@@ -3,6 +3,10 @@
 \usepackage[margin=1.2in]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{natbib}
+\usepackage{tikz}
+\usepackage{url}
 
 \title{\textbf{Congruente getallen}\\
 		\small{eerste versie studentencheck}}
@@ -31,5 +35,28 @@
 	\allowdisplaybreaks
 	
 	\section{Inleiding}
+	
+	\section{Stelligen}
+	
+	\newtheorem{Tunnell}{Theorem}
+	\begin{Tunnell}
+		\text{\cite{oort_p3}} (Tunnell, 1983) If $n$ is a squarefree and odd (respectively, even) positive integer ans $n$ is the area of a right triangle with rotional sides, then
+		\begin{align}
+		\#\{x,y,z\in\ZZ|n=2x^2+y^2+32z^2\} = \frac{1}{2}\#\{x,y,z\in\ZZ|n=2x^2+y^2+8z^2\}\\
+		\notag \text{(respectively, } \\
+		\#\{x,y,z\in\ZZ|\frac{n}{2}=4x^2+y^2+32z^2\} = \frac{1}{2}\#\{x,y,z\in\ZZ|\frac{n}{2}=4x^2+y^2+8z^2\})
+		\end{align}
+		If the weak Birch-Swinnerton-Dyer conjecture is true for the elliptic curves $E_n:y^2=x^3-n^2x$, then, conversely, these equalities imply that $n$ is a congruent number.
+	\end{Tunnell}
+	
+	\newtheorem{CG}{Defenitie}
+	\begin{CG}
+		Een positief geheel getal $N$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $N\in\ZZ$. Noem de lengtes van de zijden $a,b,c\in\QQ$; met behulp van de stelling van Pythagoras zien we:
+		
+	\end{CG}
+	
+	
+	\bibliographystyle{plain}
+	\bibliography{bib}
 	
 \end{document}
