@@ -1,3 +1,9 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Werkstuk versie 1.aux
 The style file: plain.bst
 Database file #1: bib.bib
+"{" immediately follows a field name---line 9 of file bib.bib
+ : @MISC
+ :      {Oort_p3,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "oort_p3"
+(There was 1 error message)
