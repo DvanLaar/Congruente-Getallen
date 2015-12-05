@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{color}
 \usepackage{natbib}
 \usepackage{tikz}
 \usepackage{url}
@@ -40,7 +41,7 @@
 	
 	\newtheorem{Tunnell}{Theorem}
 	\begin{Tunnell}
-		\text{\cite{oort_p3}} (Tunnell, 1983) If $n$ is a squarefree and odd (respectively, even) positive integer ans $n$ is the area of a right triangle with rational sides, then
+		\cite{Koblitz} (Tunnell, 1983) If $n$ is a squarefree and odd (respectively, even) positive integer ans $n$ is the area of a right triangle with rational sides, then
 		\begin{align}
 		\#\{x,y,z\in\ZZ|n=2x^2+y^2+32z^2\} = \frac{1}{2}\#\{x,y,z\in\ZZ|n=2x^2+y^2+8z^2\}\\
 		\notag \text{(respectively, } \\
@@ -51,19 +52,25 @@
 	
 	\newtheorem{CG}{Defenitie}
 	\begin{CG}
-		Een positief geheel getal $N$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $N\in\ZZ$. Noem de lengtes van de zijden $a,b,c\in\QQ$; met behulp van de stelling van Pythagoras zien we:
+		\cite{Oort} Een positief geheel getal $N$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $N\in\ZZ$. Noem de lengtes van de zijden $a,b,c\in\QQ$; met behulp van de stelling van Pythagoras zien we:
 		
 	\end{CG}
 	
 	
 	\section{Elliptische krommen}
+	Het volgende komt uit \cite{Koblitz}.\\
+	We weten nu wat een congruent nummer $n$ is: een geheel getal als oppervlakte van een driehoek met rationale zijden. We doen nu het volgende:\\
+	Neem een getal $r\in\QQ$ en zeg $r$ is congruent. Dan zijn $x,y,z\in\QQ$ de zijden van de rechthoekige driehoek met oppervlakte $r$. We kunnen nu voor elke $r\neq0$ een $s\in\QQ$ vinden zodat $s^2r$ een kwadraatvrij natuurlijk getal is.
+	\begin{itemize}
+		\item[] \underline{Bewijs}: Stel $r=\frac{p}{q}$. Neem nu $s$ zodat $s^2$ deelbaar is door $q$. {\color{red}Nu geldt dat $s^2r$ een kwadraatvrij getal.}\QED
+	\end{itemize}
+	We kunnen nu de driehoek nemen met zijden $sx,sy,sz$. De oppervlakte van deze driehoek is $s^2r$. We kunnen nu zonder verlies van algemeenheid zeggen dat $s^2r=n$. We kunnen nu dus ook aannemen dat $n$ een congruent kwadraatvrij natuurlijk getal is.\\
+	
+	Er is een algoritme die alle Pythagorasdrietalle langsgaat om zo alle congruente getallen $n$ in een lijst te zetten. Echter, we weten niet hoe lang het duurt om al deze combinaties langs te gaan. Dus als een getal $n$ niet in de lijst voorkomt kan het zijn dat (1) het geen congruent getal is of dat (2) het te lang duurde en het zoeken is afgebroken. We willen dus eigenlijk opzoek naar een formule die ons congruente geeft {\color{red}zodat we precies weten hoe lang we moeten wachten o alle getallen te krijgen}.
+	\\
 	
 	Elliptische krommen zijn krommen die voldoen aan de vergelijking $y^2=x^3-N^2x$. 
 	
-	
-	
-	
 	\bibliographystyle{plain}
 	\bibliography{bib}
-	
 \end{document}

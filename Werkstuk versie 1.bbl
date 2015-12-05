@@ -1,3 +1,14 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Koblitz}
+Neal Koblitz.
+\newblock {\em {I}ntroduction to {E}lliptic {C}urves and {M}odular {F}orms}.
+\newblock Springer-Verlag New York Inc., 1984.
+
+\bibitem{Oort}
+Frans Oort.
+\newblock {C}ongruente getallen, februari 2009.
+\newblock Urecht. Verkregen op 24-11-2015 van
+  \url{http://www.staff.science.uu.nl/~oort0109/Kaleid-II-09-kortetekst.pdf}.
 
 \end{thebibliography}
