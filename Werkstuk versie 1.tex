@@ -37,6 +37,13 @@
 	
 	\section{Inleiding}
 	
+	\section{Begrippen}
+	\begin{tabular}{ l p{10cm} }
+		\textbf{kwadraatvrij}: \cite{Beukers} & Een kwadraatvrij getal is een getal dat niet deelbaar is door een kwadraat groter dan $1$. Waarbij een kwadraat een getal $k\in\NN$ zodat $\sqrt{k}\in\NN$.\\
+		\textbf{begrip}: & uitleg \\
+		\textbf{begrip}: & uitleg
+	\end{tabular}
+	
 	\section{Stelligen}
 	
 	\newtheorem{Tunnell}{Theorem}
@@ -52,22 +59,21 @@
 	
 	\newtheorem{CG}{Defenitie}
 	\begin{CG}
-		\cite{Oort} Een positief geheel getal $N$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $N\in\ZZ$. Noem de lengtes van de zijden $a,b,c\in\QQ$; met behulp van de stelling van Pythagoras zien we:
+		\cite{Oort}[p.3] Een positief geheel getal $N$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $N\in\ZZ$. Noem de lengtes van de zijden $a,b,c\in\QQ$; met behulp van de stelling van Pythagoras zien we:
 		
 	\end{CG}
 	
 	
 	\section{Elliptische krommen}
 	Het volgende komt uit \cite{Koblitz}.\\
-	We weten nu wat een congruent nummer $n$ is: een geheel getal als oppervlakte van een driehoek met rationale zijden. We doen nu het volgende:\\
+	We weten nu dat een een congruent getal $n$ een geheel getal is als oppervlakte van een driehoek met rationale zijden. Als we nu willen kijken welke $n'\in\NN$ congruente getallen zijn, moeten we heel $\NN$ door. Dit is niet te doen. Daarom willen we het aantal mogelijke waardes van $n'$ beperken. We doen het volgende:\\
 	Neem een getal $r\in\QQ$ en zeg $r$ is congruent. Dan zijn $x,y,z\in\QQ$ de zijden van de rechthoekige driehoek met oppervlakte $r$. We kunnen nu voor elke $r\neq0$ een $s\in\QQ$ vinden zodat $s^2r$ een kwadraatvrij natuurlijk getal is.
 	\begin{itemize}
-		\item[] \underline{Bewijs}: Stel $r=\frac{p}{q}$. Neem nu $s$ zodat $s^2$ deelbaar is door $q$. {\color{red}Nu geldt dat $s^2r$ een kwadraatvrij getal.}\QED
+		\item[] \underline{Bewijs}: We weten $r\in\QQ$, dus $r$ is te schrijven als: $r=\frac{p}{q}$. Neem nu een $s\in\QQ$ zodat $s^2$ deelbaar is door $q$. {\color{red}Nu geldt dat $s^2r$ een kwadraatvrij getal.}\QED
 	\end{itemize}
-	We kunnen nu de driehoek nemen met zijden $sx,sy,sz$. De oppervlakte van deze driehoek is $s^2r$. We kunnen nu zonder verlies van algemeenheid zeggen dat $s^2r=n$. We kunnen nu dus ook aannemen dat $n$ een congruent kwadraatvrij natuurlijk getal is.\\
+	We weten nu dat $s^2r$ een kwaadraatvrij getal is. En we doen het volgende: neem de driehoek met zijden $sx,sy,sz$. De oppervlakte van deze driehoek is $s^2r$. We kunnen nu zonder verlies van algemeenheid zeggen dat $s^2r=n$. We kunnen dus ook aannemen dat $n$ een congruent kwadraatvrij natuurlijk getal is. \\
 	
-	Er is een algoritme die alle Pythagorasdrietalle langsgaat om zo alle congruente getallen $n$ in een lijst te zetten. Echter, we weten niet hoe lang het duurt om al deze combinaties langs te gaan. Dus als een getal $n$ niet in de lijst voorkomt kan het zijn dat (1) het geen congruent getal is of dat (2) het te lang duurde en het zoeken is afgebroken. We willen dus eigenlijk opzoek naar een formule die ons congruente geeft {\color{red}zodat we precies weten hoe lang we moeten wachten o alle getallen te krijgen}.
-	\\
+	We hebben hierboven gezien dat we de mogelijke waardes van $n'$ hebben beperkt, omdat $n'$ nu een kwadraatvrij getal is. Dus we kunnen nu al een stuk sneller door $\NN$ om te kijken welke getallen $n'\in\NN$ congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $n'$ checkt of er een Pythagorees drietal bestaat zodat $n'$ de oppervlakte is van deze driehoek (dus $n'=n$). Als $n'$ congruent is, zet het algoritme deze in een lijst. Het probleem hierbij is dat we niet weten hoe lang we moeten zoeken naar een Pythagorees drietal die bij $n'$ past. Dus als $n'$ niet in de lijst staat, weten we niet of (1) $n'$ geen congruent getal is of (2) dat het zoeken te lang duurde en het zoeken is afgebroken. Wat we dus eigenlijk willen is een gesloten formule vinden, zodat we makkelijk kunnen checken of $n'$ een congruent getal is of niet.\\
 	
 	Elliptische krommen zijn krommen die voldoen aan de vergelijking $y^2=x^3-N^2x$. 
 	
