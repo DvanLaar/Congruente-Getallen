@@ -31,8 +31,11 @@
 	\maketitle
 	\allowdisplaybreaks
 	
+	
 	\section{Inleiding}
-	We gaan het hebben over congruente getallen. Eerst vindt u een begrippenlijst, zodat u de betekenis van veelvoorkomende begrippen altijd op kan zoeken. Daarna wordt er uitgelegd wat congruente getallen zijn en wat dit te maken heeft met Pythagorese drietallen. We gaan kijken hoe we alle congruente getallen kunnen vinden en daarna zullen we ook kijken naar een aantal belangrijke stellingen.
+	We gaan het hebben over congruente getallen. Eerst vindt u een begrippenlijst, zodat u de betekenis van veelvoorkomende begrippen altijd op kan zoeken. Daarna wordt er uitgelegd wat congruente getallen zijn en wat dit te maken heeft met Pythagore\"ise drietallen. We gaan kijken hoe we alle congruente getallen kunnen vinden en daarna zullen we ook kijken naar een aantal belangrijke stellingen.
+	
+	\textit{Als er tekst roodgekleurd is, moeten we het bewijs nog afmaken, of nagaan dat de uitspraak waar is.}
 	
 	
 	\section{Begrippen}
@@ -100,7 +103,7 @@
 		\coordinate (B) at (0,1);
 		\coordinate (M) at (0.25, 0.25);
 		\draw (O) -- node[auto,swap]{$\frac{411340519227716149383203}{21666555693714761309610}$} 
-		(A) -- node[auto,swap]{$\frac{22440351770433696992455751309064863160948472041}{8912332268928859588025535178967163570016480830}$}
+		(A) -- node[auto,swap]{$\frac{224403517704336969924557513090674863160948472041}{8912332268928859588025535178967163570016480830}$}
 		(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$} (O);
 		\draw (M) node[auto]{$n=157$};
 		\end{tikzpicture}
@@ -116,9 +119,38 @@
 	\end{itemize}
 	We weten nu dat $s^2r$ een kwaadraatvrij getal is. En we doen het volgende: neem de driehoek met zijden $sx,sy,sz$. De oppervlakte van deze driehoek is $s^2r$. We kunnen nu zonder verlies van algemeenheid zeggen dat $s^2r=n$. We kunnen dus ook aannemen dat $n$ een congruent kwadraatvrij natuurlijk getal, oftewel een primitief congruent getal, is. We weten dan ook dat $s^2n$, met $s^2\in\QQ$, een congruent getal is.  \\
 	
-	We hebben hierboven gezien dat we de mogelijke waardes van $n'$ hebben beperkt, omdat $n'$ nu een kwadraatvrij getal is. Dus we kunnen nu al een stuk sneller door $\NN$ om te kijken welke getallen $n'\in\NN$ congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $n'$ checkt of er een Pythagorees drietal bestaat zodat $n'$ de oppervlakte is van deze driehoek (dus $n'=n$). Als $n'$ congruent is, zet het algoritme deze in een lijst. Het probleem hierbij is dat we niet weten hoe lang we moeten zoeken naar een Pythagorees drietal die bij $n'$ past. Dus als $n'$ niet in de lijst staat, weten we niet of (1) $n'$ geen congruent getal is of (2) dat het zoeken te lang duurde en het zoeken is afgebroken. Wat we dus eigenlijk willen is een gesloten formule vinden, zodat we makkelijk kunnen checken of $n'$ een congruent getal is of niet.\\
+	We hebben hierboven gezien dat we de mogelijke waardes van $n'$ hebben beperkt, omdat $n'$ nu een kwadraatvrij getal is. Dus we kunnen nu al een stuk sneller door $\NN$ om te kijken welke getallen $n'\in\NN$ congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $n'$ checkt of er een Pythagorees drietal bestaat zodat $n'$ de oppervlakte is van deze driehoek (dus $n'=n$). Als $n'$ congruent is, zet het algoritme deze in een lijst. Het probleem hierbij is dat we niet weten hoe lang we moeten zoeken naar een Pythagorees drietal die bij $n'$ past. Dus als $n'$ niet in de lijst staat, weten we niet of (1) $n'$ geen congruent getal is of (2) dat het zoeken te lang duurde en het zoeken is afgebroken. Wat we dus eigenlijk willen, is een gesloten formule vinden, zodat we makkelijk kunnen checken of $n'$ een congruent getal is of niet.\\
 	
-	Elliptische krommen zijn krommen die voldoen aan de vergelijking $y^2=x^3-n^2x$.
+	We kunnen met de theorie van Tunnnell precies controleren welke pythagore\"ise drietallen bij een congruent getal horen. Hiervoor moeten we wel iets aannemen wat te maken heeft met elliptische krommen. Gebruik makend van de elliptische krommen, moet gelden dat een paar rationele getallen $(x,y)$ van een congruente driehoek met zijden $x,y,z$, moet voldoen aan de vergelijking: $y^2=x^3-n^2x$.
+	
+	
+	\section{Presentaties van congruente getallen}
+	{\color{red}We weten al dat ieder congruent getal afhangt van een Pythagore\"isch drietal}, welke de presentatie wordt genoemd. Maar is dat een uniek drietal? En zo niet, hoeveel presentaties zijn er dan? Dat zijn de vragen waar we nu naar gaan kijken.\\
+	
+	Belangrijk is dat we eerst op \'e\'en lijn zitten, aangaande wat wel een Pythagore\"isch drietal is. Hier is een Pythagore\"isch drietal van de vorm $(x,y,z)$, waarbij $x,y,z\in \QQ_{>0}$ en $x^2 + y^2 = z^2$. Het bijbehorende congruente getal noemen we $N$, waarbij uiteraard geldt dat $N\in \QQ_{>0}$ (immers, $N = xy / 2$).\\
+	
+	Het is dus ook niet moeilijk te zien dat een congruent getal meerdere presentaties kan hebben. Neem bijvoorbeeld het getal 210, een presentatie daarvan is $(20,21,29)$, immers $(20\cdot 21)/2 = 210$. Een andere presentatie is $(12,35,37)$. En hoewel dit slechts \'e\'en getal is, is het desalniettemin zeer aannemelijk dat ieder congruent getal meerdere presentaties heeft. Sterker nog, ieder congruent getal heeft oneindig veel presentaties.\\
+	
+	Met de huidige definitie van "presentatie" is dat moeilijk na te gaan. Om het allemaal wat makkelijker te maken, gebruiken we een nieuwe definitie, gebaseerd op {\color{red}de stelling van Euclides}. We kiezen het positieve gehele getal $D$ dan zo dat $N=m\cdot n \cdot (m-n)^2/D^2$ een primitief congruent getal is. Hierbij zijn $m$ en $n$ zoals in de stelling van Euclides. (Ter herinnering: $m>n$, $ggd(m,n) = 1$ en $m+n$ is oneven.) Daarnaast geldt dat $x = m^2 - n^2$, $y = 2mn$ en $z = m^2 + n^2$.) In dit geval is de presentatie van het congruente getal dan $((m,n),D,N)$. Immers $D^2N = m\cdot n \cdot (m-n)^2$ en $xy/2 = D^2N$.\\
+	
+	Om nu te bewijzen dat ieder congruent getal oneindig veel presentaties heeft, moeten we eerst wat rekenwerk doen. We defini\"eren eerst:
+	\begin{equation}
+		U:= z^2=(m^2+n^2)^2, \qquad V:= 2xy=2(m^2-n^2)2mn
+	\end{equation}
+	Dit zijn de bouwstenen waar we straks een nieuwe presentatie mee gaan vormen voor ons congruente getal. Dat doen we als volgt:
+	\begin{align}
+			U\cdot V \cdot (U-V) \cdot (U+V)=\\
+			z^2\cdot 2xy\cdot (y^2+y^2-2xy)\cdot (x^2+y^2+2xy)=\\
+			2xy\cdot z^2\cdot (x-y)^2\cdot (x+y)^2=\\
+			\{2\cdot z\cdot D\cdot (x-y)\cdot (x+y)\}^2\cdot N
+	\end{align}
+	We hebben zo een nieuwe presentatie gevonden van $N$, waarbij een nieuw Pythagore\"isch drietal hoort (voor het gemak $(a,b,c)$ genoemd). Hierbij geldt:
+	\begin{equation}
+		U'=c^2, \qquad V'=2ab, \qquad E=|\{2\cdot z\cdot D\cdot (x-y)\cdot (x+y)\}|
+	\end{equation}
+	Wat opvalt is dat $E>D$.\\
+	
+	We kunnen deze methode herhalen met $U'$, $V'$ en $E$, en zo weer een nieuwe presentatie vinden. Met die nieuwe presentatie kunnen we weer een nieuwe presentatie vinden, enzovoort. In feite kunnen we het dus oneindig vaak herhalen, waarbij we steeds een nieuwe presentatie vinden. Ergo: ieder congruent getal bevat oneindig veel presentaties.
 	
 	
 	\section{Stellingen}
@@ -132,6 +164,16 @@
 		\end{align}
 		If the weak Birch-Swinnerton-Dyer conjecture is true for the elliptic curves $E_n:y^2=x^3-n^2x$, then, conversely, these equalities imply that $n$ is a congruent number.
 	\end{Tunnell}
+	
+	\newtheorem{Prop1}{Propositie}
+	\begin{Prop1}
+		\cite{Koblitz}[p.4] Let $n$ be a fixed squarefree positive integer. Let $X,Y,Z,x$ always denote rational numbers, with $X<Y<Z$. There is a one-to-one correspondence between right triangles with legs $X$ and $Y$, hypotenuse $Z$, and area $n$; and numbers $x$ for which $x$, $x+n$, and $x-n$ are each the square of a rational number. The correspondence is:
+		\begin{align*}
+		X,Y,Z\rightarrow x &= (Z/2)^2 \\
+		x\rightarrow X &= \sqrt{x+n} - \sqrt{x-n}, Y = \sqrt{x+n}+\sqrt{x-n}, Z = 2\sqrt{x}.
+		\end{align*}
+		In particular, $n$ is a congruent number if and only if there exists $x$ such that $x$, $x+n$, and $x-n$ are squares of rational numbers.
+	\end{Prop1}
 	
 	\newtheorem{CG}{Defenitie}
 	\begin{CG}
@@ -152,6 +194,8 @@
 		\end{tikzpicture}
 		\end{figure*}\\
 	\end{CG}
+	
+	
 	
 	
 	\bibliographystyle{plain}
