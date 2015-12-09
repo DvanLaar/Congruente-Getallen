@@ -31,8 +31,11 @@
 	\maketitle
 	\allowdisplaybreaks
 	
+	
 	\section{Inleiding}
-	We gaan het hebben over congruente getallen. Eerst vindt u een begrippenlijst, zodat u de betekenis van veelvoorkomende begrippen altijd op kan zoeken. Daarna wordt er uitgelegd wat congruente getallen zijn en wat dit te maken heeft met Pythagorese drietallen. We gaan kijken hoe we alle congruente getallen kunnen vinden en daarna zullen we ook kijken naar een aantal belangrijke stellingen.
+	We gaan het hebben over congruente getallen. Eerst vindt u een begrippenlijst, zodat u de betekenis van veelvoorkomende begrippen altijd op kan zoeken. Daarna wordt er uitgelegd wat congruente getallen zijn en wat dit te maken heeft met Pythagore\"ise drietallen. We gaan kijken hoe we alle congruente getallen kunnen vinden en daarna zullen we ook kijken naar een aantal belangrijke stellingen.
+	
+	\textit{Als er tekst roodgekleurd is, moeten we het bewijs nog afmaken, of nagaan dat de uitspraak waar is.}
 	
 	
 	\section{Begrippen}
@@ -43,7 +46,8 @@
 		\textbf{begrip}: & uitleg
 	\end{tabular}
 	
-	\section{Congruente getallen en Pythagorese drietallen}
+	
+	\section{Congruente getallen en Pythagore\"ise drietallen}
 	\section{Daan}
 	
 	Stel, $\exists \delta \in \QQ$. Een getal $n \in \NN$ heet een congruent getal als $\delta^2 - n$, $\delta^2$ en $\delta^2 + n$ kwadraten zijn in \QQ. Dat wil zeggen, $\delta^2 - n$, $\delta^2$ en $\delta^2 + n$ zijn te schrijven als $\left(\dfrac{p}{q}\right)^2$ met $p, q \in \NN$\\
@@ -90,7 +94,7 @@
 		\coordinate (B) at (0,1);
 		\coordinate (M) at (0.25, 0.25);
 		\draw (O) -- node[auto,swap]{$\frac{411340519227716149383203}{21666555693714761309610}$} 
-		(A) -- node[auto,swap]{$\frac{22440351770433696992455751309064863160948472041}{8912332268928859588025535178967163570016480830}$}
+		(A) -- node[auto,swap]{$\frac{224403517704336969924557513090674863160948472041}{8912332268928859588025535178967163570016480830}$}
 		(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$} (O);
 		\draw (M) node[auto]{$n=157$};
 		\end{tikzpicture}
@@ -106,9 +110,9 @@
 	\end{itemize}
 	We weten nu dat $s^2r$ een kwaadraatvrij getal is. En we doen het volgende: neem de driehoek met zijden $sx,sy,sz$. De oppervlakte van deze driehoek is $s^2r$. We kunnen nu zonder verlies van algemeenheid zeggen dat $s^2r=n$. We kunnen dus ook aannemen dat $n$ een congruent kwadraatvrij natuurlijk getal, oftewel een primitief congruent getal, is. We weten dan ook dat $s^2n$, met $s^2\in\QQ$, een congruent getal is.  \\
 	
-	We hebben hierboven gezien dat we de mogelijke waardes van $n'$ hebben beperkt, omdat $n'$ nu een kwadraatvrij getal is. Dus we kunnen nu al een stuk sneller door $\NN$ om te kijken welke getallen $n'\in\NN$ congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $n'$ checkt of er een Pythagorees drietal bestaat zodat $n'$ de oppervlakte is van deze driehoek (dus $n'=n$). Als $n'$ congruent is, zet het algoritme deze in een lijst. Het probleem hierbij is dat we niet weten hoe lang we moeten zoeken naar een Pythagorees drietal die bij $n'$ past. Dus als $n'$ niet in de lijst staat, weten we niet of (1) $n'$ geen congruent getal is of (2) dat het zoeken te lang duurde en het zoeken is afgebroken. Wat we dus eigenlijk willen is een gesloten formule vinden, zodat we makkelijk kunnen checken of $n'$ een congruent getal is of niet.\\
+	We hebben hierboven gezien dat we de mogelijke waardes van $n'$ hebben beperkt, omdat $n'$ nu een kwadraatvrij getal is. Dus we kunnen nu al een stuk sneller door $\NN$ om te kijken welke getallen $n'\in\NN$ congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $n'$ checkt of er een Pythagorees drietal bestaat zodat $n'$ de oppervlakte is van deze driehoek (dus $n'=n$). Als $n'$ congruent is, zet het algoritme deze in een lijst. Het probleem hierbij is dat we niet weten hoe lang we moeten zoeken naar een Pythagorees drietal die bij $n'$ past. Dus als $n'$ niet in de lijst staat, weten we niet of (1) $n'$ geen congruent getal is of (2) dat het zoeken te lang duurde en het zoeken is afgebroken. Wat we dus eigenlijk willen, is een gesloten formule vinden, zodat we makkelijk kunnen checken of $n'$ een congruent getal is of niet.\\
 	
-	Elliptische krommen zijn krommen die voldoen aan de vergelijking $y^2=x^3-n^2x$.
+	We kunnen met de theorie van Tunnnell precies controleren welke pythagore\"ise drietallen bij een congruent getal horen. Hiervoor moeten we wel iets aannemen wat te maken heeft met elliptische krommen. Gebruik makend van de elliptische krommen, moet gelden dat een paar rationele getallen $(x,y)$ van een congruente driehoek met zijden $x,y,z$, moet voldoen aan de vergelijking: $y^2=x^3-n^2x$.
 	
 	
 	\section{Stellingen}
@@ -122,6 +126,16 @@
 		\end{align}
 		If the weak Birch-Swinnerton-Dyer conjecture is true for the elliptic curves $E_n:y^2=x^3-n^2x$, then, conversely, these equalities imply that $n$ is a congruent number.
 	\end{Tunnell}
+	
+	\newtheorem{Prop1}{Propositie}
+	\begin{Prop1}
+		\cite{Koblitz}[p.4] Let $n$ be a fixed squarefree positive integer. Let $X,Y,Z,x$ always denote rational numbers, with $X<Y<Z$. There is a one-to-one correspondence between right triangles with legs $X$ and $Y$, hypotenuse $Z$, and area $n$; and numbers $x$ for which $x$, $x+n$, and $x-n$ are each the square of a rational number. The correspondence is:
+		\begin{align*}
+		X,Y,Z\rightarrow x &= (Z/2)^2 \\
+		x\rightarrow X &= \sqrt{x+n} - \sqrt{x-n}, Y = \sqrt{x+n}+\sqrt{x-n}, Z = 2\sqrt{x}.
+		\end{align*}
+		In particular, $n$ is a congruent number if and only if there exists $x$ such that $x$, $x+n$, and $x-n$ are squares of rational numbers.
+	\end{Prop1}
 	
 	\newtheorem{CG}{Defenitie}
 	\begin{CG}
