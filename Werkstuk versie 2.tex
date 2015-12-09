@@ -63,7 +63,7 @@
 		\coordinate (M) at (0.25, 0.25);
 		\draw (O) -- node[auto,swap]{$6\frac{2}{3}$} 
 		(A) -- node[auto,swap]{$6\frac{5}{6}$}
-		(B) -- node[auto,swap]{$1\frac{1}{2}$}cycle;
+		(B) -- node[auto,swap]{$1\frac{1}{2}$} (O);
 		\draw (M) node[auto]{$n=5$};
 		\end{tikzpicture}
 	\end{figure*}\\
@@ -77,7 +77,7 @@
 		\coordinate (M) at (0.25, 0.25);
 		\draw (O) -- node[auto,swap]{$4$} 
 		(A) -- node[auto,swap]{$5$}
-		(B) -- node[auto,swap]{$3$}cycle;
+		(B) -- node[auto,swap]{$3$} (O);
 		\draw (M) node[auto]{$n=6$};
 		\end{tikzpicture}
 	\end{figure*}\\
@@ -91,7 +91,7 @@
 		\coordinate (M) at (0.25, 0.25);
 		\draw (O) -- node[auto,swap]{$\frac{411340519227716149383203}{21666555693714761309610}$} 
 		(A) -- node[auto,swap]{$\frac{22440351770433696992455751309064863160948472041}{8912332268928859588025535178967163570016480830}$}
-		(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$}cycle;
+		(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$} (O);
 		\draw (M) node[auto]{$n=157$};
 		\end{tikzpicture}
 	\end{figure*}
@@ -127,14 +127,14 @@
 	\begin{CG}
 		\cite{Oort}[p.3] Een positief geheel getal $N$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $N\in\ZZ$. Noem de lengtes van de zijden $a,b,c\in\QQ$; met behulp van de stelling van Pythagoras zien we:
 		\begin{figure*}[h!]
-			\centering
+		\centering
 		\begin{tikzpicture}[xscale=6, yscale=3]
 		\coordinate (O) at (0,0);
 		\coordinate (A) at (1,0);
 		\coordinate (B) at (0,1);
 		\draw (O) -- node[auto,swap]{$\alpha$} 
 		      (A) -- node[auto,swap]{$\gamma$}
-		      (B) -- node[auto,swap]{$\beta$}cycle;
+		      (B) -- node[auto,swap]{$\beta$} (O);
 		\coordinate (M) at (1.5, 0.5);
 		\draw (M) node[auto]{$\alpha\cdot\beta/2=N$};
 		\coordinate (N) at (1.5, 0.25);
