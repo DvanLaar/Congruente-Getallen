@@ -39,8 +39,8 @@
 \newtheorem{definition}[theorem]{Definitie}
 \newtheorem{remark}[theorem]{Opmerking}
 
-\begin{document}
-	
+
+\begin{document}	
 	\begin{titlepage}
 		\maketitle
 	\end{titlepage}
@@ -48,9 +48,9 @@
 	\allowdisplaybreaks
 	
 	\section{Inleiding}
-	We hebben onderzoek gedaan naar congruente getallen om onze kennis te verbreden. In dit werkstuk zullen we vertellen wat we hebben gevonden.
+	We hebben onderzoek gedaan naar congruente getallen, een onderwerp uit getaltheorie, om onze kennis te verbreden. In dit werkstuk zullen we vertellen wat wij hebben gevonden.
 	
-	Als eerste gaan we kijken naar twee mogelijke definities voor congruente getallen. Er wordt hierbij ook verteld wat Pythagore\"ise drietallen zijn. Daarna gaan we kijken hoe we congruente getallen kunnen vinden. Tot slot kijken we naar een belangrijke propositie. We zullen afsluiten met een samenvatting.
+	Als eerste gaan we kijken naar twee mogelijke definities voor congruente getallen. Er wordt hierbij ook verteld wat Pythagore\"ische drietallen zijn. Daarna gaan we kijken hoe we congruente getallen kunnen vinden. Tot slot kijken we naar een belangrijke propositie. We zullen afsluiten met een samenvatting.
 	
 	
 %	\section{Begrippen}
@@ -60,7 +60,7 @@
 %	\end{tabular}
 	
 	
-	\section{Congruente getallen en Pythagore\"{i}se drietallen}	
+	\section{Congruente getallen en Pythagore\"ische drietallen}	
 	Eerst zullen we kijken naar de definitie van congruente getallen. Er bestaan echter meerdere definities. We zullen er hier twee behandelen.\\
 	
 	Ten eerste kijken we naar de meetkundige definitie uit \cite{Oort}[p.3]:	
@@ -85,7 +85,7 @@
 	\end{definition}
 	We zien dat hier een congruent getal $n$ wordt gegeven als de oppervlakte van een rechthoekige driehoek met zijn zijden in $\QQ$. We kunnen conguente getallen ook bekijken via een algebra\"{i}sche benadering. De volgende definitie komt van \cite{Oort}[p.3].
 
-	\begin{definition}
+	\begin{definition}\label{def:algebra}
 		Een positief geheel getal $n$ heet een congruent getal als er bestaat een $\delta\in\QQ$ zodanig dat
 		\begin{align*}
 		\delta^2 - n, \delta^2, \delta^2 + n
@@ -110,13 +110,14 @@
 	x^n + y^n = z^n \qquad \text{met} \qquad n \in \NN.
 	\end{align}
 	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor (1). Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$, geldt $x \cdot y \cdot z = 0$. \\
-	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. Dit komt omdat het vermoeden van Fermat met $n=2$ de stelling van Pythagoras is. De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"{i}sch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
+	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. Dit komt omdat het vermoeden van Fermat met $n=2$ de stelling van Pythagoras is. De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
 	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve Pythagore\"ische drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor ook geldt dat $ggd(x,y)=1$.
 	{\color{red}Bewijs dat ggd(x,z) en ggd(y,z) ook 1 zijn. Nog veel meer bewijzen over ppd's.}
 	%Tweede definitie congruente getallen
 	
 	%\endsection{Daan}
-	
+
+
 	\section{Voorbeelden}
 	Hieronder volgen drie voorbeelden van congruente getallen, volgens definitie 1. Het kleinste congruente getal is $5$. Dat is de driehoek met de volgende zijden: {\color{red}bewering beargumenteren?}
 	\begin{figure*}[h!]
@@ -164,16 +165,74 @@
 	
 	\section{Congruente getallen vinden}
 	Voor dit hoofdstuk hebben we gebruik gemaakt van \cite{Koblitz}[p.3-4].\\
-	We weten nu dat een congruent getal $n$ een geheel getal is als oppervlakte van een driehoek met rationale zijden. Als we nu willen kijken welke $n'\in\NN$ congruente getallen zijn, moeten we heel $\NN$ door. Dit is niet te doen. Daarom willen we het aantal mogelijke waardes van $n'$ beperken. We doen het volgende:\\
-	Neem een getal $r\in\QQ$ en zeg $r$ is congruent. Dan zijn $x,y,z\in\QQ$ de zijden van de rechthoekige driehoek met oppervlakte $r$. We kunnen nu voor elke $r\neq0$ een $s\in\QQ$ vinden zodat $s^2r$ een kwadraatvrij natuurlijk getal is.
-	\begin{proof}
-		We weten $r\in\QQ$, dus $r$ is te schrijven als: $r=\frac{p}{q}$. Neem nu een $s\in\QQ$ zodat $s^2$ deelbaar is door $q$. {\color{red}Nu geldt dat $s^2r$ een kwadraatvrij getal.}
-	\end{proof}
-	We weten nu dat $s^2r$ een kwaadraatvrij getal is. We doen het volgende: neem de driehoek met zijden $sx,sy,sz$. De oppervlakte van deze driehoek is $s^2r$. We kunnen nu zonder verlies van algemeenheid zeggen dat $s^2r=n$. We kunnen dus ook aannemen dat $n$ een congruent kwadraatvrij natuurlijk getal, oftewel een primitief congruent getal, is. We weten dan ook dat $s^2n$, met $s^2\in\QQ$, een congruent getal is.  \\
+	We weten dat een congruent getal $n$ een geheel getal is als oppervlakte van een driehoek met rationale zijden. We willen nu graag weten welke getallen $m\in\NN$ voldoen aan de definitie van een congruent getal. Als we dat willen doen met de kennis van nu, moeten we voor elke $m$ gaan kijken of we een driehoek kunnen vinden met zijden in $\QQ$ zodat de oppervlakte van deze driehoek gelijk is aan $m$. Het is niet moeilijk om te bedenken dat dat een onmogelijke zaak is, zelfs als we de computer laten rekenen. Dus moeten we opzoek gaan naar een manier om het aantal mogelijke getallen $m\in\NN$ te verminderen. Om te kijken hoe we dat kunnen doen, kijken we eerst naar de volgende driehoek:
+	\begin{figure}[h!]
+		\centering
+		\begin{tikzpicture}[xscale=2, yscale=1]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (1,0);
+		\coordinate (B) at (0,1);
+		\coordinate (M) at (0.25, 0.25);
+		\draw (O) -- node[auto,swap]{$y$} 
+		(A) -- node[auto,swap]{$z$}
+		(B) -- node[auto,swap]{$x$} (O);
+		\draw (M) node[auto]{$r$};
+		
+		\coordinate (S) at (1.8, 0.7);
+		\draw (S) node[auto]{$x,y,z\in\QQ$};
+		\coordinate (N) at (1.9, 0.1);
+		\draw (N) node[auto]{$\frac{1}{2}xy=r\in\NN$};
+		\end{tikzpicture}
+	\end{figure}\\
+	Dit is een driehoek met zijn zijden in $\QQ$ en zijn oppervlakte in $\NN$. Dit betekent dus dat $r$ een congruent getal is.
 	
-	We hebben hierboven gezien dat we de mogelijke waardes van $n'$ hebben beperkt, omdat $n'$ nu een kwadraatvrij getal is. Dus we kunnen nu al een stuk sneller door $\NN$ om te kijken welke getallen $n'\in\NN$ congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $n'$ checkt of er een Pythagorees drietal bestaat zodat $n'$ de oppervlakte is van deze driehoek (dus $n'=n$). Als $n'$ congruent is, zet het algoritme deze in een lijst. Het probleem hierbij is dat we niet weten hoe lang we moeten zoeken naar een Pythagorees drietal die bij $n'$ past. Dus als $n'$ niet in de lijst staat, weten we niet of (1) $n'$ geen congruent getal is of (2) dat het zoeken te lang duurde en het zoeken is afgebroken. Wat we dus eigenlijk willen, is een gesloten formule vinden, zodat we makkelijk kunnen checken of $n'$ een congruent getal is of niet.\\
+	We bekijken nu de driehoek nadat we alle zijden vermigvuldigd hebben met een getal $s\in\NN$. Deze driehoek ziet er dan alsvolgt uit:
+	\begin{figure}[h!]
+		\centering
+		\begin{tikzpicture}[xscale=2, yscale=1]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (1,0);
+		\coordinate (B) at (0,1);
+		\coordinate (M) at (0.25, 0.25);
+		\draw (O) -- node[auto,swap]{$sy$} 
+		(A) -- node[auto,swap]{$sz$}
+		(B) -- node[auto,swap]{$sx$} (O);
+		\draw (M) node[auto]{$s^2r$};
+		
+		\coordinate (S) at (1.9, 0.7);
+		\draw (S) node[auto]{$sx,sy,sz\in\QQ$};
+		\coordinate (N) at (2.6, 0.1);
+		\draw (N) node[auto]{$\frac{1}{2} sx \cdot sy = s^2 \cdot \frac{1}{2}xy = s^2r \in\NN$};
+		\end{tikzpicture}
+	\end{figure}\\
+	We zien dat $s^2r\in\NN$ ook een congruent getal is, want de zijden van de driehoek bevinden zich in $\QQ$. Als we nu willen zoeken naar congruente getallen, kunnen we dus ook kijken naar alle kwadraatvrije\footnote{Een kwadraatvrij getal is een getal dat niet deelbaar is door een kwadraat groter dan $1$. Waarbij een kwadraat een getal $k\in\NN$ zodat $\sqrt{k}\in\NN$. \cite{Beukers}} getallen $m'\in\NN$. Want door het zojuist gegeven voorbeeld zien we dat we $r$ met een willekeurig kwadraat uit $\NN$ kunnen vermenigvuldigen zonder dat het zijn eigenschappen verliest, het is dan nog steeds een congruent getal.
+
+	We hebben nu dus gezien dat we alleen nog maar hoeven te kijken naar kwaadraatvrije getallen. We nemen vanaf nu dus aan dat $n$ een kwaadraatvrij congruent getal is. Dat betekent dat we al een stuk sneller door $\NN$ kunnen gaan om te kijken welke getallen congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $m'\in\NN$ checkt of er een Pythagore\"isch drietal bestaat zodat $m'$ de oppervlakte is van deze driehoek. Als $m'$ congruent is, zet het algoritme deze in een lijst. Helaas weten we niet of een getal dat niet in de lijst staat, ook daadwerkelijk geen congruent getal is. Het kan namelijk ook zo zijn dat het algoritme te lang moest zoeken naar een Pythagore\"isch drietal, waardoor hij het zoeken heeft afgebroken. Dit is dus nog steeds geen optimale manier om naar congruente getallen te zoeken. We zoeken dus eigenlijk nog steeds naar een formule die ons kan vertellen of een getal wel of niet congruent is. Daarvoor introduceren we eerst de stelling van Tunnell:
+	\begin{theorem}
+		\cite{Koblitz}[p.212, vertaald] (Tunnell, 1983) Als $n$ een kwadraatvrij en oneven (respectievelijk even) positief geheel getal is en $n$ is de oppervlakte van een rechthoekige driehoek met rationale zijden, dan
+		\begin{align}
+		\#\{x,y,z\in\ZZ \mid n=2x^2+y^2+32z^2\} = \frac{1}{2} \#\{x,y,z\in\ZZ \mid n=2x^2+y^2+8z^2\}\\
+		\notag \text{(respectievelijk} \\
+		\#\{x,y,z\in\ZZ \mid \frac{n}{2}=4x^2+y^2+32z^2\} = \frac{1}{2} \#\{x,y,z\in\ZZ \mid \frac{n}{2}=4x^2+y^2+8z^2\})
+		\end{align}
+		Als het zwakke vermoeden van Birch-Swinnerton-Dyer waar is voor de elliptische krommen $E_n:y^2=x^3-n^2x$, dan, omgekeerd, impliceren deze gelijkheden dat $n$ een congruent getal is.
+	\end{theorem}
 	
-	We kunnen met de theorie van Tunnell precies controleren welke pythagore\"ise drietallen bij een congruent getal horen. Hiervoor moeten we wel iets aannemen wat te maken heeft met elliptische krommen. Gebruik makend van de elliptische krommen, moet gelden dat een paar rationele getallen $(x,y)$ van een congruente driehoek met zijden $x,y,z$, moet voldoen aan de vergelijking: $y^2=x^3-n^2x$.
+	\begin{proposition}
+		Laat $n$ een vast kwaadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta$, $\delta +n$ en $\delta -n$ de kwadraten zijn van een rationeel nummer. De correspondentie is:
+		\begin{align}
+			x,y,z &\rightarrow \delta = \left( \frac{z}{2} \right)^2 \\
+			\delta &\rightarrow x=\sqrt{\delta+n} - \sqrt{\delta-n},\quad y = \sqrt{\delta+n}+\sqrt{\delta-n},\quad z = 2\sqrt{\delta}.
+		\end{align}
+		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er bestaat een $\delta$ zodat $\delta$, $\delta+n$ en $\delta-n$ kwadraten van rationele nummers zijn.
+	\end{proposition}
+	
+	
+	
+	Definitie \ref{def:algebra}
+	
+	
+	We kunnen met de theorie van Tunnell precies controleren welke Pythagore\"ische drietallen bij een congruent getal horen. Hiervoor moeten we wel iets aannemen wat te maken heeft met elliptische krommen. Gebruik makend van de elliptische krommen, moet gelden dat een paar rationele getallen $(x,y)$ van een congruente driehoek met zijden $x,y,z$, moet voldoen aan de vergelijking: $y^2=x^3-n^2x$.
 	
 	
 	\section{Presentaties van congruente getallen}
@@ -198,34 +257,33 @@
 	\end{align}
 	We hebben zo een nieuwe presentatie gevonden van $N$, waarbij een nieuw Pythagore\"isch drietal hoort (voor het gemak $(a,b,c)$ genoemd). Hierbij geldt:
 	\begin{equation}
-		U'=c^2, \qquad V'=2ab, \qquad E=|\{2\cdot z\cdot D\cdot (x-y)\cdot (x+y)\}|
+		U'=c^2, \qquad V'=2ab, \qquad E= \mid \{2\cdot z\cdot D\cdot (x-y)\cdot (x+y)\} \mid
 	\end{equation}
 	Wat opvalt is dat $E>D$.\\
 	
 	We kunnen deze methode herhalen met $U'$, $V'$ en $E$, en zo weer een nieuwe presentatie vinden. Met die nieuwe presentatie kunnen we weer een nieuwe presentatie vinden, enzovoort. In feite kunnen we het dus oneindig vaak herhalen, waarbij we steeds een nieuwe presentatie vinden. Ergo: ieder congruent getal bevat oneindig veel presentaties.
 	
 	
-	\section{Stellingen}
-	{\color{red}Deze stellingen moeten we nog invoegen.}
-	
-	\begin{theorem}
-		\cite{Koblitz}[p.212] (Tunnell, 1983) If $n$ is a squarefree and odd (respectively, even) positive integer ans $n$ is the area of a right triangle with rational sides, then
-		\begin{align}
-		\#\{x,y,z\in\ZZ|n=2x^2+y^2+32z^2\} = \frac{1}{2}\#\{x,y,z\in\ZZ|n=2x^2+y^2+8z^2\}\\
-		\notag \text{(respectively, } \\
-		\#\{x,y,z\in\ZZ|\frac{n}{2}=4x^2+y^2+32z^2\} = \frac{1}{2}\#\{x,y,z\in\ZZ|\frac{n}{2}=4x^2+y^2+8z^2\})
-		\end{align}
-		If the weak Birch-Swinnerton-Dyer conjecture is true for the elliptic curves $E_n:y^2=x^3-n^2x$, then, conversely, these equalities imply that $n$ is a congruent number.
-	\end{theorem}
-	
-	\begin{proposition}
-		\cite{Koblitz}[p.4] Let $n$ be a fixed squarefree positive integer. Let $X,Y,Z,x$ always denote rational numbers, with $X<Y<Z$. There is a one-to-one correspondence between right triangles with legs $X$ and $Y$, hypotenuse $Z$, and area $n$; and numbers $x$ for which $x$, $x+n$, and $x-n$ are each the square of a rational number. The correspondence is:
-		\begin{align*}
-		X,Y,Z\rightarrow x &= (Z/2)^2 \\
-		x\rightarrow X &= \sqrt{x+n} - \sqrt{x-n}, Y = \sqrt{x+n}+\sqrt{x-n}, Z = 2\sqrt{x}.
-		\end{align*}
-		In particular, $n$ is a congruent number if and only if there exists $x$ such that $x$, $x+n$, and $x-n$ are squares of rational numbers.
-	\end{proposition}
+%	\section{Stellingen}
+%	
+%	\begin{theorem}
+%		\cite{Koblitz}[p.212] (Tunnell, 1983) If $n$ is a squarefree and odd (respectively, even) positive integer ans $n$ is the area of a right triangle with rational sides, then
+%		\begin{align}
+%		\#\{x,y,z\in\ZZ \mid n=2x^2+y^2+32z^2\} = \frac{1}{2}\#\{x,y,z\in\ZZ \mid n=2x^2+y^2+8z^2\}\\
+%		\notag \text{(respectively, } \\
+%		\#\{x,y,z\in\ZZ \mid \frac{n}{2}=4x^2+y^2+32z^2\} = \frac{1}{2}\#\{x,y,z\in\ZZ \mid \frac{n}{2}=4x^2+y^2+8z^2\})
+%		\end{align}
+%		If the weak Birch-Swinnerton-Dyer conjecture is true for the elliptic curves $E_n:y^2=x^3-n^2x$, then, conversely, these equalities imply that $n$ is a congruent number.
+%	\end{theorem}
+%	
+%	\begin{proposition}
+%		\cite{Koblitz}[p.4] Let $n$ be a fixed squarefree positive integer. Let $X,Y,Z,x$ always denote rational numbers, with $X<Y<Z$. There is a one-to-one correspondence between right triangles with legs $X$ and $Y$, hypotenuse $Z$, and area $n$; and numbers $x$ for which $x$, $x+n$, and $x-n$ are each the square of a rational number. The correspondence is:
+%		\begin{align*}
+%		X,Y,Z\rightarrow x &= (Z/2)^2 \\
+%		x\rightarrow X &= \sqrt{x+n} - \sqrt{x-n}, Y = \sqrt{x+n}+\sqrt{x-n}, Z = 2\sqrt{x}.
+%		\end{align*}
+%		In particular, $n$ is a congruent number if and only if there exists $x$ such that $x$, $x+n$, and $x-n$ are squares of rational numbers.
+%	\end{proposition}
 	
 	\section{Praktische toepassingen}
 	
