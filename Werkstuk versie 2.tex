@@ -46,7 +46,7 @@
 		\thispagestyle{empty}
 		\begin{figure*}[h!]
 			\centering
-			\begin{tikzpicture}[xscale=5, yscale=3]
+			\begin{tikzpicture}[xscale=6, yscale=3]
 			\coordinate (O) at (0,0);
 			\coordinate (A) at (1,0);
 			\coordinate (B) at (0,1);
@@ -55,6 +55,10 @@
 			(A) -- node[auto,swap]{$\frac{224403517704336969924557513090674863160948472041}{8912332268928859588025535178967163570016480830}$}
 			(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$} (O);
 			\draw (M) node[auto]{oppervlakte $=157$};
+			\coordinate (X1) at (0,0.1);
+			\coordinate (X2) at (0.05,0.1);
+			\coordinate (X3) at (0.05,0);
+			\draw (X1) -- (X2) -- (X3);
 			\end{tikzpicture}
 		\end{figure*}
 	\end{titlepage}
@@ -94,6 +98,10 @@
 			\draw (M) node[auto]{$x\cdot \dfrac{y}{2} = n$};
 			\coordinate (N) at (1.5, 0.25);
 			\draw (N) node[auto]{$x^2 + y^2 = z^2$};
+			\coordinate (X1) at (0,0.1);
+			\coordinate (X2) at (0.05,0.1);
+			\coordinate (X3) at (0.05,0);
+			\draw (X1) -- (X2) -- (X3);
 			\end{tikzpicture}
 		\end{figure*}
 	\end{definition}
@@ -144,41 +152,9 @@
 
 
 	\section{Voorbeelden}
-	We zullen eerst aantonen dat $m=1$ en $m=2$ geen congruente getallen zijn. We nemen daarvoor de volgende rechthoekige driehoek:
-	\begin{figure*}[h!]
-		\centering
-		\begin{tikzpicture}[xscale=4, yscale=2]
-		\coordinate (O) at (0,0);
-		\coordinate (A) at (1,0);
-		\coordinate (B) at (0,1);
-		\coordinate (M) at (0.25, 0.25);
-		\draw (O) -- node[auto,swap]{$y$} 
-		(A) -- node[auto,swap]{$z$}
-		(B) -- node[auto,swap]{$x$} (O);
-		\draw (M) node[auto]{$m$};
-		\end{tikzpicture}
-	\end{figure*}\\
-	Als $m=1$ een congruent getal is, moet er volgens definitie (\ref{def:meetkunde}) gelden dat er $\frac{1}{2}xy=1$ en $x,y,z\in\QQ$. Hieruit kunnen we afleiden dat:
-	\begin{equation}
-	xy=2
-	\end{equation}
-	Waaruit volgt dat:
-	\begin{align}
-	\label{vgl:x} x=\frac{2}{y}\\
-	\label{vgl:y} y=\frac{2}{x}
-	\end{align}
-	We weten door de stelling van Pythagoras dat er moet gelden $x^2+y^2=z^2$. Als we de vergelijkingen (\ref{vgl:x}) en (\ref{vgl:y}) invullen, krijgen we:
-	\begin{align}
-	\left(\frac{2}{y}\right)^2 + \left(\frac{2}{x}\right)^2 &= z^2\\
-	\Rightarrow \sqrt{\frac{2^2}{y^2} + \frac{2^2}{x^2}} &= z\\
-	\Rightarrow \sqrt{\frac{4x^2 + 4y^2}{x^2y^2}} &= z\\
-	\Rightarrow \frac{\sqrt{4x^2 + 4y^2}}{xy} &= z
-	\end{align} 
-	
-		
-	%Geef een bewijs met n=1 of n=2
-	%Geef andere voorbeelden
-	Hieronder volgen drie voorbeelden van congruente getallen, volgens definitie \ref{def:meetkunde}. Het kleinste congruente getal is $5$. Dat is de driehoek met de volgende zijden: {\color{red}bewering beargumenteren?}
+	De eerste negentien congruente zijn: $5$, $6$, $7$, $13$, $14$, $15$, $21$, $22$, $23$, $29$, $30$, $31$, $34$, $37$, $38$, $39$, $41$, $46$, $47$. \cite{Coates}[p.19] We zullen hieronder drie voorbeelden geven.\\
+	\\
+	Het kleinste congruente getal is $5$. Dat is de driehoek met de volgende zijden:
 	\begin{figure*}[h!]
 		\centering
 		\begin{tikzpicture}[xscale=4, yscale=2]
@@ -190,6 +166,10 @@
 		(A) -- node[auto,swap]{$6\frac{5}{6}$}
 		(B) -- node[auto,swap]{$1\frac{1}{2}$} (O);
 		\draw (M) node[auto]{$n=5$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
 		\end{tikzpicture}
 	\end{figure*}\\
 	Het kleinste congruente getal met zijden uit $\NN$ is $6$. Dat is de driehoek met de volgende zijden:
@@ -204,9 +184,13 @@
 		(A) -- node[auto,swap]{$5$}
 		(B) -- node[auto,swap]{$3$} (O);
 		\draw (M) node[auto]{$n=6$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
 		\end{tikzpicture}
 	\end{figure*}\\
-	Dit is de driehoek met oppervlakte $157$: \cite{Koblitz}[p.5]
+	Dit is de driehoek met een oppervlakte van $157$: \cite{Koblitz}[p.5]
 	\begin{figure*}[h!]
 		\centering
 		\begin{tikzpicture}[xscale=4, yscale=2]
@@ -218,6 +202,10 @@
 		(A) -- node[auto,swap]{$\frac{224403517704336969924557513090674863160948472041}{8912332268928859588025535178967163570016480830}$}
 		(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$} (O);
 		\draw (M) node[auto]{$n=157$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
 		\end{tikzpicture}
 	\end{figure*}
 
@@ -241,6 +229,10 @@
 		\draw (S) node[auto]{$x,y,z\in\QQ$};
 		\coordinate (N) at (1.9, 0.1);
 		\draw (N) node[auto]{$\frac{1}{2}xy=r\in\NN$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
 		\end{tikzpicture}
 	\end{figure}\\
 	Dit is een driehoek met zijn zijden in $\QQ$ en zijn oppervlakte in $\NN$. Dit betekent dus dat $r$ een congruent getal is.
@@ -262,6 +254,10 @@
 		\draw (S) node[auto]{$sx,sy,sz\in\QQ$};
 		\coordinate (N) at (2.6, 0.1);
 		\draw (N) node[auto]{$\frac{1}{2} sx \cdot sy = s^2 \cdot \frac{1}{2}xy = s^2r \in\NN$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
 		\end{tikzpicture}
 	\end{figure}\\
 	We zien dat $s^2r\in\NN$ ook een congruent getal is, want de zijden van de driehoek bevinden zich in $\QQ$. Als we nu willen zoeken naar congruente getallen, kunnen we dus ook kijken naar alle kwadraatvrije\footnote{Een kwadraatvrij getal is een getal dat niet deelbaar is door een kwadraat groter dan $1$. Waarbij een kwadraat een getal $k\in\NN$ zodat $\sqrt{k}\in\NN$. \cite{Beukers}} getallen $m'\in\NN$. Namelijk: door het zojuist gegeven voorbeeld zien we dat we $r$ met een willekeurig kwadraat uit $\NN$ kunnen vermenigvuldigen zonder dat het zijn eigenschappen verliest, het is dan nog steeds een congruent getal.
@@ -306,9 +302,6 @@
 	Wat opvalt is dat $E>D$.\\
 	
 	We kunnen deze methode herhalen met $U'$, $V'$ en $E$, en zo weer een nieuwe presentatie vinden. Met die nieuwe presentatie kunnen we weer een nieuwe presentatie vinden, enzovoort. In feite kunnen we het dus oneindig vaak herhalen, waarbij we steeds een nieuwe presentatie vinden. Ergo: ieder congruent getal bevat oneindig veel presentaties.
-	
-	
-	\section{Praktische toepassingen}
 	
 	
 	\section{Samenvatting}
