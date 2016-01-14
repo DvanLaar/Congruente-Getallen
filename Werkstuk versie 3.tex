@@ -1,0 +1,413 @@
+\documentclass[12pt,reqno]{article}
+\usepackage[dutch]{babel}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{url}
+
+\title{\textbf{Congruente getallen}\\
+		\small{eerste versie begeleider}}
+\author{
+	\begin{tabular}{ l l }
+		Lotte Bruijnen, & 4297652 \\
+		Daan van Laar, & 5518741 \\
+		Suzanne Vincken, & 4273338
+	\end{tabular}\\\\
+	Onder begeleiding van: Carel Faber, UU
+}
+\date{04-01-2016}
+
+\newcommand*{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand*{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand*{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand*{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand*{\CC}{\ensuremath{\mathbb{C}}}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Stelling}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Propositie}
+\newtheorem{corollary}[theorem]{Gevolg}
+
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Voorbeeld}
+\newtheorem{definition}[theorem]{Definitie}
+\newtheorem{remark}[theorem]{Opmerking}
+
+\DeclareMathOperator{\ggd}{ggd}
+
+\begin{document}
+	\begin{titlepage}
+		\maketitle
+		\thispagestyle{empty}
+		\begin{figure*}[h!]
+			\centering
+			\begin{tikzpicture}[xscale=6, yscale=3]
+			\coordinate (O) at (0,0);
+			\coordinate (A) at (1,0);
+			\coordinate (B) at (0,1);
+			\coordinate (M) at (0.38, 0.15);
+			\draw (O) -- node[auto,swap]{$\frac{411340519227716149383203}{21666555693714761309610}$} 
+			(A) -- node[auto,swap]{$\frac{224403517704336969924557513090674863160948472041}{8912332268928859588025535178967163570016480830}$}
+			(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$} (O);
+			\draw (M) node[auto]{oppervlakte $=157$};
+			\coordinate (X1) at (0,0.1);
+			\coordinate (X2) at (0.05,0.1);
+			\coordinate (X3) at (0.05,0);
+			\draw (X1) -- (X2) -- (X3);
+			\end{tikzpicture}
+		\end{figure*}
+	\end{titlepage}
+
+	\allowdisplaybreaks
+	
+	\section{Inleiding}
+	We hebben onderzoek gedaan naar congruente getallen om onze kennis te verbreden. Het is een onderwerp uit de getaltheorie. In dit werkstuk zullen we vertellen wat we hebben gevonden.
+	
+	In hoofdstuk 2 zullen we Pythagore\"ische drietallen en congruente getallen behandelen. We zullen definities geven en we leggen uit wat deze twee onderwerpen met elkaar te maken hebben. Daarna, in hoofdstuk 3, zullen we een aantal voorbeelden geven van congruente getallen. Hoofdstuk 4 zal gaan over het vinden van congruente getallen. Hoe vinden we alle getallen die congruent zijn? In het laatste hoofdstuk, hoofdstuk 5, zullen we kijken naar presentaties van congruente getallen. Dit heeft te maken met Pythagore\"ische drietallen. Als afsluiting zullen we een samenvatting geven van alles wat we hebben behandeld.
+	
+	
+	%\beginsection{Daan}
+	\section{Pythagore\"ische drietallen en congruente getallen}\label{sec:def}
+	%Wat is een Pythagoreisch drietal?
+	%Wat is een congruent getal?
+	%  - algebraische definitie + bewijs
+	%  - meetkundige definitie
+	%  - equivalentie van die twee definities
+	%  - definitie primitieve congruente getallen: Een kwadraatvrij congruent getal
+	%Er schijnt een stelling te zijn die alle Pythagoreïsche drietallen classificeert. Als je die kan vinden, kan je het die even noemen.
+	Eerst zullen we kijken naar de definitie van congruente getallen. Er bestaan echter meerdere definities. We zullen er hier twee behandelen.\\
+	
+	Ten eerste kijken we naar de meetkundige definitie uit \cite{Oort}[p.3]:	
+	
+	\begin{definition}\label{def:meetkunde}
+		Een positief geheel getal $n$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $n$. Noem de lengtes van de zijden $x,y,z\in\QQ$; met behulp van de stelling van Pythagoras zien we:
+		\begin{figure*}[h!]
+			\centering
+			\begin{tikzpicture}[xscale=6, yscale=3]
+			\coordinate (O) at (0,0);
+			\coordinate (A) at (1,0);
+			\coordinate (B) at (0,1);
+			\draw (O) -- node[auto,swap]{$x$} 
+			(A) -- node[auto,swap]{$z$}
+			(B) -- node[auto,swap]{$y$} (O);
+			\coordinate (M) at (1.5, 0.5);
+			\draw (M) node[auto]{$x\cdot \dfrac{y}{2} = n$};
+			\coordinate (N) at (1.5, 0.25);
+			\draw (N) node[auto]{$x^2 + y^2 = z^2$};
+			\coordinate (X1) at (0,0.1);
+			\coordinate (X2) at (0.05,0.1);
+			\coordinate (X3) at (0.05,0);
+			\draw (X1) -- (X2) -- (X3);
+			\end{tikzpicture}
+		\end{figure*}
+	\end{definition}
+	We zien dat hier een congruent getal $n$ wordt gegeven als de oppervlakte van een rechthoekige driehoek waarvan (de lengte van) de zijden in $\QQ$ zitten. We kunnen conguente getallen ook bekijken via een algebra\"{i}sche benadering. De volgende definitie komt van \cite{Oort}[p.3].
+
+	\begin{definition}\label{def:algebra}
+		Een positief geheel getal $n$ heet een congruent getal als er een $\delta\in\QQ$ bestaat zodanig dat
+		\begin{align*}
+		\delta^2 - n,\quad \delta^2,\quad \delta^2 + n
+		\end{align*}
+		kwadraten zijn in $\QQ$.
+	\end{definition}	
+	Een getal dat aan deze definitie voldoet is het getal 5. We nemen $\delta = \frac{41}{12}$. Dan geldt:
+	\begin{align*}
+	\delta^2 &= \left( \frac{41}{12} \right)^2 \in\QQ\\
+	\delta^2 - n &= \frac{1681}{144} - 5 = \frac{961}{144} = \left( \frac{31}{12}\right)^2 \in\QQ\\
+	\delta^2 + n &= \frac{1681}{144} + 5 = \frac{2401}{144} = \left( \frac{48}{12}\right)^2 \in\QQ
+	\end{align*}
+	Hieruit volgt dus dat $5$ een conguent getal is. \\
+	
+	%Een andere manier om congruente getallen te defini\"{e}ren is door er op een meetkundige manier naar te kijken. Echter, voor die definitie is het handig om eerst te kijken naar Pythagore\"ische drietallen. \\
+	
+	%Dit straks verwijderen en de definities weer omdraaien.
+	Bij de eerste definitie maken we gebruik van Pythagore\"ische drietallen. Daar zullen we nu wat meer over uitleggen.\\
+	
+	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden van Fermat. Dit vermoeden ziet er als volgt uit:
+	\begin{align}
+	x^n + y^n = z^n \qquad \text{met} \qquad n \in \NN.
+	\end{align}
+	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor (1). Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$, geldt $x \cdot y \cdot z = 0$. \\
+	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. Dit komt omdat het vermoeden van Fermat met $n=2$ de stelling van Pythagoras is. De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
+	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve \mbox{Pythagore\"ische} drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor ook geldt dat de grootste gemeenschappelijke deler van x en y 1 is. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen en gaan we het volgende bewijzen:
+	\begin{theorem}
+	Als $(x,y,z)$ een Pythagore\"isch drietal is met $\ggd(x,y) = 1$, dan $\ggd(x,z) = 1$
+	\end{theorem}
+	\begin{proof}
+	Stel, $\ggd(x,y) = g$, dan geldt
+	\begin{align*}
+	x = a \cdot g \text{ met } a \in \NN \\
+	y = b \cdot g \text{ met } b \in \NN
+	\end{align*}
+	Deze notaties voor $x$ en $y$ kunnen we substitueren in de stelling van Pythagoras:
+	\begin{align*}
+	z^2=(a\cdot g)^2+(b\cdot g)^2\\
+	z^2 = g^2\cdot (a^2 + b^2)\\
+	z = g\cdot \sqrt{a^2 + b^2}
+	\end{align*}
+	Nu weten we dat $g$ in ieder geval een deler van $z$ is. Verder weten we dat $x$ wel $a$ als deler heeft, maar niet $b$. Als dat wel zo was, was $\ggd(x,y) = g*b$. Daarom is $g$ de grootste gemene deler van $x$ en $z$. Ditzelfde kan worden gedaan zonder verlies van algemeenheid voor $y$ en $z$.
+	\end{proof}	
+	Verder hebben primitieve Pythagore\"ische drietallen nog veel meer eigenschappen, die elk bewezen kunnen worden. Wij zullen nog een aantal van deze eigenschappen behandelen, te beginnen met welke getallen even, en welke getallen oneven zijn. Van $x$ en $y$ is er altijd \'e\'en getal even. Daardoor is $z$ altijd oneven.
+	\begin{proof}
+	Voor $x$ en $y$ zijn er 3 mogelijkheden: allebei even, allebei even of 1 van de 2 is even. De eerste mogelijkheid kunnen we snel afschrijven. Als $x$ en $y$ allebei even zouden zijn, dan is $\ggd(x,y) \neq 1$ want 2 is sowieso een deler. Om te bewijzen dat $x$ en $y$ niet allebei oneven kunnen zijn, nemen we eerst aan dat dat wel zo is:
+	\begin{align*}
+	x = 2k + 1\\
+	y = 2n + 1\\
+	\end{align*}
+	Uitwerken hiervan geeft dat $z^2$ een even getal is, en daarom $z$ ook (de som van 2 oneven getallen is weer even). We schrijven $z = 2m$
+	\begin{align*}
+	x^2 + y^2 = z^2\\
+	(2k + 1)^2 + (2n + 1)^2 = (2m)^2\\
+	4k^2 + 4k + 1 +4n^2 + 4n + 1 = 4m^2\\
+	4(k^2 + k + n^2 + n) + 2 = 4m^2
+	\end{align*}
+	Als we beide kanten door 4 zouden delen, krijgen we een rest van 2 aan de linkerkant en een rest van 0 aan de rechterkant. Dit kan natuurlijk niet, dus $x$ en $y$ zijn niet allebei even.
+	\end{proof}
+	\cite{Posamentier}[p.156]Een derde eigenschap van een Pythagore\"isch drietal is dat $\frac{(z-x)(z-y)}{2}$ een kwadraat is. 
+	
+	\begin{proposition}
+		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwaadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta$, $\delta +n$ en $\delta -n$ de kwadraten zijn van een rationeel nummer. De correspondentie is:
+		\begin{align}
+		x,y,z &\rightarrow \delta = \left( \frac{z}{2} \right)^2 \\
+		\delta &\rightarrow x=\sqrt{\delta+n} - \sqrt{\delta-n},\quad y = \sqrt{\delta+n}+\sqrt{\delta-n},\quad z = 2\sqrt{\delta}.
+		\end{align}
+		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er bestaat een $\delta$ zodat $\delta$, $\delta+n$ en $\delta-n$ kwadraten van rationele nummers zijn.
+	\end{proposition}
+	\begin{proof}
+	We beginnen door een drietal $(x,y,z)$ te nemen met de gewenste eigenschappen, dus
+	\begin{align*}
+	x^2 + y^2 = z^2 \text{ en } \frac{1}{2}xy=n
+	\end{align*}
+	Als we 4 keer de tweede vergelijking van de eerste afhalen of erbij optellen houden we het volgende over:
+	\begin{align*}
+	x^2 \pm 2xy + y^2 = z^2 \pm 4n\\
+	(x \pm y)^2 = z^2 \pm 4n\\
+	\end{align*}
+	Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = \frac{z}{2}^2$ de eigenschap heeft dat $\delta \pm n$ gehele kwadraten zijn
+	\end{proof}
+	
+	%\endsection{Daan}
+
+
+	\section{Voorbeelden}
+	De eerste negentien congruente zijn: $5$, $6$, $7$, $13$, $14$, $15$, $21$, $22$, $23$, $29$, $30$, $31$, $34$, $37$, $38$, $39$, $41$, $46$, $47$. \cite{Coates}[p.19] We zullen hieronder drie voorbeelden geven.\\
+	\\
+	Het kleinste congruente getal is $5$. Dat is de driehoek met de volgende zijden:
+	\begin{figure*}[h!]
+		\centering
+		\begin{tikzpicture}[xscale=4, yscale=2]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (1,0);
+		\coordinate (B) at (0,1);
+		\coordinate (M) at (0.25, 0.25);
+		\draw (O) -- node[auto,swap]{$6\frac{2}{3}$} 
+		(A) -- node[auto,swap]{$6\frac{5}{6}$}
+		(B) -- node[auto,swap]{$1\frac{1}{2}$} (O);
+		\draw (M) node[auto]{$n=5$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
+		\end{tikzpicture}
+	\end{figure*}\\
+	Het kleinste congruente getal met zijden uit $\NN$ is $6$. Dat is de driehoek met de volgende zijden:
+	\begin{figure*}[h!]
+		\centering
+		\begin{tikzpicture}[xscale=4, yscale=2]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (1,0);
+		\coordinate (B) at (0,1);
+		\coordinate (M) at (0.25, 0.25);
+		\draw (O) -- node[auto,swap]{$4$} 
+		(A) -- node[auto,swap]{$5$}
+		(B) -- node[auto,swap]{$3$} (O);
+		\draw (M) node[auto]{$n=6$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
+		\end{tikzpicture}
+	\end{figure*}\\
+	Dit is de driehoek met een oppervlakte van $157$: \cite{Koblitz}[p.5]
+	\begin{figure*}[h!]
+		\centering
+		\begin{tikzpicture}[xscale=4, yscale=2]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (1,0);
+		\coordinate (B) at (0,1);
+		\coordinate (M) at (0.25, 0.25);
+		\draw (O) -- node[auto,swap]{$\frac{411340519227716149383203}{21666555693714761309610}$} 
+		(A) -- node[auto,swap]{$\frac{224403517704336969924557513090674863160948472041}{8912332268928859588025535178967163570016480830}$}
+		(B) -- node[auto,swap]{$\frac{6803298487826435051217540}{411340519227716149383203}$} (O);
+		\draw (M) node[auto]{$n=157$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
+		\end{tikzpicture}
+	\end{figure*}
+
+
+	\section{Congruente getallen vinden}
+	Voor dit hoofdstuk hebben we gebruik gemaakt van \cite{Koblitz}[p.3-4].\\
+	We weten dat een congruent getal $n$ een geheel getal is als oppervlakte van een driehoek met rationale zijden. We willen nu graag weten welke getallen $m\in\NN$ voldoen aan de definitie van een congruent getal. Als we dat willen doen met de kennis van nu, moeten we voor elke $m$ gaan kijken of we een driehoek kunnen vinden met zijden in $\QQ$ zodat de oppervlakte van deze driehoek gelijk is aan $m$. Het is niet moeilijk om te bedenken dat dat een onmogelijke zaak is, zelfs als we de computer laten rekenen. Dus moeten we opzoek gaan naar een manier om het aantal mogelijke getallen $m\in\NN$ te verminderen. Om te kijken hoe we dat kunnen doen, kijken we eerst naar de volgende driehoek:
+	\begin{figure}[h!]
+		\centering
+		\begin{tikzpicture}[xscale=2, yscale=1]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (1,0);
+		\coordinate (B) at (0,1);
+		\coordinate (M) at (0.25, 0.25);
+		\draw (O) -- node[auto,swap]{$y$} 
+		(A) -- node[auto,swap]{$z$}
+		(B) -- node[auto,swap]{$x$} (O);
+		\draw (M) node[auto]{$r$};
+		
+		\coordinate (S) at (1.8, 0.7);
+		\draw (S) node[auto]{$x,y,z\in\QQ$};
+		\coordinate (N) at (1.9, 0.1);
+		\draw (N) node[auto]{$\frac{1}{2}xy=r\in\NN$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
+		\end{tikzpicture}
+	\end{figure}\\
+	Dit is een driehoek met zijn zijden in $\QQ$ en zijn oppervlakte in $\NN$. Dit betekent dus dat $r$ een congruent getal is.\\
+	
+	We bekijken nu dezelfde driehoek nadat we alle zijden vermigvuldigd hebben met een getal $s\in\NN$. Deze driehoek ziet er dan alsvolgt uit:
+	\begin{figure}[h!]
+		\centering
+		\begin{tikzpicture}[xscale=2, yscale=1]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (1,0);
+		\coordinate (B) at (0,1);
+		\coordinate (M) at (0.25, 0.25);
+		\draw (O) -- node[auto,swap]{$sy$} 
+		(A) -- node[auto,swap]{$sz$}
+		(B) -- node[auto,swap]{$sx$} (O);
+		\draw (M) node[auto]{$s^2r$};
+		
+		\coordinate (S) at (1.9, 0.7);
+		\draw (S) node[auto]{$sx,sy,sz\in\QQ$};
+		\coordinate (N) at (2.6, 0.1);
+		\draw (N) node[auto]{$\frac{1}{2} sx \cdot sy = s^2 \cdot \frac{1}{2}xy = s^2r \in\NN$};
+		\coordinate (X1) at (0,0.1);
+		\coordinate (X2) at (0.05,0.1);
+		\coordinate (X3) at (0.05,0);
+		\draw (X1) -- (X2) -- (X3);
+		\end{tikzpicture}
+	\end{figure}\\
+	We zien dat $s^2r\in\NN$ ook een congruent getal is, want de zijden van de driehoek bevinden zich in $\QQ$. Als we nu willen zoeken naar congruente getallen, kunnen we dus ook kijken naar alle kwadraatvrije\footnote{Een kwadraatvrij getal is een getal dat niet deelbaar is door een kwadraat groter dan $1$. Waarbij een kwadraat een getal $k\in\NN$ zodat $\sqrt{k}\in\NN$. \cite{Beukers}} getallen $m'\in\NN$. Namelijk: door het zojuist gegeven voorbeeld zien we dat we $r$ met een willekeurig kwadraat uit $\NN$ kunnen vermenigvuldigen zonder dat het zijn eigenschappen verliest, het is dan nog steeds een congruent getal.\\
+
+	We hebben nu dus gezien dat we alleen nog maar hoeven te kijken naar kwaadraatvrije getallen. We nemen vanaf nu dus aan dat $n$ een kwaadraatvrij congruent getal is. Dat betekent dat we al een stuk sneller door $\NN$ kunnen gaan om te kijken welke getallen congruent zijn. Sterker nog: er betstaat een algoritme die voor elke $m'\in\NN$ checkt of er een Pythagore\"isch drietal bestaat zodat $m'$ de oppervlakte is van deze driehoek. Als $m'$ congruent is, zet het algoritme deze in een lijst. Helaas weten we niet of een getal dat niet in de lijst staat, ook daadwerkelijk geen congruent getal is. Het kan namelijk ook zo zijn dat het algoritme te lang moest zoeken naar een Pythagore\"isch drietal, waardoor hij het zoeken heeft afgebroken. Dit is dus nog steeds geen optimale manier om naar congruente getallen te zoeken. We zoeken dus eigenlijk nog steeds naar een formule die ons kan vertellen of een getal wel of niet congruent is. Daarvoor introduceren we eerst de stelling van Tunnell:
+	\begin{theorem}\label{def:tunnell}
+		\cite{Koblitz}[p.212, vertaald] (Tunnell, 1983) Als $n$ een kwadraatvrij en oneven (respectievelijk even) positief geheel getal is en $n$ is de oppervlakte van een rechthoekige driehoek met rationale zijden, dan
+		\begin{align}
+		\label{vgl:oneven} \#\{x,y,z\in\ZZ \mid n=2x^2+y^2+32z^2\} = \frac{1}{2} \#\{x,y,z\in\ZZ \mid n=2x^2+y^2+8z^2\}\\
+		\notag \text{(respectievelijk} \\
+		\label{vgl:even} \#\{x,y,z\in\ZZ \mid \frac{n}{2}=4x^2+y^2+32z^2\} = \frac{1}{2} \#\{x,y,z\in\ZZ \mid \frac{n}{2}=4x^2+y^2+8z^2\})
+		\end{align}
+		Als het zwakke vermoeden van Birch-Swinnerton-Dyer waar is voor de elliptische krommen $E_n:y^2=x^3-n^2x$, dan, omgekeerd, impliceren deze gelijkheden dat $n$ een congruent getal is.
+	\end{theorem}
+	\noindent Deze stelling zegt dat als $n$ een kwadraatvrij en congruent getal is, dan voldoet deze $n$ aan de vergelijkingen (\ref{vgl:oneven}) en (\ref{vgl:even}). Om te checken of een kwadraatvrij getal $m'\in\NN$ congruent is, willen we weten dat de stelling ook de andere kant op werkt. Dit kunnen we alleen aannemen als we het vermoeden van Birch-Swinnerton-Dyer aannemen, een vermoeden over elliptische krommen. Dit is voor nu te ingewikkeld, dus dit zullen we niet verder behandelen. Wat we nu in elk geval hebben is een formule om te kijken of een kwadraatvrij getal $m'\in\NN$ congruent is of niet en dat is waar we naar zochten.
+	
+	
+	\section{Presentaties van congruente getallen}
+	Zoals we in hoofdstuk \ref{sec:def} al gezien hebben, bestaan er verschillende definities voor een congruent getal. Wij gebruiken hier de meetkundige definitie, waarbij een congruent getal afhangt van een Pythagore\"isch drietal. We zullen hieronder eerst uitleggen wat een presentatie is, daarna zullen we een voorbeeld geven van een presentatie.
+	
+	\subsection{Wat is een presentatie}\label{sec:presentaties}
+	Het Pythagore\"ische drietal dat bij een congruent getal hoort, heet de presentatie van het congruente getal. Zo is $(3,4,5)$ de presentatie van het congruente getal $6$. Oftewel,  de presentatie van een congruent getal $n$ is een drietal $(x,y,z)\in\QQ^3_{>0}$, zodat dit, met de meetkundige definitie, $n$ geeft.\\
+	
+	Het is belangrijk om hier op te merken dat een congruent getal meerdere presentaties heeft. Zo zijn $(21,20,29)$ en $(35,12,37)$ allebei presentaties van het congruente getal $210$ \cite{Oort}[p.9]. Sterker nog, ieder congruent getal heeft oneindig veel presentaties. We zullen dat hieronder bewijzen.\\
+	
+	Om te beginnen, breiden we eerst de definitie van presentatie uit. Het Pythagore\"ische drietal is \'e\'en versie van een presentatie. En hoewel deze heel praktisch is om congruente getallen te vinden, is deze niet handig voor ons bewijs. We gebruiken dus een andere soort presentatie, gebaseerd op de stelling van Euclides. Deze is van de vorm $((k,l),D,n)$; wat dit precies inhoudt, zal straks duidelijk worden. Concreter gezegd: een presentatie is dat wat "bewijst" dat een getal congruent is.\\
+	
+	Om deze nieuwe presentatie te begrijpen, hebben we de volgende stelling nodig:
+	\begin{theorem}\label{def:euclides}
+		\cite{Oort}[p.8] (Euclides) Als $(x,y,z)$ een primitief Pythagore\"isch drietal is met $x$ oneven, dan zijn er getallen $k,l\in\ZZ_{>0}$ met $k>l$, en $\ggd(k,l)=1$ en $k+l$ oneven zodat
+		\begin{equation*}
+			x=k^2-l^2,\qquad y=2kl,\qquad z=k^2+l^2.
+		\end{equation*}
+	\end{theorem}
+	\noindent Deze stelling verklaart alvast de $k$ en $l$ in onze nieuwe presentatie $((k,l),D,n)$.\\
+	
+	De $D$ en $n$ zijn allebei positieve gehele getallen, afhankelijk van $k$ en $l$. Dat zit zo: $n=kl\cdot \frac{k^2-l^2}{D^2}$, waarbij $n$ een kwadraatvrij congruent getal is en $D$ is het getal dat ervoor zorgt dat $n$ inderdaad kwadraatvrij is.\footnote{Indien een $kl\cdot(k^2-l^2)$ al kwadraatvrij is, is de waarde van $D$ uiteraard gelijk aan 1.} Dus $((k,l),D,n)$ is een presentatie van $n$.\\
+	
+	Nu we weten wat de presentatie $((k,l),D,n)$ inhoudt, kunnen we beginnen met het bewijzen van de volgende stelling.	
+	\begin{theorem}
+		Elk congruent getal heeft oneindig veel presentaties.
+	\end{theorem}
+	
+	\begin{proof}
+		We defini\"eren eerst:
+		\begin{equation*}
+			U:=z^2=(k^2+l^2)^2, \qquad V:=2xy=2\cdot(k^2-l^2)\cdot 2kl
+		\end{equation*}
+		Met $U$ en $V$ kunnen we een andere presentatie vinden voor ons congruente getal. Dat doen we als volgt:
+		\begin{align*}
+			UV (U - V) (U + V) &= z^2 \cdot 2xy (z^2 - 2xy) (z^2 + 2xy)\\
+			&= z^2 \cdot 2xy (x^2 + y^2 - 2xy) (x^2 + y^2 + 2xy)\\
+			&= 2xy \cdot z^2 (x - y)^2 (x + y)^2\\
+			&= 2 (k^2-l^2) \cdot 2kl (k^2+l^2)^2 (x - y)^2 (x + y)^2\\
+			&= (2 (k^2+l^2) (x-y) (x+y))^2 \cdot kl (k^2-l^2)\\
+			&= (2 z (x - y) (x + y))^2 \cdot d^2n\\
+			&= (2 z D (x - y) (x + y))^2 \cdot n
+		\end{align*}
+		
+		We hebben zo dus een nieuwe presentatie gevonden voor $n$, namelijk: $((p,q),E,n)$, met bijbehorend Pythagor\"isch drietal $(a,b,c)$. Zowel $p$ en $q$ als $(a,b,c)$ voldoen uiteraard aan de eisen die gesteld zijn in de stelling van Euclides.\\
+		
+		Dat de gevonden presentatie niet gelijk is aan de originele, is te zien aan de constante $E$. Er geldt namelijk:
+		\begin{align*}
+			E &= | 2 z D (x-y) (x+y) | \\
+			&= 2 D \cdot | z (x-y) (x+y) | \\
+			&\geq 2 D \\
+			&> D.
+		\end{align*}
+		Dus $E > D$.\\
+		
+		We kunnen dezelfde berekeningen doen met $U'$ en $V'$. We krijgen dan weer een andere presentatie. Belangrijker nog, we krijgen de nieuwe constante $F$ waarvoor geldt: $F=|2 c E (a-b) (a+b)|.$ Uiteraard geldt dan dat $F > E$.\\
+		
+		We kunnen de procedure dus oneindig vaak herhalen, steeds met een andere presentatie als uitkomst. Dat betekent dus dat voor ons congruente getal $n$ (en dus ieder congruent getal $n$) oneindig veel presentaties bestaan.
+	\end{proof}
+	
+	\subsection{Een voorbeeld van een presentatie}
+	We hebben in hoofdstuk \ref{sec:presentaties} een bewijs geleverd dat er oneindig veel presentaties bestaan, maar we hebben nog niet gezien hoe deze methode in de praktijk werkt. Dat gaan we hier doen, voor het congruente getal 210.\\
+	
+	Als eerste willen we uiteraard controleren of 210 inderdaad een congruent en kwadraatvrij getal is. Dat het congruent is, weten we al. Immers, eerder zijn al twee presentaties gegeven, namelijk $(21,20,29)$ en $(35,12,37)$. Dat 210 ook kwadraatvrij is, is na te gaan door het getal op te splitsen in priemfactoren. Voor 210 geldt: $210 = 2 \cdot 3 \cdot 5 \cdot 7$. Geen enkel getal komt dubbel voor, dus is 210 ook kwadraatvrij.\\
+	
+	We kennen al twee presentaties voor 210. We kiezen ervoor om $(21,20,29)$ te gebruiken.\\
+	
+	Allereerst willen we een presentatie van de vorm $((k,l),D,n)$ vinden. De constante $n=210$ weten we al, dus resteren $k$, $l$ en $D$. We kunnen $k$ en $l$ berekenen door de formules $x = k^2 - l^2$, $y = 2kl$ en $z = k^2 + l^2$. De laatste constante, $D$, berekenen we met de formule $n = kl \cdot \frac{k^2-l^2}{D^2}$.\\
+	
+	\noindent We rekenen eerst $k$ uit:
+	\begin{equation*}
+		k^2 = \frac{1}{2}((k^2-l^2)+(k^2+l^2)) = \frac{1}{2} (x+z) = \frac{1}{2} (21+29) = 25.
+	\end{equation*}
+	Dus $k = \sqrt{25} = 5$. Vervolgens kunnen we ook $l$ uitrekenen:
+	\begin{equation*}
+		l = \frac{y}{2k} = \frac{20}{2 \cdot 5} = 2.
+	\end{equation*}
+	Nu resteert alleen $D$ nog:
+	\begin{align*}
+		n &= kl \cdot \frac{k^2-l^2}{D^2}.
+		\intertext{Als we dit invullen, krijgen we:}
+		210 &= 5 \cdot 2 \cdot \frac{5^2-2^2}{D^2} = \frac{210}{D^2}.
+	\end{align*}
+	Dus $D = \sqrt{1} = 1$. De gezochte presentatie is dus $((5,2),1,210)$. Hiermee kunnen we weer een nieuwe presentatie vinden. We gebruiken daarvoor een formule uit het bewijs: $E = |2 z D  (x - y) (x+y)|$. In dit geval geldt dan dat $E = |2 \cdot 29 \cdot 1 \cdot (21-20) (21+20)| = 2378$. Dit is duidelijk een presentatie die heel veel groter is dan de originele.\footnote{Het berekenen van de precieze presentatie is zeer gecompliceerd, dus dat zullen we niet doen.}\\
+	
+	Dezelfde stappen kunnen we uitvoeren voor andere kwadraatvrije congruente getallen. De andere presentatie van 210, $(35,12,37)$, blijkt dan $((6,1),1,210)$ te zijn en geeft $E = 79994$. De eerdergegeven presentatie van 6, $(3,4,5)$, levert dan $((2,1),1,6)$ en $E = 70$ op.
+	
+	
+	\section{Samenvatting}
+	
+	
+	\bibliographystyle{plain}
+	\bibliography{bib}
+\end{document}
