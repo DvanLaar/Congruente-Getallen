@@ -40,6 +40,9 @@
 
 \DeclareMathOperator{\ggd}{ggd}
 
+\hyphenation{Pytha-go-reïsch}
+\hyphenation{pytha-go-reïsch}
+
 \begin{document}
 	\begin{titlepage}
 		\maketitle
@@ -119,20 +122,22 @@
 	\begin{align*}
 	\delta^2 &= \left( \frac{41}{12} \right)^2 \in\QQ\\
 	\delta^2 - n &= \frac{1681}{144} - 5 = \frac{961}{144} = \left( \frac{31}{12}\right)^2 \in\QQ\\
-	\delta^2 + n &= \frac{1681}{144} + 5 = \frac{2401}{144} = \left( \frac{48}{12}\right)^2 \in\QQ
+	\delta^2 + n &= \frac{1681}{144} + 5 = \frac{2401}{144} = \left( \frac{49}{12}\right)^2 \in\QQ
 	\end{align*}
 	Hieruit volgt dus dat $5$ een conguent getal is. \\
 	
 	%Een andere manier om congruente getallen te defini\"{e}ren is door er op een meetkundige manier naar te kijken. Echter, voor die definitie is het handig om eerst te kijken naar Pythagore\"ische drietallen. \\
 	
 	%Dit straks verwijderen en de definities weer omdraaien.
+	
+	%TODO equivalente definities.
 	Bij de eerste definitie maken we gebruik van Pythagore\"ische drietallen. Daar zullen we nu wat meer over uitleggen.\\
 	
-	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden van Fermat. Dit vermoeden ziet er als volgt uit:
+	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden van Fermat. De bijbehorende vergelijking is als volgt geformuleerd:
 	\begin{align}
 	x^n + y^n = z^n \qquad \text{met} \qquad n \in \NN.
 	\end{align}
-	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor (1). Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$, geldt $x \cdot y \cdot z = 0$. \\
+	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor (1). Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$ en $x, y, z \geq 0$, geldt $x \cdot y \cdot z = 0$. \\
 	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. Dit komt omdat het vermoeden van Fermat met $n=2$ de stelling van Pythagoras is. De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
 	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve \mbox{Pythagore\"ische} drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor ook geldt dat de grootste gemeenschappelijke deler van x en y 1 is. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen en gaan we het volgende bewijzen:
 	\begin{theorem}
@@ -171,12 +176,12 @@
 	\cite{Posamentier}[p.156]Een derde eigenschap van een Pythagore\"isch drietal is dat $\frac{(z-x)(z-y)}{2}$ een kwadraat is. 
 	
 	\begin{proposition}
-		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwaadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta$, $\delta +n$ en $\delta -n$ de kwadraten zijn van een rationeel nummer. De correspondentie is:
+		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta$, $\delta +n$ en $\delta -n$ de kwadraten zijn van een rationaal getal. De correspondentie is:
 		\begin{align}
 		x,y,z &\rightarrow \delta = \left( \frac{z}{2} \right)^2 \\
 		\delta &\rightarrow x=\sqrt{\delta+n} - \sqrt{\delta-n},\quad y = \sqrt{\delta+n}+\sqrt{\delta-n},\quad z = 2\sqrt{\delta}.
 		\end{align}
-		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er bestaat een $\delta$ zodat $\delta$, $\delta+n$ en $\delta-n$ kwadraten van rationele nummers zijn.
+		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er een $\delta$ bestaat z\'o dat $\delta$, $\delta+n$ en $\delta-n$ kwadraten van rationale getallen zijn.
 	\end{proposition}
 	\begin{proof}
 	We beginnen door een drietal $(x,y,z)$ te nemen met de gewenste eigenschappen, dus
@@ -188,8 +193,9 @@
 	x^2 \pm 2xy + y^2 = z^2 \pm 4n\\
 	(x \pm y)^2 = z^2 \pm 4n\\
 	\end{align*}
-	Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = \frac{z}{2}^2$ de eigenschap heeft dat $\delta \pm n$ gehele kwadraten zijn
+	Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ rationale kwadraten zijn
 	\end{proof}
+	Hieruit volgt dat de twee eerder gegeven definities in feite equivalent zijn aan elkaar. Het maakt niet heel veel uit welke definitie wij zullen hanteren, maar voor het gemak gaan we uit van definitie 1.
 	
 	%\endsection{Daan}
 
