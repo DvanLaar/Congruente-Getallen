@@ -71,7 +71,7 @@
 	\section{Inleiding}
 	We hebben onderzoek gedaan naar congruente getallen om onze kennis te verbreden. Het is een onderwerp uit de getaltheorie. In dit werkstuk zullen we vertellen wat we hebben gevonden.
 	
-	In hoofdstuk 2 zullen we Pythagore\"ische drietallen en congruente getallen behandelen. We zullen definities geven en we leggen uit wat deze twee onderwerpen met elkaar te maken hebben. Daarna, in hoofdstuk 3, zullen we een aantal voorbeelden geven van congruente getallen. Hoofdstuk 4 zal gaan over het vinden van congruente getallen. Hoe vinden we alle getallen die congruent zijn? In het laatste hoofdstuk, hoofdstuk 5, zullen we kijken naar presentaties van congruente getallen. Dit heeft te maken met Pythagore\"ische drietallen. Als afsluiting zullen we een samenvatting geven van alles wat we hebben behandeld.
+	In hoofdstuk \ref{sec:def} zullen we Pythagore\"ische drietallen en congruente getallen behandelen. We zullen definities geven en we leggen uit wat deze twee onderwerpen met elkaar te maken hebben. Daarna, in hoofdstuk \ref{sec:vb}, zullen we een aantal voorbeelden geven van congruente getallen. Hoofdstuk \ref{sec:suus} zal gaan over het vinden van congruente getallen. Hoe vinden we alle getallen die congruent zijn? In het laatste hoofdstuk, hoofdstuk \ref{sec:lotte}, zullen we kijken naar presentaties van congruente getallen. Dit heeft te maken met Pythagore\"ische drietallen. Als afsluiting zullen we een samenvatting geven van alles wat we hebben behandeld.
 	
 	
 	%\beginsection{Daan}
@@ -112,16 +112,16 @@
 
 	\begin{definition}\label{def:algebra}
 		Een positief geheel getal $n$ heet een congruent getal als er een $\delta\in\QQ$ bestaat zodanig dat
-		\begin{align*}
+		\begin{equation*}
 		\delta^2 - n,\quad \delta^2,\quad \delta^2 + n
-		\end{align*}
+		\end{equation*}
 		kwadraten zijn in $\QQ$.
 	\end{definition}	
 	Een getal dat aan deze definitie voldoet is het getal 5. We nemen $\delta = \frac{41}{12}$. Dan geldt:
 	\begin{align*}
-		\delta^2 &= \left( \frac{41}{12} \right)^2 \in\QQ\\
-		\delta^2 - n &= \frac{1681}{144} - 5 = \frac{961}{144} = \left( \frac{31}{12}\right)^2 \in\QQ\\
-		\delta^2 + n &= \frac{1681}{144} + 5 = \frac{2401}{144} = \left( \frac{49}{12}\right)^2 \in\QQ
+		\delta^2 &= \left( \frac{41}{12} \right)^2 \in\QQ \\
+		\delta^2 - n &= \frac{1681}{144} - 5 = \frac{961}{144} = \left( \frac{31}{12} \right)^2 \in\QQ \\
+		\delta^2 + n &= \frac{1681}{144} + 5 = \frac{2401}{144} = \left( \frac{49}{12} \right)^2 \in\QQ
 	\end{align*}
 	Hieruit volgt dus dat $5$ een conguent getal is. \\
 	
@@ -133,10 +133,10 @@
 	Bij de eerste definitie maken we gebruik van Pythagore\"ische drietallen. Daar zullen we nu wat meer over uitleggen.\\
 	
 	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden van Fermat. De bijbehorende vergelijking is als volgt geformuleerd:
-	\begin{align}
+	\begin{equation}\label{fermat}
 		x^n + y^n = z^n \qquad \text{met} \qquad n \in \NN.
-	\end{align}
-	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor (1). Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$ en $x, y, z \geq 0$, geldt $x \cdot y \cdot z = 0$. \\
+	\end{equation}
+	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor (\ref{fermat}). Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$ en $x, y, z \geq 0$, geldt $x \cdot y \cdot z = 0$. \\
 	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. Dit komt omdat het vermoeden van Fermat met $n=2$ de stelling van Pythagoras is. De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
 	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve \mbox{Pythagore\"ische} drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor ook geldt dat de grootste gemeenschappelijke deler van x en y 1 is. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen en gaan we het volgende bewijzen:
 	\begin{theorem}
@@ -184,13 +184,13 @@
 	\end{proposition}
 	\begin{proof}
 		We beginnen door een drietal $(x,y,z)$ te nemen met de gewenste eigenschappen, dus
-		\begin{align*}
+		\begin{equation*}
 			x^2 + y^2 = z^2 \text{ en } \frac{1}{2}xy=n
-		\end{align*}
+		\end{equation*}
 		Als we 4 keer de tweede vergelijking van de eerste afhalen of erbij optellen houden we het volgende over:
 		\begin{align*}
-			x^2 \pm 2xy + y^2 = z^2 \pm 4n\\
-			(x \pm y)^2 = z^2 \pm 4n\\
+			x^2 \pm 2xy + y^2 = z^2 \pm 4n \\
+			(x \pm y)^2 = z^2 \pm 4n
 		\end{align*}
 		Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ rationale kwadraten zijn
 	\end{proof}
@@ -199,7 +199,7 @@
 	%\endsection{Daan}
 
 
-	\section{Voorbeelden}
+	\section{Voorbeelden}\label{sec:vb}
 	De eerste negentien congruente getallen zijn: $5$, $6$, $7$, $13$, $14$, $15$, $21$, $22$, $23$, $29$, $30$, $31$, $34$, $37$, $38$, $39$, $41$, $46$, $47$, zie \cite{Coates}[p.19]. We zullen hieronder drie voorbeelden geven.\\
 	\\
 	Het kleinste congruente getal is $5$. Dat correspondeert met de driehoek met de volgende zijden:
@@ -258,7 +258,7 @@
 	\end{figure*}
 
 
-	\section{Congruente getallen vinden}
+	\section{Congruente getallen vinden}\label{sec:suus}
 	Voor dit hoofdstuk hebben we gebruik gemaakt van \cite{Koblitz}[p.3-4].\\
 	We weten dat een congruent getal $n$ een geheel getal is dat de oppervlakte is van een driehoek met rationale zijden. We willen nu graag weten welke getallen $m\in\NN$ congruent zijn. Als we dat willen doen met de kennis van nu, moeten we voor elke $m$ gaan kijken of we een driehoek kunnen vinden met zijden in $\QQ$ zodat de oppervlakte van deze driehoek gelijk is aan $m$. Het is niet moeilijk om te bedenken dat dat een onmogelijke zaak is, zelfs als we de computer laten rekenen. Dus moeten we op zoek gaan naar een manier om het aantal mogelijke getallen $m\in\NN$ te verminderen. Om te kijken hoe we dat kunnen doen, kijken we eerst naar de volgende driehoek:
 	\begin{figure}[h!]
@@ -325,7 +325,7 @@
 	\noindent Deze stelling zegt dat als $n$ een kwadraatvrij en congruent getal is, dan voldoet deze $n$ aan de vergelijkingen (\ref{vgl:oneven}) om (\ref{vgl:even}). Om te checken of een kwadraatvrij getal $m'\in\NN$ congruent is, willen we weten dat de stelling ook de andere kant op werkt. Dit kunnen we alleen aannemen als we het vermoeden van Birch en Swinnerton-Dyer aannemen, een vermoeden over elliptische krommen. Dit is voor nu te ingewikkeld, dus dit zullen we niet verder behandelen. Wat we nu in elk geval hebben is een formule om te bewijzen dat $m'$ niet congruent is en we kunnen zeer aannemelijk maken dat $n$ wel een congruent getal is.
 	
 	
-	\section{Presentaties van congruente getallen}
+	\section{Presentaties van congruente getallen}\label{sec:lotte}
 	Zoals we in hoofdstuk \ref{sec:def} al gezien hebben, bestaan er verschillende definities voor een congruent getal. Wij gebruiken hier de meetkundige definitie, waarbij een congruent getal afhangt van een Pythagore\"isch drietal. We zullen hieronder eerst uitleggen wat een presentatie is, daarna zullen we een voorbeeld geven van een presentatie.
 	
 	\subsection{Wat is een presentatie?}\label{sec:presentaties}
