@@ -24,6 +24,7 @@
 \newcommand*{\QQ}{\ensuremath{\mathbb{Q}}}
 \newcommand*{\RR}{\ensuremath{\mathbb{R}}}
 \newcommand*{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand*{\NO}{\ensuremath{\mathbb{N}_{>0}}}
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
 
@@ -42,6 +43,7 @@
 
 \hyphenation{Pytha-go-reïsch}
 \hyphenation{pytha-go-reïsch}
+\hyphenation{Mathematics}
 
 \begin{document}
 	\begin{titlepage}
@@ -198,7 +200,7 @@
 
 
 	\section{Voorbeelden}\label{sec:vb}
-	De eerste negentien congruente getallen zijn: $5$, $6$, $7$, $13$, $14$, $15$, $21$, $22$, $23$, $29$, $30$, $31$, $34$, $37$, $38$, $39$, $41$, $46$, $47$, zie \cite{Coates}[p.19]. We zullen hieronder drie voorbeelden geven.\\
+	De eerste negentien congruente getallen zijn: $5$, $6$, $7$, $13$, $14$, $15$, $21$, $22$, $23$, $29$, $30$, $31$, $34$, $37$, $38$, $39$, $41$, $46$, $47$, zie \cite{Coates}[p.19]. We zullen hieronder drie voorbeelden geven. Daarna zullen we bewijzen dat $n=1$ geen congruent getal is.\\
 	\\
 	Het kleinste congruente getal is $5$. Dat correspondeert met de driehoek met de volgende zijden:
 	\begin{figure*}[h!]
@@ -253,7 +255,70 @@
 		\coordinate (X3) at (0.05,0);
 		\draw (X1) -- (X2) -- (X3);
 		\end{tikzpicture}
-	\end{figure*}
+	\end{figure*}\\
+	\\
+	
+	We zullen hieronder bewijzen dat $n=1$ geen congruent getal is. Daarvoor bekijken we eerst een stelling die we veel nodig zullen hebben in het bewijs.
+	\begin{theorem}\label{1:hulp}
+		Twee positieve gehele getallen die relatief priem zijn en waarvan het product een kwadraat is, moeten zelf kwadraten zijn.
+	\end{theorem}
+	\begin{proof}
+		Neem $x,y\in\NO$ met $\ggd(x,y) = 1$. Stel dat we het kwadraat $xy$ hebben. Laat nu $p$ een priemfactor zijn van $xy$. Dan weten we dat $p\in x$ \'of $p\in y$ (immers $\ggd(x,y)=1$. We weten dat $p$ in tweevoud voorkomt in $xy$, anders is $xy$ geen kwadraat. Dat betekent ook dat $p$ in tweevoud voorkomt in $x$ \'of in $y$. Dit kunnen we doen voor alle priemfactoren van $x$ en $y$. We weten dus dat elke priemfactor precies twee keer voorkomt in $x$ \'of $y$. Dus kunnen we concluderen dat $x$ en $y$ kwadraten zijn. Hiermee is de stelling bewezen.
+	\end{proof}
+	
+	We zullen nu bewijzen dat onderstaande stelling waar is.
+	\begin{theorem}
+		Het getal $n=1$ is geen congruent getal.
+	\end{theorem}
+	\begin{proof}
+		Voor dit bewijs hebben we gebruik gemaakt van \cite{Conrad}[p.3-4].\\
+		Stel we hebben een rechthoekige driehoek met oppervlakte $1$. We noemen de zijden $\frac{a}{d}, \frac{b}{d}, \frac{c}{d}$ met $a,b,c,d\in\NO$. Dit correspondeert met een driehoek van de volgende vorm:
+		\begin{figure}[h!]
+			\centering
+			\begin{tikzpicture}[xscale=2, yscale=1]
+			\coordinate (O) at (0,0);
+			\coordinate (A) at (1,0);
+			\coordinate (B) at (0,1);
+			\coordinate (M) at (0.25, 0.25);
+			\draw (O) -- node[auto,swap]{$\frac{b}{d}$} 
+			(A) -- node[auto,swap]{$\frac{c}{d}$}
+			(B) -- node[auto,swap]{$\frac{a}{d}$} (O);
+			\draw (M) node[auto]{$d^2$};
+			
+			\coordinate (X1) at (0,0.1);
+			\coordinate (X2) at (0.05,0.1);
+			\coordinate (X3) at (0.05,0);
+			\draw (X1) -- (X2) -- (X3);
+			\end{tikzpicture}
+		\end{figure}\\
+		We weten dat er geldt $a^2 + b^2 = c ^2$ en $\frac{1}{2}ab = d^2$. Als we de tweede vergelijking omschrijven, geeft dat ons de volgende vergelijkingen:
+		\begin{equation}\label{1:gedefineerd}
+			a^2 + b^2 = c^2 \quad \text{en} \quad ab = 2d^2.
+		\end{equation}
+		We gaan nu laten zien dat (\ref{1:gedefineerd}) geen gehele positieve oplossingen heeft.\\
+		
+		Stel dat (\ref{1:gedefineerd}) oplossingen heeft in $\NO$. Dan zullen we nu bewijzen dat er een oplossing is zodat $a$ en $b$ relatief priem zijn. Stel $\ggd(a,b) = g$. Dan weten we dat $g \mid a$ en $g \mid b$. Hieruit volgen twee resultaten samen met (\ref{1:gedefineerd}). Ten eerste weten we nu dat $g^2 \mid a^2$ en $g^2 \mid b^2$. Hieruit volgt dat $g^2 \mid a^2 + b^2$, dus $g^2 \mid c^2$, wat betekent dat $g \mid c$. Ten tweede weten we dat $g^2 \mid ab$ dat $g^2 \mid 2d^2$, waaruit volgt dat $g^2 \mid d^2$, met de volgende reden: Stel $g^2 \mid 2d^2$, dan weten we dat $2\frac{d^2}{g^2} = x \in\NN$. Omdat er geldt dat $x\in\NN$, weten we dat $\frac{d^2}{g^2}$ een even aantal factoren $2$ bevat. Dan bevat $2\frac{d^2}{g^2}$ dus een oneven aantal factoren $2$. We weten hierdoor dat $x$ een oneven aantal factoren $2$ bevat, dus $x$ is een even getal. Nu kunnen we de vergelijking dus delen door $2$. Dit geeft ons $\frac{d^2}{g^2}=\frac{x}{2} \in\NN$. We weten nu dat $g^2 \mid d^2$. Hieruit volgt dat $g \mid d$. We weten nu dus dat $g \mid a$, $g \mid b$, $g \mid c$ en $g \mid d$. We kunnen dus alle zijden door $g$ delen zodat we $a'$, $b'$, $c'$ en $d'$ krijgen die voldoen aan (\ref{1:gedefineerd}) met $\ggd(a',b') = 1$. Dan gaan we nu verder met bewijzen dat (\ref{1:gedefineerd}) geen gehele positieve oplossingen heeft, met de extra voorwaarde dat $\ggd(a,b) = 1$.\\
+		
+		{\color{red}We gebruiken Fermats methode van afdaling.} We construeren een nieuw viertal $a', b', c', d' \in\NO$ die voldoet aan (\ref{1:gedefineerd}) met $\ggd(a',b') = 1$ en $0 < c' < c$. Als we dit vaak genoeg herhalen, zullen we een tegenspraak krijgen.\\
+		
+		{\color{red}We starten nu de afdaling.} Omdat er geldt dat $ab = 2d^2$ en $\ggd(a,b)=1$, weten we dat $a$ \'of $b$ even is, maar niet beide. Daaruit volgt dat $c^2 = a^2 + b^2$ oneven is, waaruit volgt dat $c$ oneven is. We kunnen nu zonder verlies van algemeenheid zeggen dat $a$ is even en $b$ is oneven. Dit komt omdat $ab$ gelijk is aan twee keer een kwadraat, $\ggd(a,b)=1$ en $a$ en $b$ zijn beide positief. Hierdoor geldt dat \'e\'en van de twee een kwadraat is, en de ander is twee keer een kwadraat. We kiezen daarom nu
+		\begin{equation}
+			a = 2k^2 \quad \text{en} \quad b = l^2
+		\end{equation}
+		voor $k,l\in\NO$ met $l$ oneven (omdat $b$ oneven is). Als we dit invullen in (\ref{1:gedefineerd}), krijgen we de vergelijking $4k^4 + b^2 = c^2$. Hieruit volgt, door factorisatie, dat $k^4 = \frac{c+b}{2}\frac{c-b}{2}$. Omdat $b$ en $c$ beide oneven en relatief priem zijn, geldt dat $\frac{c+b}{2}$ en $\frac{c-b}{2}$ relatief priem zijn (volgens stelling \ref{1:hulp}). We defini\"eren nu
+		\begin{equation*}
+			r^4 = \frac{c+b}{2} \quad \text{en} \quad s^4 = \frac{c-b}{2}
+		\end{equation*}
+		voor positieve gehele getallen $r$ en $s$ die relatief priem zijn. Dit lossen we op voor $b$ en $c$ wat ons de volgende resultaten geeft:
+		\begin{equation*}
+			b = r^4 - s^4 \quad \text{en} \quad c = r^4 + s^4,
+		\end{equation*}
+		waaruit volgt dat $l^2 = b = (r^2 + s^2) (r^2 - s^2)$. De twee factoren $(r^2 + s^2)$ en $(r^2 - s^2)$ zijn relatief priem, want een eventuele gemene deler zou oneven zijn, omdat $l$ oneven is. Bovendien moet de gemene deler de som, $2r^2$, en het verchil, $s^2$, van de twee factoren delen. Hieruit volgt dat $\ggd(r^2,s^2) = 1$. We weten dat het product van de genoemde twee factoren een oneven kwadraat is. Het eerste factor, $r^2 + s^2$, is sowieso positief. Omdat het product ook positief is, geldt er dat $r^2 - s^2$ ook positief is. We defini\"eren nu
+		\begin{equation}
+			t^2 = r^2 + s^2 \quad \text{en} \quad u^2 = r^2 - s^2
+		\end{equation}
+		voor oneven positieve gehele getallen $t$ en $u$ die relatief priem zijn.
+	\end{proof}
 
 
 	\section{Congruente getallen vinden}\label{sec:suus}
