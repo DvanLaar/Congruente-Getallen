@@ -258,7 +258,7 @@
 	\end{figure*}\\
 	\\
 	
-	We zullen hieronder bewijzen dat $n=1$ geen congruent getal is. Daarvoor bekijken we eerst een stelling die we veel nodig zullen hebben in het bewijs.
+	We zullen hieronder bewijzen dat $n=1$ geen congruent getal is. Daarvoor bekijken we eerst een stelling die we gebruiken in het bewijs.
 	\begin{theorem}\label{1:hulp}
 		Twee positieve gehele getallen die relatief priem zijn en waarvan het product een kwadraat is, moeten zelf kwadraten zijn.
 	\end{theorem}
@@ -266,7 +266,7 @@
 		Neem $x,y\in\NO$ met $\ggd(x,y) = 1$. Stel dat we het kwadraat $xy$ hebben. Laat nu $p$ een priemfactor zijn van $xy$. Dan weten we dat $p\in x$ \'of $p\in y$ (immers $\ggd(x,y)=1$. We weten dat $p$ in tweevoud voorkomt in $xy$, anders is $xy$ geen kwadraat. Dat betekent ook dat $p$ in tweevoud voorkomt in $x$ \'of in $y$. Dit kunnen we doen voor alle priemfactoren van $x$ en $y$. We weten dus dat elke priemfactor precies twee keer voorkomt in $x$ \'of $y$. Dus kunnen we concluderen dat $x$ en $y$ kwadraten zijn. Hiermee is de stelling bewezen.
 	\end{proof}
 	
-	We zullen nu bewijzen dat onderstaande stelling waar is.
+	We moeten nu ook nog iets weten over modulo rekenen. Een even kwadraat is altijd $0 \pmod{4}$. Namelijk; een even getal is $0,2 \pmod{4}$, dus een even kwadraat is $0^2 \equiv 2^2 \equiv 0 \pmod{4}$. Een oneven kwadraat is altijd $1 \pmod{4}$. Namelijk; een oneven getal is $1,3 \pmod{4}$, dus een oneven kwadraat is $1^2 \equiv 3^2 \equiv 1 \pmod{4}$. We zullen nu bewijzen dat onderstaande stelling waar is.
 	\begin{theorem}
 		Het getal $n=1$ is geen congruent getal.
 	\end{theorem}
@@ -297,11 +297,11 @@
 		\end{equation}
 		We gaan nu laten zien dat (\ref{1:gedefineerd}) geen gehele positieve oplossingen heeft.\\
 		
-		Stel dat (\ref{1:gedefineerd}) oplossingen heeft in $\NO$. Dan zullen we nu bewijzen dat er een oplossing is zodat $a$ en $b$ relatief priem zijn. Stel $\ggd(a,b) = g$. Dan weten we dat $g \mid a$ en $g \mid b$. Hieruit volgen twee resultaten samen met (\ref{1:gedefineerd}). Ten eerste weten we nu dat $g^2 \mid a^2$ en $g^2 \mid b^2$. Hieruit volgt dat $g^2 \mid a^2 + b^2$, dus $g^2 \mid c^2$, wat betekent dat $g \mid c$. Ten tweede weten we dat $g^2 \mid ab$ dat $g^2 \mid 2d^2$, waaruit volgt dat $g^2 \mid d^2$, met de volgende reden: Stel $g^2 \mid 2d^2$, dan weten we dat $2\frac{d^2}{g^2} = x \in\NN$. Omdat er geldt dat $x\in\NN$, weten we dat $\frac{d^2}{g^2}$ een even aantal factoren $2$ bevat. Dan bevat $2\frac{d^2}{g^2}$ dus een oneven aantal factoren $2$. We weten hierdoor dat $x$ een oneven aantal factoren $2$ bevat, dus $x$ is een even getal. Nu kunnen we de vergelijking dus delen door $2$. Dit geeft ons $\frac{d^2}{g^2}=\frac{x}{2} \in\NN$. We weten nu dat $g^2 \mid d^2$. Hieruit volgt dat $g \mid d$. We weten nu dus dat $g \mid a$, $g \mid b$, $g \mid c$ en $g \mid d$. We kunnen dus alle zijden door $g$ delen zodat we $a'$, $b'$, $c'$ en $d'$ krijgen die voldoen aan (\ref{1:gedefineerd}) met $\ggd(a',b') = 1$. Dan gaan we nu verder met bewijzen dat (\ref{1:gedefineerd}) geen gehele positieve oplossingen heeft, met de extra voorwaarde dat $\ggd(a,b) = 1$.\\
+		Stel dat (\ref{1:gedefineerd}) een oplossing heeft in $\NO$, zeg $(a, b, c, d)$. Dan zullen we nu bewijzen dat er een oplossing is zodat $a$ en $b$ relatief priem zijn. Stel $\ggd(a,b) = g$. Dan weten we dat $g \mid a$ en $g \mid b$. Hieruit volgen twee resultaten samen met (\ref{1:gedefineerd}). Ten eerste weten we nu dat $g^2 \mid a^2$ en $g^2 \mid b^2$. Hieruit volgt dat $g^2 \mid a^2 + b^2$, dus $g^2 \mid c^2$, wat betekent dat $g \mid c$. Ten tweede weten we dat $g^2 \mid ab$ dat $g^2 \mid 2d^2$, waaruit volgt dat $g^2 \mid d^2$, met de volgende reden: Stel $g^2 \mid 2d^2$, dan weten we dat $2\frac{d^2}{g^2} = x \in\NN$. Omdat er geldt dat $x\in\NN$, weten we dat $\frac{d^2}{g^2}$ een even aantal factoren $2$ bevat. Dan bevat $2\frac{d^2}{g^2}$ dus een oneven aantal factoren $2$. We weten hierdoor dat $x$ een oneven aantal factoren $2$ bevat, dus $x$ is een even getal. Nu kunnen we de vergelijking dus delen door $2$. Dit geeft ons $\frac{d^2}{g^2}=\frac{x}{2} \in\NN$. We weten nu dat $g^2 \mid d^2$. Hieruit volgt dat $g \mid d$. We weten nu dus dat $g \mid a$, $g \mid b$, $g \mid c$ en $g \mid d$. We kunnen dus alle zijden door $g$ delen zodat we $a'$, $b'$, $c'$ en $d'$ krijgen die voldoen aan (\ref{1:gedefineerd}) met $\ggd(a',b') = 1$. Dan gaan we nu verder met bewijzen dat (\ref{1:gedefineerd}) geen gehele positieve oplossingen heeft, met de extra voorwaarde dat $\ggd(a,b) = 1$.\\
 		
-		{\color{red}We gebruiken Fermats methode van afdaling.} We construeren een nieuw viertal $a', b', c', d' \in\NO$ die voldoet aan (\ref{1:gedefineerd}) met $\ggd(a',b') = 1$ en $0 < c' < c$. Als we dit vaak genoeg herhalen, zullen we een tegenspraak krijgen.\\
+		Laat $(a, b, c, d)$ een oplossing zijn met $\ggd(a,b) = 1$ en $c$ minimaal. We construeren een nieuw viertal $a', b', c', d' \in\NO$ die voldoet aan (\ref{1:gedefineerd}) met $\ggd(a',b') = 1$ en $0 < c' < c$. Dit is in tegenspraak met de aanname dat $c$ minimaal is.\\
 		
-		{\color{red}We starten nu de afdaling.} Omdat er geldt dat $ab = 2d^2$ en $\ggd(a,b)=1$, weten we dat $a$ \'of $b$ even is, maar niet beide. Daaruit volgt dat $c^2 = a^2 + b^2$ oneven is, waaruit volgt dat $c$ oneven is. We kunnen nu zonder verlies van algemeenheid zeggen dat $a$ is even en $b$ is oneven. Dit komt omdat $ab$ gelijk is aan twee keer een kwadraat, $\ggd(a,b)=1$ en $a$ en $b$ zijn beide positief. Hierdoor geldt dat \'e\'en van de twee een kwadraat is, en de ander is twee keer een kwadraat. We kiezen daarom nu
+		Omdat er geldt dat $ab = 2d^2$ en $\ggd(a,b)=1$, weten we dat $a$ \'of $b$ even is, maar niet beide. Daaruit volgt dat $c^2 = a^2 + b^2$ oneven is, waaruit volgt dat $c$ oneven is. We kunnen nu zonder verlies van algemeenheid zeggen dat $a$ is even en $b$ is oneven. Dit komt omdat $ab$ gelijk is aan twee keer een kwadraat, $\ggd(a,b)=1$ en $a$ en $b$ zijn beide positief. Hierdoor geldt dat \'e\'en van de twee een kwadraat is, en de ander is twee keer een kwadraat. We kiezen daarom nu
 		\begin{equation}
 			a = 2k^2 \quad \text{en} \quad b = l^2
 		\end{equation}
@@ -314,10 +314,18 @@
 			b = r^4 - s^4 \quad \text{en} \quad c = r^4 + s^4,
 		\end{equation*}
 		waaruit volgt dat $l^2 = b = (r^2 + s^2) (r^2 - s^2)$. De twee factoren $(r^2 + s^2)$ en $(r^2 - s^2)$ zijn relatief priem, want een eventuele gemene deler zou oneven zijn, omdat $l$ oneven is. Bovendien moet de gemene deler de som, $2r^2$, en het verchil, $s^2$, van de twee factoren delen. Hieruit volgt dat $\ggd(r^2,s^2) = 1$. We weten dat het product van de genoemde twee factoren een oneven kwadraat is. Het eerste factor, $r^2 + s^2$, is sowieso positief. Omdat het product ook positief is, geldt er dat $r^2 - s^2$ ook positief is. We defini\"eren nu
-		\begin{equation}
+		\begin{equation}\label{1:r}
 			t^2 = r^2 + s^2 \quad \text{en} \quad u^2 = r^2 - s^2
 		\end{equation}
-		voor oneven positieve gehele getallen $t$ en $u$ die relatief priem zijn.
+		voor oneven positieve gehele getallen $t$ en $u$ die relatief priem zijn. Omdat $u$ oneven is, geldt er dat $u^2 \equiv 1 \pmod{4}$, dus $r^2 - s^2 \equiv 1 \pmod{4}$. Hieruit volgt dat $r$ oneven is, dus is $s$ even. Namelijk; stel $r$ is even, dan is $s$ oneven. Er geldt nu dat $r^2 \equiv 0 \pmod{4}$ en $s^2 \equiv 1 \pmod{4}$. Dit levert op: $r^2 - s^2 \equiv -1 \equiv 3 \pmod{4}$ en dat kan niet. We weten dus dat $r$ oneven is en dat $s$ even is. Nu lossen we  (\ref{1:r}) op voor $r^2$. Dit geeft ons:
+		\begin{equation}
+			r^2 = \frac{t^2 + u^2}{2} = \left( \frac{t+u}{2} \right)^2 + \left( \frac{t-u}{2} \right)^2,
+		\end{equation}
+		met $\frac{t \pm u}{2} \in\ZZ$ omdat $t$ en $u$ beide oneven zijn. We zien hierboven dus een nieuwe, kleinere, oplossing voor de stelling van Pythagoras met
+		\begin{equation}
+			a' = \frac{t+u}{2}, \quad b' = \frac{t-u}{2} \quad \text{en} \quad c' = r.
+		\end{equation}
+		Omdat er geldt dat $\ggd(t,u) = 1$ , geldt er nu ook dat $\ggd(a',b') = 1$. Als we gebruik maken van (\ref{1:r}), vinden we dat $a'b' = \frac{t^2 - u^2}{4} = \frac{2s^2}{4} = 2\left( \frac{s}{2} \right)^2$. Laat $d' = \frac{s}{2} \in\ZZ$, dan hebben we een nieuwe oplossing $(a', b', c', d')$ voor (\ref{1:gedefineerd}). Er geldt dat $0 < c'= r \leq r^4 < r^4 + s^4 = c$. Dit is een tegenspraak, omdat $c$ minimaal is. Dus (\ref{1:gedefineerd}) heeft geen gehele positieve oplossingen, dus $n=1$ is niet congruent.
 	\end{proof}
 
 
