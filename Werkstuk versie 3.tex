@@ -378,22 +378,22 @@
 	Zoals we in hoofdstuk \ref{sec:def} al gezien hebben, bestaan er verschillende definities voor een congruent getal. Wij gebruiken hier de meetkundige definitie, waarbij een congruent getal afhangt van een Pythagore\"isch drietal. We zullen hieronder eerst uitleggen wat een presentatie is, daarna zullen we een voorbeeld geven van een presentatie.
 	
 	\subsection{Wat is een presentatie?}\label{sec:presentaties}
-	Het Pythagore\"ische drietal dat bij een congruent getal hoort, heet de presentatie van het congruente getal. Zo is $(3,4,5)$ de presentatie van het congruente getal $6$. Oftewel,  de presentatie van een congruent getal $n$ is een drietal $(x,y,z)\in\QQ^3_{>0}$, zodat dit, met de meetkundige definitie, $n$ geeft.\\
+	Het {\color{red}Het of Een?} Pythagore\"ische drietal dat bij een congruent getal hoort, heet de presentatie van het congruente getal. Zo is $(3,4,5)$ de presentatie van het congruente getal $6$. Oftewel,  de presentatie van een congruent getal $n$ is een drietal $(x,y,z)\in\QQ^3_{>0}$, zodat dit, met {\color{red}hier mist iets van een werkwoord zoals: het berkenen volgens} de meetkundige definitie, $n$ geeft.\\
 	
-	Het is belangrijk om hier op te merken dat een congruent getal meerdere presentaties heeft. Zo zijn $(21,20,29)$ en $(35,12,37)$ allebei presentaties van het congruente getal $210$ \cite{Oort}[p.9]. Sterker nog, ieder congruent getal heeft oneindig veel presentaties. We zullen dat hieronder bewijzen.\\
+	Het is belangrijk om hier op te merken dat een congruent getal meerdere presentaties heeft. Zo zijn $(21,20,29)$ en $(35,12,37)$ allebei presentaties van het congruente getal $210$ \cite{Oort}[p.9]. Sterker nog, ieder congruent getal heeft oneindig veel presentaties. We zullen dat {\color{red}dit} hieronder bewijzen.\\
 	
-	Om te beginnen, breiden we eerst de definitie van presentatie uit. Het Pythagore\"ische drietal is \'e\'en versie van een presentatie. En hoewel deze heel praktisch is om congruente getallen te vinden, is deze niet handig voor ons bewijs. We gebruiken dus een andere soort presentatie, gebaseerd op de stelling van Euclides. Deze is van de vorm $((k,l),D,n)$; wat dit precies inhoudt, zal straks duidelijk worden. Concreter gezegd: een presentatie is dat wat "bewijst" dat een getal congruent is.\\
+	Om te beginnen, breiden we eerst de definitie van {\color{red}een / het begrip} presentatie uit. Het Pythagore\"ische drietal is \'e\'en versie van een presentatie. En hoewel deze heel praktisch is om congruente getallen te vinden, is deze niet handig voor ons bewijs. We gebruiken dus een andere {\color{red}moet hier niet ander staan?} soort presentatie, gebaseerd op de stelling van Euclides. Deze is van de vorm $((k,l),D,n)$; wat dit precies inhoudt, zal straks {\color{red}misschien straks vervangen door hieronder} duidelijk worden. Concreter gezegd: een presentatie is dat wat "bewijst" dat {\color{red}$n$?} een getal congruent is.\\
 	
 	Om deze nieuwe presentatie te begrijpen, hebben we de volgende stelling nodig:
 	\begin{theorem}\label{def:euclides}
-		\cite{Oort}[p.8] (Euclides) Als $(x,y,z)$ een primitief Pythagore\"isch drietal is met $x$ oneven, dan zijn er getallen $k,l\in\ZZ_{>0}$ met $k>l$, en $\ggd(k,l)=1$ en $k+l$ oneven zodat
+		\cite{Oort}[p.8] (Euclides) Als $(x,y,z)$ een primitief Pythagore\"isch drietal is met $x$ oneven, dan zijn er getallen $k,l\in\ZZ_{>0}$ met $k>l$, $\ggd(k,l)=1$ en $k+l$ oneven zodat
 		\begin{equation*}
 			x=k^2-l^2,\qquad y=2kl,\qquad z=k^2+l^2.
 		\end{equation*}
 	\end{theorem}
-	\noindent Deze stelling verklaart alvast de $k$ en $l$ in onze nieuwe presentatie $((k,l),D,n)$.\\
+	\noindent Deze stelling verklaart alvast {\color{red}Ik zou dit anders verwoorden. Zoiets als: We weten nu dus wat de $k$ en $l$ betekenen} de $k$ en $l$ in onze nieuwe presentatie $((k,l),D,n)$.\\
 	
-	De $D$ en $n$ zijn allebei positieve gehele getallen, afhankelijk van $k$ en $l$. Dat zit zo: $n=kl\cdot \frac{k^2-l^2}{D^2}$, waarbij $n$ een kwadraatvrij congruent getal is en $D$ is het grootste positieve gehele getal waarvan het kwadraat een deler is van $kl\cdot (k^2-l^2)$. Dus $((k,l),D,n)$ is een presentatie van $n$.\\
+	De {\color{red}variabelen} $D$ en $n$ zijn allebei positieve gehele getallen, afhankelijk van $k$ en $l$. Dat zit zo {\color{red}Volgens de volgende relatie (ofzoiets)}: $n=\frac{kl(k^2-l^2)}{D^2}$, waarbij $n$ een kwadraatvrij congruent getal is en $D$ is het grootste positieve gehele getal waarvan het kwadraat een deler is van $kl(k^2-l^2)$. Dus $((k,l),D,n)$ is een presentatie van $n$.\\
 	
 	Nu we weten wat de presentatie $((k,l),D,n)$ inhoudt, kunnen we beginnen met het bewijzen van de volgende stelling.	
 	\begin{theorem}
@@ -416,7 +416,7 @@
 			&= (2 z D (x - y) (x + y))^2 \cdot n
 		\end{align*}
 		
-		We hebben zo dus een nieuwe presentatie gevonden voor $n$, die we $((p,q),E,n)$ noemen, met het bijbehorend Pythagor\"isch drietal $(a,b,c)$.\footnote{Hierbij hebben $p$ en $q$ dezelfde rol als $k$ en $l$, en $E$ vervangt $D$. Het congruente getal verandert niet, en is dus nog steeds $n$. $(a,b,c)$ is het bijbehorende Pythagore\"isch drietal, waarbij geldt dat $a=p^2-q^2$, $b=2pq$ en $c=p^2+q^2$.} Zowel $p$ en $q$ als $(a,b,c)$ voldoen uiteraard aan de eisen die gesteld zijn in de stelling van Euclides.\\
+		We hebben zo dus een nieuwe presentatie gevonden voor $n$, die we $((p,q),E,n)$ noemen, met het bijbehorend Pythagor\"isch drietal $(a,b,c)$.\footnote{Hierbij hebben $p$ en $q$ dezelfde rol als $k$ en $l$, en $E$ vervangt $D$. Het congruente getal verandert niet, en is dus nog steeds $n$. $(a,b,c)$ {\color{red}Begin een zin nooit met een variable.} is het bijbehorende Pythagore\"isch drietal, waarbij geldt dat $a=p^2-q^2$, $b=2pq$ en $c=p^2+q^2$.} {\color{red}Ik zou deze footnote weglaten en het lekker in de tekst zetten, want het is belangrijk voor het stuk.} Zowel $p$ en $q$ als $(a,b,c)$ voldoen uiteraard aan de eisen die gesteld zijn in de stelling van Euclides.\\
 		
 		Dat de gevonden presentatie niet gelijk is aan de originele, is te zien aan de constante $E$. Er geldt namelijk:
 		\begin{align*}
@@ -427,21 +427,21 @@
 		\end{align*}
 		Dus $E > D$.\\
 		
-		We kunnen nu vervangers definiëren voor $U$ en $V$, behorende bij de nieuwe presentatie. We noemen deze $U'$ en $V'$. Ze zijn op dezelfde manier gedefini\"eerd, namelijk $U':=c^2=(p^2+q^2)^2$ en $V':=2ab=2\cdot(p^2-q^2)\cdot2pq$.\\
+		We kunnen nu vervangers defini\"eren voor $U$ en $V$, behorende bij de nieuwe presentatie. We noemen deze $U'$ en $V'$. Ze zijn op dezelfde manier gedefini\"eerd, namelijk $U':=c^2=(p^2+q^2)^2$ en $V':=2ab=2\cdot(p^2-q^2)\cdot2pq$.\\
 		
-		We kunnen dezelfde berekeningen doen met $U'$ en $V'$. We krijgen dan weer een andere presentatie. Belangrijker nog, we krijgen de nieuwe constante $F$ waarvoor geldt: $F=|2 c E (a-b) (a+b)|.$ Uiteraard geldt dan dat $F > E$.\\
+		We kunnen dezelfde berekeningen doen met $U'$ en $V'$. We krijgen dan weer een andere presentatie. Belangrijker nog, we krijgen de nieuwe constante $F$ {\color{red}cool, wat doet die constante dan? (mention even dat deze E vervangt oid)} waarvoor geldt: $F=|2 c E (a-b) (a+b)|.$ Uiteraard geldt dan dat $F > E$ {\color{red}Ik zou die align hierboven veranderen in een equation zonder sterretje. Je kan binnen de equation een split gebruiken om het nog wel op verschillende regels te zetten. Dan kan je die een label geven en hier referen dat op dezelfde manier als in (.) geldt dat F>E}.\\
 		
-		We kunnen de procedure dus oneindig vaak herhalen, steeds met een andere presentatie als uitkomst. Dat betekent dus dat voor ons congruente getal $n$ (en dus ieder congruent getal $n$) oneindig veel presentaties bestaan.
+		We kunnen de procedure dus {\color{red}Ik zou deze dus weghalen en zoiets zeggen als: We kunnen deze procedure oneindig vaak herhalen, wat ons dan oneindig veel presentatie opleverd (ofzoiets)} oneindig vaak herhalen, steeds met een andere presentatie als uitkomst. Dat betekent dus dat voor ons congruente getal $n$ (en dus ieder congruent getal $n$) oneindig veel presentaties bestaan.
 	\end{proof}
 	
 	\subsection{Een voorbeeld van een presentatie}
-	We hebben in hoofdstuk \ref{sec:presentaties} een bewijs geleverd dat er oneindig veel presentaties bestaan, maar we hebben nog niet gezien hoe deze methode in de praktijk werkt. Dat gaan we hier doen, voor het congruente getal 210.\\
+	We hebben in hoofdstuk \ref{sec:presentaties} {\color{red}Ik zou denk ik zeggen ``in de paragraaf hiervoor".} een bewijs geleverd dat er oneindig veel presentaties bestaan, maar we hebben nog niet gezien hoe deze methode in de praktijk werkt. Dat gaan we hier doen{\color{red}zullen we nu laten zien}, voor het congruente getal 210.\\
 	
-	Als eerste willen we uiteraard controleren of 210 inderdaad een congruent en kwadraatvrij getal is. Dat het congruent is, weten we al. Immers, eerder zijn al twee presentaties gegeven, namelijk $(21,20,29)$ en $(35,12,37)$. Dat 210 ook kwadraatvrij is, is na te gaan door het getal op te splitsen in priemfactoren. Voor 210 geldt: $210 = 2 \cdot 3 \cdot 5 \cdot 7$. Geen enkel getal komt dubbel voor, dus is 210 ook kwadraatvrij.\\
+	Als eerste willen we uiteraard {\color{red}ik zou de uiteraard weglaten} controleren of 210 inderdaad een congruent en kwadraatvrij getal {\color{red}kwadraatvrij congruent getal} is. Dat het congruent is, weten we al {\color{red}door de eerder gegeven presentaties (rest weglaten)}. Immers, eerder zijn al twee presentaties gegeven, namelijk $(21,20,29)$ en $(35,12,37)$. Dat 210 ook kwadraatvrij is, is {\color{red}kunnen we nagaan door (is mooier dan twee keer is achter elkaar) }na te gaan door het getal op te splitsen in priemfactoren. Voor 210 geldt: {\color{red}je kan dit weglaten en de punt vervangen door een ; } $210 = 2 \cdot 3 \cdot 5 \cdot 7$. Geen enkel getal komt dubbel voor, dus is 210 ook {\color{red}ook weglaten} kwadraatvrij.\\
 	
 	We kennen al twee presentaties voor 210. We kiezen ervoor om $(21,20,29)$ te gebruiken.\\
 	
-	Allereerst willen we een presentatie van de vorm $((k,l),D,n)$ vinden. De constante $n=210$ weten we al, dus resteren $k$, $l$ en $D$. We kunnen $k$ en $l$ berekenen door de formules $x = k^2 - l^2$, $y = 2kl$ en $z = k^2 + l^2$. De laatste constante, $D$, berekenen we met de formule $n = kl \cdot \frac{k^2-l^2}{D^2}$.\\
+	Allereerst willen we een presentatie van de vorm $((k,l),D,n)$ vinden. De constante $n=210$ weten we al, dus resteren $k$, $l$ en $D$. We kunnen $k$ en $l$ berekenen door de formules $x = k^2 - l^2$, $y = 2kl$ en $z = k^2 + l^2$. {\color{red}De zin die hierop volgt zou ik weglaten en tussen de vergelijkingen stoppen, op de plek waar je zegt Nu resteert alleen D nog, Deze kunnen we bereken met ....} De laatste constante, $D$, berekenen we met de formule $n = kl \cdot \frac{k^2-l^2}{D^2}$.\\
 	
 	\noindent We rekenen eerst $k$ uit:
 	\begin{equation*}
@@ -457,9 +457,9 @@
 		\intertext{Als we dit invullen, krijgen we:}
 		210 &= 5 \cdot 2 \cdot \frac{5^2-2^2}{D^2} = \frac{210}{D^2}.
 	\end{align*}
-	Dus $D = \sqrt{1} = 1$. De gezochte presentatie is dus $((5,2),1,210)$. Hiermee kunnen we weer een nieuwe presentatie vinden. We gebruiken daarvoor een formule uit het bewijs: $E = |2 z D  (x - y) (x+y)|$. In dit geval geldt dan dat $E = |2 \cdot 29 \cdot 1 \cdot (21-20) (21+20)| = 2378$. Dit is duidelijk een presentatie die heel veel groter is dan de originele.\footnote{Het berekenen van de precieze presentatie is zeer gecompliceerd, dus dat zullen we niet doen.}\\
+	Dus $D = \sqrt{1} = 1$. De gezochte presentatie is dus $((5,2),1,210)$. Hiermee kunnen we weer een nieuwe variabele $E$ vinden, die de sleutel vormt voor een nieuwe presentatie. Hiervoor gebruiken we een formule uit het bewijs: $E = |2 z D  (x - y) (x+y)|$. Zo blijkt dan dat $E = |2 \cdot 29 \cdot 1 \cdot (21-20) (21+20)| = 2378$. De rest van de presentatie zal ook vele malen groter zijn dan het origineel, doordat {\color{red}omdat} $E$ zo groot is.\\
 	
-	Dezelfde stappen kunnen we uitvoeren voor andere kwadraatvrije congruente getallen. De andere presentatie van 210, $(35,12,37)$, blijkt dan $((6,1),1,210)$ te zijn en geeft $E = 79994$. De eerdergegeven presentatie van 6, $(3,4,5)$, levert dan $((2,1),1,6)$ en $E = 70$ op.
+	Dezelfde stappen kunnen we uitvoeren voor andere kwadraatvrije congruente getallen. De andere presentatie van {\color{red}$n=$ of het congruente getal} 210, {\color{red}namelijk:} $(35,12,37)$, blijkt dan {\color{red}dan weglaten} $((6,1),1,210)$ te zijn en geeft $E = 79994$. De eerdergegeven {\color{red}zijn dit niet twee woorden?} presentatie van {\color{red}$n=$ of het congruente getal} 6, {\color{red}zelfde verhaal} $(3,4,5)$, levert dan {\color{red}de presentatie} $((2,1),1,6)$ en $E = 70$ op.
 	
 	
 	\section{Samenvatting}
