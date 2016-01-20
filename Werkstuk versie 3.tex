@@ -127,11 +127,30 @@
 	\end{align*}
 	Hieruit volgt dus dat $5$ een conguent getal is. \\
 	
-	%Een andere manier om congruente getallen te defini\"{e}ren is door er op een meetkundige manier naar te kijken. Echter, voor die definitie is het handig om eerst te kijken naar Pythagore\"ische drietallen. \\
+	Dit lijken twee onafhankelijke definities te zijn, maar ze zijn in feite equivalent. Dit gaan we op de volgende manier bewijzen: \\
 	
-	%Dit straks verwijderen en de definities weer omdraaien.
+	\begin{proposition}
+			\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta$, $\delta +n$ en $\delta -n$ de kwadraten zijn van een rationaal getal. De correspondentie is:
+			\begin{align}
+				x,y,z &\rightarrow \delta = \left( \frac{z}{2} \right)^2 \\
+				\delta &\rightarrow x=\sqrt{\delta+n} - \sqrt{\delta-n},\quad y = \sqrt{\delta+n}+\sqrt{\delta-n},\quad z = 2\sqrt{\delta}.
+			\end{align}
+			In het bijzonder, $n$ is een congruent getal dan en slechts dan als er een $\delta$ bestaat z\'o dat $\delta$, $\delta+n$ en $\delta-n$ kwadraten van rationale getallen zijn.
+		\end{proposition}
+		\begin{proof}
+			We beginnen door een drietal $(x,y,z)$ te nemen met de gewenste eigenschappen, dus
+			\begin{equation*}
+				x^2 + y^2 = z^2 \text{ en } \frac{1}{2}xy=n
+			\end{equation*}
+			Als we 4 keer de tweede vergelijking van de eerste afhalen of erbij optellen houden we het volgende over:
+			\begin{align*}
+				x^2 \pm 2xy + y^2 = z^2 \pm 4n \\
+				(x \pm y)^2 = z^2 \pm 4n
+			\end{align*}
+			Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ rationale kwadraten zijn
+		\end{proof}
+		Hieruit volgt dat de twee eerder gegeven definities in feite equivalent zijn aan elkaar. Het maakt niet heel veel uit welke definitie wij zullen hanteren, maar voor het gemak gaan we uit van definitie 1. \\
 	
-	%TODO equivalente definities.
 	Bij de eerste definitie maken we gebruik van Pythagore\"ische drietallen. Daar zullen we nu wat meer over uitleggen.\\
 	
 	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden van Fermat. De bijbehorende vergelijking is als volgt geformuleerd:
@@ -174,27 +193,6 @@
 	We kunnen nu concluderen dat $x$ en $y$ niet allebei even zijn, en ook niet allebei oneven zijn. Een van de getallen $x$ of $y$ moet dus per definitie oneven zijn en de ander moet per definitie even zijn. Hieruit volgt dat $z$ altijd een oneven getal is. $x^2$ is namelijk even en $y^2$ is oneven (of precies andersom, zonder verlies van algemeenheid). De som van een oneven en een even getal is een oneven getal, waardoor $z^2$ en $z$ oneven zijn.
 	\end{proof}
 	Een derde eigenschap van een Pythagore\"isch drietal is dat $\frac{(z-x)(z-y)}{2}$ een kwadraat is. \cite{Posamentier}[p.156]
-	\begin{proposition}
-		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta$, $\delta +n$ en $\delta -n$ de kwadraten zijn van een rationaal getal. De correspondentie is:
-		\begin{align}
-			x,y,z &\rightarrow \delta = \left( \frac{z}{2} \right)^2 \\
-			\delta &\rightarrow x=\sqrt{\delta+n} - \sqrt{\delta-n},\quad y = \sqrt{\delta+n}+\sqrt{\delta-n},\quad z = 2\sqrt{\delta}.
-		\end{align}
-		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er een $\delta$ bestaat z\'o dat $\delta$, $\delta+n$ en $\delta-n$ kwadraten van rationale getallen zijn.
-	\end{proposition}
-	\begin{proof}
-		We beginnen door een drietal $(x,y,z)$ te nemen met de gewenste eigenschappen, dus
-		\begin{equation*}
-			x^2 + y^2 = z^2 \text{ en } \frac{1}{2}xy=n
-		\end{equation*}
-		Als we 4 keer de tweede vergelijking van de eerste afhalen of erbij optellen houden we het volgende over:
-		\begin{align*}
-			x^2 \pm 2xy + y^2 = z^2 \pm 4n \\
-			(x \pm y)^2 = z^2 \pm 4n
-		\end{align*}
-		Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ rationale kwadraten zijn
-	\end{proof}
-	Hieruit volgt dat de twee eerder gegeven definities in feite equivalent zijn aan elkaar. Het maakt niet heel veel uit welke definitie wij zullen hanteren, maar voor het gemak gaan we uit van definitie 1.
 	
 	%\endsection{Daan}
 
