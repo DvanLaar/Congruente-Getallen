@@ -89,7 +89,7 @@
 	
 	Ten eerste kijken we naar de meetkundige definitie uit \cite{Oort}[p.3]:	
 	\begin{definition}\label{def:meetkunde}
-		Een positief geheel getal $n$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $n$. Noem de lengtes van de zijden $x,y,z\in\QQ$; met behulp van de stelling van Pythagoras \textcolor{red}{en de formule voor de oppervlakte van een driehoek} zien we:
+		Een positief geheel getal $n$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $n$. Noem de lengtes van de zijden $x,y,z\in\QQ$; met behulp van de stelling van Pythagoras en de formule voor de oppervlakte van een driehoek ($oppervlakte = \frac{1}{2} \cdot basis \cdot hoogte$) zien we:
 		\begin{figure*}[h!]
 			\centering
 			\begin{tikzpicture}[xscale=6, yscale=3]
@@ -110,14 +110,14 @@
 			\end{tikzpicture}
 		\end{figure*}
 	\end{definition}
-	We zien dat hier een congruent getal $n$ wordt gegeven als de oppervlakte van een rechthoekige driehoek waarvan (de lengte van) de zijden in $\QQ$ zitten. \textcolor{red}{Grammaticaal beetje iffy, kan wel overigens} We kunnen conguente getallen ook bekijken via een algebra\"{i}sche benadering. De volgende definitie komt van \cite{Oort}[p.3].
+	We zien dat hier een congruent getal $n$ wordt gegeven als de oppervlakte van een rechthoekige driehoek waarvan (de lengte van) de zijden in $\QQ$ zitten. We kunnen conguente getallen ook bekijken via een algebra\"{i}sche benadering. De volgende definitie komt van \cite{Oort}[p.3].
 	
 	\begin{definition}\label{def:algebra}
 		Een positief geheel getal $n$ heet een congruent getal als er een $\delta\in\QQ$ bestaat zodanig dat
 		\begin{equation*}
 			\delta^2 - n,\quad \delta^2,\quad \delta^2 + n
 		\end{equation*}
-		kwadraten zijn in $\QQ$. \textcolor{red}{Maak duidelijk dat het kwadraten van rationale getallen zijn!}
+		kwadraten zijn in $\QQ$.
 	\end{definition}	
 	Een getal dat aan deze definitie voldoet is het getal 5. We nemen $\delta = \frac{41}{12}$. Dan geldt:
 	\begin{align*}
@@ -157,9 +157,9 @@
 	\begin{equation}\label{fermat}
 		x^n + y^n = z^n \qquad \text{met} \qquad n \in \NN.
 	\end{equation}
-	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor (\ref{fermat}) \textcolor{red}{Zin loopt een beetje moeizaam. Kijk of je 'm kan herschrijven}. Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$ en $x, y, z \geq 0$, geldt $x \cdot y \cdot z = 0$. \\
-	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. Dit komt omdat het vermoeden van Fermat met $n=2$ de stelling van Pythagoras is. \textcolor{red}{In zijn commentaar wordt dit door Faber in twijfel getrokken} De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
-	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve \mbox{Pythagore\"ische} drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor ook geldt dat de grootste gemeenschappelijke deler van x en y 1 is. \textcolor{red}{Zet x en y tussen dollartekens, zodat ze cursief staan} We noteren dit als $\ggd(x,y) = 1$. Nu kunnen en gaan we het volgende bewijzen: \textcolor{red}{Kies een persoonsvorm, bij voorkeur "kunnen".}
+	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor vergelijking (\ref{fermat}) . Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$ en $x, y, z \geq 0$, geldt $x \cdot y \cdot z = 0$. \\
+	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. De vergelijking van de stelling van Pythagoras lijkt sterk op de vergelijking van het vermoeden van Fermat. Het vermoeden is echter alleen relevant voor $n \geq 3$ dus het is niet helemaal hetzelfde. De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
+	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve \mbox{Pythagore\"ische} drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor ook geldt dat de grootste gemeenschappelijke deler van $x$ en $y$ 1 is. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen we het volgende bewijzen:
 	
 	\begin{theorem}
 		Als $(x,y,z)$ een Pythagore\"isch drietal is met $\ggd(x,y) = 1$, dan $\ggd(x,z) = 1$.
@@ -176,10 +176,23 @@
 		\end{align*}
 		Stel nu dat $\ggd(x, y) = 1$. Dit kan alleen zo zijn als $\ggd(x, z) $ ook gelijk aan $1$ is. 
 	\end{proof}	
-	\textcolor{red}{De opmaak van dit bewijs (vooral de align) is nogal wazig.}
-	Verder hebben primitieve Pythagore\"ische drietallen nog veel meer eigenschappen, die elk bewezen kunnen worden. Wij zullen nog een aantal van deze eigenschappen behandelen, te beginnen met welke getallen even, en welke getallen oneven zijn. Van $x$ en $y$ is er altijd \'e\'en getal even. Daardoor is $z$ altijd oneven. \textcolor{red}{Geef duidelijker aan wat precies de stelling is welke je wil bewijzen}
+	Verder hebben primitieve Pythagore\"ische drietallen nog veel meer eigenschappen, die elk bewezen kunnen worden. Wij zullen nog een aantal van deze eigenschappen behandelen, te beginnen met welke getallen even, en welke getallen oneven zijn. Van $x$ en $y$ is er altijd \'e\'en getal even. Daardoor is $z$ altijd oneven.
+	\begin{theorem}
+		Als $(x, y, z)$ een primitief Pythagore\"isch drietal is, dan kunnen $x$ en $y$ niet allebei even zijn.
+	\end{theorem}
 	\begin{proof}
-		Voor $x$ en $y$ zijn er 3 \textcolor{red}{drie} mogelijkheden: allebei even, allebei oneven of 1 \textcolor{red}{\'e\'en} van de 2 \textcolor{red}{twee} is even. De eerste mogelijkheid kunnen we snel afschrijven. Als $x$ en $y$ allebei even zouden zijn, dan is $\ggd(x,y) \neq 1$ want 2 is sowieso een deler. Om te bewijzen dat $x$ en $y$ niet allebei oneven kunnen zijn, nemen we eerst aan dat dat wel zo is:
+		Stel, $x$ en $y$ zijn allebei even. Dan kunnen we $x$ en respectievelijk $y$ als volgt opschrijven
+		\begin{align*}
+		x = 2\cdot v \\
+		y = 2\cdot w
+		\end{align*} 
+		Nu weten we dat $2\mid x$ en $2 \mid y$, dus $\ggd(x, y) \geq 2 > 1$. Dit mag niet, omdat $(x, y, z)$ geen primitief Pythagore\"isch drietal meer zou zijn.
+	\end{proof}
+	\begin{theorem}
+		Als $(x, y, z)$ een primitief Pythagore\"isch drietal is, dan kunnen $s$ en $y$ niet allebei oneven zijn.
+	\end{theorem}
+	\begin{proof}
+		Om deze stelling te kunnen bewijzen nemen we eerst aan dat $x$ en $y$ wel allebei oneven zijn:
 		\begin{align*}
 			x = 2s + 1\\
 			y = 2t + 1\\
@@ -262,7 +275,7 @@
 		Twee positieve gehele getallen die relatief priem \textcolor{red}{Hebben we hier een definitie van gegeven? Of verwachten we dat de lezer dat wel weet?} zijn en waarvan het product een kwadraat is, moeten zelf kwadraten zijn. \textcolor{red}{$x \text{ of } y = 1$?}
 	\end{theorem}
 	\begin{proof}
-		Neem $x,y\in\NO$ met $\ggd(x,y) = 1$. Stel dat $xy$ \textcolor{red}{Ik denk dat $x$ \cdot $y$ duidelijker is}een kwadraat is. Laat nu $p$ een priemfactor zijn van $x$, maar $p$ is geen \textcolor{red}{niet een} priemfactor van $y$. Dan weten we dat $p$ in tweevoud moet voorkomen in $xy$, omdat $xy$ een kwadraat is en omdat $p$ niet in $y$ voorkomt. Hierdoor weten we ook dat $p$ in tweevoud moet voorkomen in $x$. Dus $x$ is een kwadraat. We kunnen dit op dezelfde manier doen voor $y$, dus $y$ is een kwadraat. Hiermee is de stelling bewezen.
+		Neem $x,y\in\NO$ met $\ggd(x,y) = 1$. Stel dat $xy$ \textcolor{red}{Ik denk dat $x \cdot y$ duidelijker is}een kwadraat is. Laat nu $p$ een priemfactor zijn van $x$, maar $p$ is geen \textcolor{red}{niet een} priemfactor van $y$. Dan weten we dat $p$ in tweevoud moet voorkomen in $xy$, omdat $xy$ een kwadraat is en omdat $p$ niet in $y$ voorkomt. Hierdoor weten we ook dat $p$ in tweevoud moet voorkomen in $x$. Dus $x$ is een kwadraat. We kunnen dit op dezelfde manier doen voor $y$, dus $y$ is een kwadraat. Hiermee is de stelling bewezen.
 	\end{proof}
 	
 	\begin{remark}\label{1:hulp4}
