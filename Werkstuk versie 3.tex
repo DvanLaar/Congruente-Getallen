@@ -76,20 +76,18 @@
 	In hoofdstuk \ref{sec:def} zullen we Pythagore\"ische drietallen en congruente getallen behandelen. We zullen definities geven en we leggen uit wat deze twee onderwerpen met elkaar te maken hebben. Daarna, in hoofdstuk \ref{sec:vb}, zullen we een aantal voorbeelden geven van congruente getallen. Hoofdstuk \ref{sec:suus} zal gaan over het vinden van congruente getallen. Hoe vinden we alle getallen die congruent zijn? In het laatste hoofdstuk, hoofdstuk \ref{sec:lotte}, zullen we kijken naar presentaties van congruente getallen. Dit heeft te maken met Pythagore\"ische drietallen. Als afsluiting zullen we een samenvatting geven van alles wat we hebben behandeld.
 	
 	
-	%\beginsection{Daan}
-	\section{Pythagore\"ische drietallen en congruente getallen}\label{sec:def}
-	%Wat is een Pythagoreisch drietal?
+	\section{Congruente getallen en Pythagore\"ische drietallen}\label{sec:def}
 	%Wat is een congruent getal?
-	%  - algebraische definitie + bewijs
 	%  - meetkundige definitie
+	%  - algebraische definitie
 	%  - equivalentie van die twee definities
 	%  - definitie primitieve congruente getallen: Een kwadraatvrij congruent getal
-	%Er schijnt een stelling te zijn die alle Pythagoreïsche drietallen classificeert. Als je die kan vinden, kan je het die even noemen.
-	Eerst zullen we kijken naar de definitie van congruente getallen. Er bestaan echter meerdere definities. We zullen er hier twee behandelen.\\
+	%Wat is een Pythagoreisch drietal?
+	Eerst zullen we kijken naar de {\color{red}niet ``de", want er zijn er meerdere. Ik zou eerst zeggen dat er meerdere definities zijn en dan zeggen dat we er twee gaan geven.} definitie van congruente getallen. Er bestaan echter meerdere definities. We zullen er hier twee behandelen.\\
 	
-	Ten eerste kijken we naar de meetkundige definitie uit \cite{Oort}[p.3]:	
+	Als eerste kijken we naar de meetkundige definitie uit \cite{Oort}[p.3].	
 	\begin{definition}\label{def:meetkunde}
-		Een positief geheel getal $n$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $n$. Noem de lengtes van de zijden $x,y,z\in\QQ$; met behulp van de stelling van Pythagoras en de formule voor de oppervlakte van een driehoek ($oppervlakte = \frac{1}{2} \cdot basis \cdot hoogte$) zien we:
+		Een positief geheel getal $n$ heet een congruent getal als er een rechthoekige driehoek bestaat met lengtes van zijden in $\QQ_{>0}$ en met oppervlak gelijk aan $n$. Noem de lengtes van de zijden $x,y,z\in\QQ$; met behulp van de stelling van Pythagoras en de formule voor de oppervlakte van een driehoek ($oppervlakte = \frac{1}{2} \cdot basis \cdot hoogte$) {\color{red}Ik denk dat de formule wat overdreven is, als je die niet weet, snap je congruente getallen ook niet} zien we:
 		\begin{figure*}[h!]
 			\centering
 			\begin{tikzpicture}[xscale=6, yscale=3]
@@ -117,7 +115,7 @@
 		\begin{equation*}
 			\delta^2 - n,\quad \delta^2,\quad \delta^2 + n
 		\end{equation*}
-		kwadraten zijn in $\QQ$.
+		kwadraten zijn in $\QQ$. {\color{red}Commentaar Faber: dat wil zeggen, kwadraten van rationale getallen.} 
 	\end{definition}	
 	Een getal dat aan deze definitie voldoet is het getal 5. We nemen $\delta = \frac{41}{12}$. Dan geldt:
 	\begin{align*}
@@ -127,89 +125,78 @@
 	\end{align*}
 	Hieruit volgt dus dat $5$ een conguent getal is. \\
 	
-	Dit lijken twee onafhankelijke definities te zijn, maar ze zijn in feite equivalent. Dit gaan we op de volgende manier bewijzen: \\
+	Dit {\color{red}je kan niet het woord dit gebruiken, want je hebt net een voorbeeld gegeven van het getal 5. Je kan wel zo beginnen: Definitie \ref{def:meetkunde} en definitie \ref{def:algebra} lijken onafhankelijk te zijn (anders heb je 3x het woord definitie in een zin staan)} lijken twee onafhankelijke definities te zijn, maar ze zijn in feite equivalent. Dit gaan we op de volgende manier bewijzen: {\color{red}Dit zullen we bewijzen met behulp van de volgende propositie: (je geeft geen manier waarop je het gaat bewijzen, dus dat kan je niet zeggen)}
 	
 	\begin{proposition}
-		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta$, $\delta +n$ en $\delta -n$ de kwadraten zijn van een rationaal getal. De correspondentie is:
+		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta^2$, $\delta^2 +n$ en $\delta^2 -n$ de kwadraten zijn van een rationaal getal. De correspondentie is:
 		\begin{align}
-			x,y,z &\rightarrow \delta = \left( \frac{z}{2} \right)^2 \\
-			\delta &\rightarrow x=\sqrt{\delta+n} - \sqrt{\delta-n},\quad y = \sqrt{\delta+n}+\sqrt{\delta-n},\quad z = 2\sqrt{\delta}.
+			\label{prop:corr1} x,y,z &\rightarrow \delta = \frac{z}{2} \\
+			\label{prop:corr2} \delta &\rightarrow x=\sqrt{\delta^2+n} - \sqrt{\delta^2-n},\quad y = \sqrt{\delta^2+n}+\sqrt{\delta^2-n},\quad z = 2\delta.
 		\end{align}
-		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er een $\delta$ bestaat z\'o dat $\delta$, $\delta+n$ en $\delta-n$ kwadraten van rationale getallen zijn.
+		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er een $\delta$ bestaat z\'o dat $\delta^2$, $\delta^2+n$ en $\delta^2-n$ kwadraten van rationale getallen zijn.
 	\end{proposition}
 	\begin{proof}
-		We beginnen door een drietal $(x,y,z)$ te nemen met de gewenste eigenschappen, dus
+		We beginnen door een drietal $(x,y,z)$ te nemen met de gewenste eigenschappen, dus {\color{red}Neem een drietal $(x,y,x)$ zodat geldt} 
 		\begin{equation*}
-			x^2 + y^2 = z^2 \text{ en } \frac{1}{2}xy=n
+			x^2 + y^2 = z^2 \quad \text{en} \quad \frac{1}{2}xy=n \text{{\color{red}eindigen met een punt, want dit is het einde van de voorgaande zin.}} 
 		\end{equation*}
-		Als we 4 keer de tweede vergelijking van de eerste afhalen of erbij optellen houden we het volgende over:
+		Als we 4 {\color{red}vier (want het is hier geen wiskundig getal)} keer de tweede vergelijking van de eerste afhalen of erbij optellen houden we het volgende over:
 		\begin{align*}
-			x^2 \pm 2xy + y^2 = z^2 \pm 4n \\
-			(x \pm y)^2 = z^2 \pm 4n
+			x^2 \pm 2xy + y^2 = z^2 \pm 4n,
+			\intertext{wat gelijk is aan}
+			(x \pm y)^2 = z^2 \pm 4n.
 		\end{align*}
-		Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ rationale kwadraten zijn
+		{\color{red}We delen nu beide kanten door 4, hierdoor....} Door nu beide kanten door 4 te delen kunnen we eenvoudig zien dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ rationale kwadraten zijn.\\
+		{\color{red}Ik wil graag twee dingen zeggen: Je beschrijft je bewijs goed, alleen staat het er als een soort van stappenplan. Het is niet echt de bedoeling om een stappenplan te geven aan de kijker, meer om te vertellen wat we hebben gedaan. Dus ik zou meer gebruik maken van ``We doen nu ...". Ten tweede: je hebt nu alleen correspondentie \ref{prop:corr1} bewezen. Je hebt niet bewezen dat \ref{prop:corr2} ook geldt. (laatste tip: eindig je bewijs met: dus de twee definities corresponderen \'e\'en op \'e\'en met elkaar.)} 
 	\end{proof}
-	Hieruit volgt dat de twee eerder gegeven definities in feite equivalent zijn aan elkaar. Het maakt niet heel veel uit welke definitie wij zullen hanteren, maar voor het gemak gaan we uit van definitie 1. \\
+	Hieruit volgt dat de twee eerder gegeven definities in feite equivalent zijn aan elkaar. Het maakt niet heel veel uit welke definitie wij zullen hanteren, maar voor het gemak gaan we uit van definitie 1. {\color{red}Als je het bewijs aanpast, zou ik hiervan maken: We hebben dus nu gezien dat definitie \ref{def:meetkunde} en definitie \ref{def:algebra} in feite equivalent zijn. Voor het gemak gebruiken wij vanaf nu definitie \ref{def:meetkunde}.} \\
 	
-	Bij de eerste definitie maken we gebruik van Pythagore\"ische drietallen. Daar zullen we nu wat meer over uitleggen.\\
+	Bij de eerste definitie maken we gebruik van Pythagore\"ische drietallen. {\color{red}Dit is niet waar, want ik heb het hele woord Pythagore\"isch drietal niet voor zien komen tot nu.} Daar zullen we nu wat meer over uitleggen.\\
 	
-	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden van Fermat. De bijbehorende vergelijking is als volgt geformuleerd:
+	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden {\color{red}een ondertussen bewezen vermoeden, een oud vermoeden (ofzoiets)} van Fermat. De bijbehorende vergelijking is als volgt geformuleerd:
 	\begin{equation}\label{fermat}
-		x^n + y^n = z^n \qquad \text{met} \qquad n \in \NN.
+		x^n + y^n = z^n \quad \text{met} \quad n \in \NN.
 	\end{equation}
-	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor vergelijking (\ref{fermat}) . Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en $x^n + y^n = z^n$ met $n \geq 3$ en $x, y, z \geq 0$, geldt $x \cdot y \cdot z = 0$. \\
-	Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. De vergelijking van de stelling van Pythagoras lijkt sterk op de vergelijking van het vermoeden van Fermat. Het vermoeden is echter alleen relevant voor $n \geq 3$ dus het is niet helemaal hetzelfde. De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
-	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve \mbox{Pythagore\"ische} drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor ook geldt dat de grootste gemeenschappelijke deler van $x$ en $y$ 1 is. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen we het volgende bewijzen:
+	Fermat vermoedde {\color{red}vroeger (ofzo)} dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor vergelijking (\ref{fermat}) . Dat wil zeggen, $\forall (x,y,z) \in \ZZ^3$ en {\color{red}commentaar Faber: met} $x^n + y^n = z^n$ met {\color{red}commentaar Faber: , waar} $n \geq 3$ en $x, y, z \geq 0$, geldt $x \cdot y \cdot z = 0$. Wij zijn echter vooral ge\"interesseerd in het geval waarbij $n=2$ en alle niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$ {\color{red}commentaar Faber: met $x,y,z>0$}. Deze oplossingen noteren we als $(x,y,z)$ en we noemen deze oplossingen Pythagore\"ische drietallen. De vergelijking van de stelling van Pythagoras lijkt sterk op {\color{red}vergelijking (\ref{fermat}). (zo vermijd je opnieuw het woord vermoeden)} de vergelijking van het vermoeden van Fermat. Het vermoeden is echter alleen relevant voor $n \geq 3$ dus het is niet helemaal hetzelfde. {\color{red}Als dit waar is, waarom zou je dan de vergelijking maken tussen pythagoras en fermat? Is dat een nuttige vergelijking, of kan je deze er net zo goed uit laten en alleen vertellen dat we op zoek zijn naar drietallen die voldoen aan de stelling van Pythagoras?} De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$ vormen dan ook een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
+	
+	Een speciaal soort Pythagore\"isch drietal is het zogenaamde primitieve \mbox{Pythagore\"ische} drietal. Dit is een Pythagore\"isch drietal $(x,y,z)$ waarvoor geldt dat de grootste gemeenschappelijke deler van $x$ en $y$ 1 is. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen we het volgende bewijzen:
 	
 	\begin{theorem}
-		Als $(x,y,z)$ een Pythagore\"isch drietal is met $\ggd(x,y) = 1$, dan $\ggd(x,z) = 1$.
+		Als $(x,y,z)$ een Pythagore\"isch drietal is met $\ggd(x,y) = 1$, dan $\ggd(x,z) = 1$. {\color{red}commentaar Faber: Woorden toevoegen, want anders wordt de zin lelijk afgebroken.} 
 	\end{theorem}
 	\begin{proof}
-		Stel, $\ggd(x,z) = d \geq 1$. Dan deelt $d$ zowel $x$ als $y$. Hieruit kunnen we als volgt concluderen dat $y$ ook door $d$ wordt gedeeld:
-		\begin{align*}
-			d\mid x \text{ en } d\mid z \\
-			d^2\mid x^2 \text{ en } d^2 \mid z^2 \\
-			d^2\mid z^2 - x^2 \text{ (want } z>x \text{)} \\
-			\text{dus, } d^2 \mid y^2 \text{ (uit $x^2 + y^2 = z^2$ volgt $y^2 = z^2 - x^2$)} \\
-			\text{dus, } d \mid y \\
-			\text{dus, } \ggd(x, y) \geq d \geq 1
-		\end{align*}
-		Stel nu dat $\ggd(x, y) = 1$. Dit kan alleen zo zijn als $\ggd(x, z) $ ook gelijk aan $1$ is. 
+		Neem aan dat $\ggd(x,y) = 1$. Stel, $\ggd(x,z) = d > 1$. Dan deelt $d$ zowel $x$ als $z$. We weten dat als $d \mid x$ en $d \mid z$, dan geldt ook dat $d^2\mid x^2$ en $d^2 \mid z^2$. We weten ook dat $d$ het verschil moet delen: $d^2\mid z^2 - x^2$, waaruit volgt dat $d^2 \mid y^2$, vanwege de stelling van Pythagoras. Dus weten we dat $d \mid y$, waaruit volgt dat $\ggd(x, y) = d > 1$. Dit is in tegenspraak met de aanname dat $\ggd(x,y) = 1$. {\color{red}Sorry voor het aanpassen van dit bewijs, maar zoals ik eerder in whatsapp zei, kan je het niet noteren in een align zonder zinnen ertussen. Kijk goed hoe ik dit heb opgeschreven, dat is netter. Overigens wilde je dit bewijzen voor $d>1$ en niet voor $d\geq1$.}
 	\end{proof}	
-	Verder hebben primitieve Pythagore\"ische drietallen nog veel meer eigenschappen, die elk bewezen kunnen worden. Wij zullen nog een aantal van deze eigenschappen behandelen, te beginnen met welke getallen even, en welke getallen oneven zijn. Van $x$ en $y$ is er altijd \'e\'en getal even. Daardoor is $z$ altijd oneven.
+	Verder hebben {\color{red}Deze twee woorden weglaten en beginnen met Primitieve ....} primitieve Pythagore\"ische drietallen {\color{red}hebben} nog veel meer eigenschappen, die elk bewezen kunnen worden. {\color{red}dat achter de komma zou ik weglaten.} Wij zullen nog een aantal {\color{red}en dan zou ik hier een getal noemen} van deze eigenschappen behandelen, {\color{red}punt. nieuwe zin: We beginnen met de volgende stelling. rest schrappen, anders geef je alle informatie dubbel.} te beginnen met welke getallen even, en welke getallen oneven zijn. Van $x$ en $y$ is er altijd \'e\'en getal even. Daardoor is $z$ altijd oneven.
 	\begin{theorem}
-		Als $(x, y, z)$ een primitief Pythagore\"isch drietal is, dan kunnen $x$ en $y$ niet allebei even zijn.
+		Als $(x, y, z)$ een primitief Pythagore\"isch drietal is, dan kunnen $x$ en $y$ niet allebei even zijn. {\color{red}Je zegt hier primitief drietal, maar je hebt nog nooit gezegd wat primitief betekent. Dit moet je hiervoor dus eerst nog melden.} 
 	\end{theorem}
 	\begin{proof}
 		Stel, $x$ en $y$ zijn allebei even. Dan kunnen we $x$ en respectievelijk $y$ als volgt opschrijven
 		\begin{align*}
-		x = 2\cdot v \\
-		y = 2\cdot w
+		x = 2v \quad \text{en} \quad y = 2w.
 		\end{align*} 
-		Nu weten we dat $2\mid x$ en $2 \mid y$, dus $\ggd(x, y) \geq 2 > 1$. Dit mag niet, omdat $(x, y, z)$ geen primitief Pythagore\"isch drietal meer zou zijn.
+		Nu weten we dat $2\mid x$ en $2 \mid y$, dus $\ggd(x, y) \neq 1$. {\color{red}Dit is in tegenspraak met de eigenschap dat .... een primitief Pythagoreisch drietal is.} Dit mag niet, omdat $(x, y, z)$ geen primitief Pythagore\"isch drietal meer zou zijn. {\color{red}De woorden mag en zou zijn wil je vermijden in een bewijs.} 
 	\end{proof}
 	\begin{theorem}
-		Als $(x, y, z)$ een primitief Pythagore\"isch drietal is, dan kunnen $s$ en $y$ niet allebei oneven zijn.
+		Als $(x, y, z)$ een primitief Pythagore\"isch drietal is, dan kunnen $x$ en $y$ niet allebei oneven zijn.
 	\end{theorem}
 	\begin{proof}
-		Om deze stelling te kunnen bewijzen nemen we eerst aan dat $x$ en $y$ wel allebei oneven zijn:
+		Neem aan dat $x$ en $y$ wel allebei oneven zijn:
 		\begin{align*}
-			x = 2s + 1\\
-			y = 2t + 1\\
+			x = 2s + 1 \quad \text{en} \quad y = 2t + 1
 		\end{align*}
-		Uitwerken hiervan geeft dat $z^2$ een even getal is, en daarom $z$ ook (het kwadraat van een oneven getal is weer een oneven getal en de som van 2 oneven getallen is weer even). We schrijven $z = 2u$
+		met $s,t \in\NN$. Uitwerken hiervan {\color{red}waarvan? ik snap niet wat je hier uitwerkt en waarom daat $z^2$ uit komt.} geeft dat $z^2$ een even getal is, waaruit volgt dat $z$ ook even is. We weten namelijk dat het kwadraat van een oneven getal weer een oneven getal is en de som van twee oneven getallen is weer even. We schrijven $z = 2u$. Als we de waardes van $x$, $y$ en $z$ invullen in de vergelijking $x^2 + y^2 = z^2$, geeft dat ons
 		\begin{align*}
-			x^2 + y^2 = z^2\\
-			(2s + 1)^2 + (2t + 1)^2 = (2u)^2\\
-			4s^2 + 4s + 1 +4t^2 + 4t + 1 = 4u^2\\
-			4(s^2 + s + t^2 + t) + 2 = 4u^2
+			(2s + 1)^2 + (2t + 1)^2 = (2u)^2,
+			\intertext{wat equivalent is aan}
+			4(s^2 + s + t^2 + t) + 2 = 4u^2.
 		\end{align*}
-		Als we beide kanten door 4 zouden delen, krijgen we een rest van 2 aan de linkerkant en een rest van 0 aan de rechterkant. Dit kan natuurlijk niet, dus $x$ en $y$ zijn niet allebei oneven. \\
-		We kunnen nu concluderen dat $x$ en $y$ niet allebei even zijn, en ook niet allebei oneven zijn. Een van de getallen $x$ of $y$ moet dus per definitie oneven zijn en de ander moet per definitie even zijn. Hieruit volgt dat $z$ altijd een oneven getal is. $x^2$ is namelijk even en $y^2$ is oneven (of precies andersom, zonder verlies van algemeenheid). De som van een oneven en een even getal is een oneven getal, waardoor $z^2$ en $z$ oneven zijn.
+		{\color{red}Ik heb de vergelijking hierboven aangepast (in rood was te ingewikkeld XD) vanwege dat wat ik in whatsapp zei. Alles wat hierna staat snap ik niet. Als je beide kanten door vier deelt, staat er $(s^2 + s + t^2 + t) + \frac{1}{2} = u^2$. Wat is hier fout aan? Wat bedoel je met een rest van nul?} Als we beide kanten door vier zouden delen, krijgen we een rest van 2 aan de linkerkant en een rest van 0 aan de rechterkant. Dit kan natuurlijk niet, dus $x$ en $y$ zijn niet allebei oneven. \\
+		
+		{\color{red}Alles wat hierachter staat hoort niet in het bewijs, maar daarbuiten. In de stelling staat namelijk niks over even getallen oid. Dus plak dit op de plek na het bewijs.} We kunnen nu concluderen dat {\color{red}We hebben dit al geconcludeert. Hier moet je dus van maken: We weten nu dat} $x$ en $y$ niet allebei even zijn, en dat ze ook niet allebei oneven zijn. Een van de getallen $x$ of $y$ moet dus per definitie oneven zijn en de ander moet per definitie even zijn. {\color{red}Deze zin is equivalent aan de zin ervoor. Deze zou ik dus weglaten. Als x en y niet dezelfde pariteit hebben, hebben ze uiteraard verschillende pariteit.} {\color{blue}Hieruit volgt dat $z$ altijd een oneven getal is. $x^2$ is namelijk even en $y^2$ is oneven (of precies andersom, zonder verlies van algemeenheid). De som van een oneven en een even getal is een oneven getal, waardoor $z^2$ en $z$ oneven zijn.} {\color{red}Het stuk hiervoor wat ik blauw heb gemaakt, is verkeerd om. Na wat je hebt gezegd concludeer je dat $x$ en $y$ niet dezelfde pariteit hebben. Een even getal plus een oneven getal is altijd oneven, dus $z^2$ is oneven. Hieruit volgt dat ook $z$ even moet zijn. (klaar. Uit wat je zei volgt namelijk niet dat $x$ oneven is. Je kan ook niet aannemen dat $x^2$ even is (wat je daarna wel zegt, maar dat is in de verkeerde volgorde) )} 
 	\end{proof}
-	Een derde eigenschap van een Pythagore\"isch drietal is dat $\frac{(z-x)(z-y)}{2}$ een kwadraat is. \cite{Posamentier}[p.156]
-	
-	%\endsection{Daan}
+	Een derde eigenschap van een Pythagore\"isch drietal is dat $\frac{(z-x)(z-y)}{2}$ een kwadraat is. \cite{Posamentier}[p.156] {\color{red}Waarom is dit leuk? Wat moeten we hiermee?}
 
 
 	\section{Voorbeelden}\label{sec:vb}
