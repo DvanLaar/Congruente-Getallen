@@ -257,16 +257,17 @@
 		\end{tikzpicture}
 	\end{figure*}\\
 	
-	We zullen hieronder bewijzen dat $n=1$ geen congruent getal is. Daarvoor bekijken we eerst een aantal benodigde stellingen en opmerkingen.
+	We zullen hieronder bewijzen dat $n=1$ geen congruent getal is. Daarvoor bekijken we eerst een aantal benodigde stellingen en opmerkingen. Ook hebben we het begrip ``relatief priem" nodig: als twee getallen relatief priem zijn, wil dat zeggen dat ze geen factoren gemeen hebben, oftewel hun grootste gemene deler is 1.
+	
 	\begin{theorem}\label{1:hulp2}
-		Twee positieve gehele getallen die relatief priem \textcolor{red}{Hebben we hier een definitie van gegeven? Of verwachten we dat de lezer dat wel weet?} zijn en waarvan het product een kwadraat is, moeten zelf kwadraten zijn. \textcolor{red}{$x \text{ of } y = 1$?}
+		Twee positieve gehele getallen die relatief priem zijn en waarvan het product een kwadraat is, moeten zelf kwadraten zijn.
 	\end{theorem}
 	\begin{proof}
-		Neem $x,y\in\NO$ met $\ggd(x,y) = 1$. Stel dat $xy$ \textcolor{red}{Ik denk dat $x$ \cdot $y$ duidelijker is}een kwadraat is. Laat nu $p$ een priemfactor zijn van $x$, maar $p$ is geen \textcolor{red}{niet een} priemfactor van $y$. Dan weten we dat $p$ in tweevoud moet voorkomen in $xy$, omdat $xy$ een kwadraat is en omdat $p$ niet in $y$ voorkomt. Hierdoor weten we ook dat $p$ in tweevoud moet voorkomen in $x$. Dus $x$ is een kwadraat. We kunnen dit op dezelfde manier doen voor $y$, dus $y$ is een kwadraat. Hiermee is de stelling bewezen.
+		Neem $x,y\in\NO$ met $\ggd(x,y) = 1$. Stel dat $xy$ een kwadraat is. Laat nu $p$ een priemfactor zijn van $x$, maar niet van $y$. Dan weten we dat $p$ in tweevoud moet voorkomen in $xy$, omdat $xy$ een kwadraat is en omdat $p$ niet in $y$ voorkomt. Hierdoor weten we ook dat $p$ in tweevoud moet voorkomen in $x$. Dus $x$ is een kwadraat. We kunnen dit op dezelfde manier doen voor $y$, dus $y$ is een kwadraat. Merk op dat in het bijzonder $x$ of $y$ ook $1$ zouden kunnen zijn. Hiermee is de stelling bewezen.
 	\end{proof}
 	
 	\begin{remark}\label{1:hulp4}
-		Merk op dat als $xy$ een vierde macht is, dan zijn $x$ en $y$ ook vierde machten. We kunnen dit op dezelfde manier doen als bij stelling \ref{1:hulp2}. Laat $p$ een priemfactor zijn van $x$, maar niet van $y$. Dan weten we dat $p$ in viervoud moet voorkomen in $xy$, omdat $xy$ een vierde macht is en omdat $p$ niet in $y$ voorkomt. Hierdoor weten we ook dat $p$ in viervoud moet voorkomen in $x$. Dus $x$ is een vierde macht. We kunnen dit op dezelfde manier doen voor $y$, dus $y$ is een vierde macht. \textcolor{red}{zelfde als hierboven XD}
+		Merk op dat als $xy$ een vierde macht is, dan zijn $x$ en $y$ ook vierde machten. We kunnen dit op dezelfde manier doen als bij stelling \ref{1:hulp2}. Laat $p$ een priemfactor zijn van $x$, maar niet van $y$. Dan weten we dat $p$ in viervoud moet voorkomen in $xy$, omdat $xy$ een vierde macht is en omdat $p$ niet in $y$ voorkomt. Hierdoor weten we ook dat $p$ in viervoud moet voorkomen in $x$. Dus $x$ is een vierde macht. We kunnen dit op dezelfde manier doen voor $y$, dus $y$ is een vierde macht.
 	\end{remark}
 	
 	We moeten nu ook nog iets weten over modulo rekenen.
@@ -280,7 +281,7 @@
 	\end{theorem}
 	\begin{proof}
 		Voor dit bewijs hebben we gebruik gemaakt van \cite{Conrad}[p.3-4].\\
-		Stel we hebben een rechthoekige driehoek met oppervlakte $1$. We noemen de zijden $\frac{a}{d}, \frac{b}{d}, \frac{c}{d}$ met $a,b,c,d\in\NO$. \textcolor{red}{extra stap dat je alle zijden met $d$ kan vermenigvuldigen waardoor het oppervlak $d^2$ wordt}We weten dat er geldt $a^2 + b^2 = c ^2$ en $\frac{1}{2}ab = d^2$. Als we de tweede vergelijking omschrijven, geeft dat ons de volgende vergelijkingen:
+		Stel we hebben een rechthoekige driehoek met oppervlakte $1$. We noemen de zijden $\frac{a}{d}, \frac{b}{d}, \frac{c}{d}$ met $a,b,c,d\in\NO$. We kunnen nu alle zijden met $d$ vermenigvuldigen, dan geldt er $a^2 + b^2 = c ^2$ en $\frac{1}{2}ab = d^2$. Als we de tweede vergelijking omschrijven, geeft dat ons de volgende vergelijkingen:
 		\begin{equation}\label{1:gedefineerd}
 			a^2 + b^2 = c^2 \quad \text{en} \quad ab = 2d^2.
 		\end{equation}
@@ -315,7 +316,6 @@
 			a' = \frac{t+u}{2}, \quad b' = \frac{t-u}{2} \quad \text{en} \quad c' = r.
 		\end{equation*}
 		Er geldt dat $\ggd(a',b') = 1$, om dezelfde reden dat de eerder genoemde factoren $\frac{c+b}{2}$ en $\frac{c-b}{2}$ relatief priem zijn. Als we gebruik maken van (\ref{1:r}), vinden we dat $a'b' = \frac{t^2 - u^2}{4} = \frac{2s^2}{4} = 2\left( \frac{s}{2} \right)^2$. Laat $d' = \frac{s}{2} \in\ZZ$, dan hebben we nu een nieuwe oplossing $(a', b', c', d')$ voor (\ref{1:gedefineerd}). Er geldt dat $0 < c'= r \leq r^4 < r^4 + s^4 = c$. Dit geeft een tegenspraak, omdat $c$ minimaal is. Dus (\ref{1:gedefineerd}) heeft geen positieve gehele oplossingen, dus $n=1$ is niet congruent.
-		\textcolor{red}{pffff, wat een variabelen XD Ziet er verder wel goed uit!}
 	\end{proof}
 
 
