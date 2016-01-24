@@ -79,20 +79,20 @@
 	\section{Pythagore\"ische drietallen en congruente getallen}\label{sec:def}
 	Voordat we vertellen wat congruente getallen zijn, zullen we eerst iets vertellen over Pythagore\"ische drietallen.\\
 	
-	De geschiedenis van Pythagore\"ische drietallen begint bij het vermoeden van Fermat. De bijbehorende vergelijking is als volgt geformuleerd:
+	De geschiedenis van Pythagore\"ische drietallen begint bij het inmiddels bewezen vermoeden van Fermat. De bijbehorende vergelijking is als volgt geformuleerd:
 	\begin{equation}\label{fermat}
 	x^n + y^n = z^n \quad \text{met} \quad n \in \NN.
 	\end{equation}
 	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor vergelijking (\ref{fermat}). Dat wil zeggen, voor alle $(x,y,z) \in \ZZ^3$ met $x^n + y^n = z^n$, waar $n \geq 3$ en $x, y, z \geq 0$, geldt $xyz = 0$. Wij zijn echter vooral ge\"interesseerd in het geval waarvoor geldt dat $n=2$. Bovendien zoeken we naar niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$ met $x,y,z \in\QQ_{>0}$. Deze oplossingen noteren we als $(x,y,z)$ en ze heten Pythagore\"ische drietallen. De vergelijking van de stelling van Pythagoras lijkt sterk op vergelijking (\ref{fermat}). Het vermoeden is echter bekend geworden voor $n \geq 3$, omdat dat erg moeilijk te bewijzen is. \\
 	De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$, vormen een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
 	
-	Naast de gewone drietallen, bestaan er ook primitieve \mbox{Pythagore\"ische} drietallen. Dit zijn Pythagore\"ische drietallen $(x,y,z)$ waarvoor geldt dat de grootste gemeenschappelijke deler van $x$ en $y$ gelijk is aan 1. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen we het volgende bewijzen:
+	Naast de gewone drietallen, bestaan er ook primitieve \mbox{Pythagore\"ische} drietallen. Dit zijn Pythagore\"ische drietallen $(x,y,z)\in\NN^3_{>0}$ waarvoor geldt dat de grootste gemeenschappelijke deler van $x$ en $y$ gelijk is aan 1. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen we het volgende bewijzen:
 	
 	\begin{theorem}
 		Stel, $(x,y,z)$ is een primitief Pythagore\"isch drietal, dus $\ggd(x,y) = 1$, dan geldt er dat $\ggd(x,z) = 1$.
 	\end{theorem}
 	\begin{proof}
-		Neem aan dat $\ggd(x,y) = 1$. Stel, $\ggd(x,z) = d > 1$. Dan deelt $d$ zowel $x$ als $z$. We weten dat als $d \mid x$ en $d \mid z$, dan geldt ook dat $d^2\mid x^2$ en $d^2 \mid z^2$. We weten ook dat $d$ het verschil moet delen: $d^2\mid z^2 - x^2$, waaruit volgt dat $d^2 \mid y^2$, vanwege de stelling van Pythagoras. Dus weten we dat $d \mid y$, waaruit volgt dat $\ggd(x, y) = d > 1$. Dit is in tegenspraak met de aanname dat $\ggd(x,y) = 1$.
+		Neem aan dat $\ggd(x,y) = 1$. Stel, $\ggd(x,z) = d > 1$. Dan deelt $d$ zowel $x$ als $z$. We weten dat als $d \mid x$ en $d \mid z$, dan $d^2\mid x^2$ en $d^2 \mid z^2$. We weten ook dat $d$ het verschil moet delen: $d^2\mid z^2 - x^2$, waaruit volgt dat $d^2 \mid y^2$, vanwege de stelling van Pythagoras. Dus weten we dat $d \mid y$, waaruit volgt dat $\ggd(x, y) \geq d > 1$. Dit is in tegenspraak met de aanname dat $\ggd(x,y) = 1$.
 	\end{proof}
 	
 	Primitieve Pythagore\"ische drietallen hebben nog veel meer eigenschappen. Wij zullen nog \'e\'en eigenschap bewijzen.
@@ -100,11 +100,7 @@
 		Als $(x, y, z)$ een primitief Pythagore\"isch drietal is, dan kunnen $x$ en $y$ niet dezelfde pariteit hebben. 
 	\end{theorem}
 	\begin{proof}
-		Stel, $x$ en $y$ zijn allebei even. Dan kunnen we $x$ en $y$ als volgt opschrijven
-		\begin{align*}
-		x = 2v \quad \text{en} \quad y = 2w,
-		\end{align*} 
-		met $v,w \in\NN$. Hieruit volgt dat $2\mid x$ en $2 \mid y$, dus $\ggd(x, y) \neq 1$. Dit is in tegenspraak met de eigenschap dat $x$ en $y$ relatief priem zijn.\\
+		Stel, $x$ en $y$ zijn allebei even. Dan geldt dat $2\mid x$ en $2 \mid y$, dus $\ggd(x, y) \neq 1$. Dit is in tegenspraak met de eigenschap dat $x$ en $y$ relatief priem zijn.\\
 		
 		Neem nu aan dat $x$ en $y$ allebei oneven zijn:
 		\begin{align*}
@@ -124,9 +120,9 @@
 		
 		We weten nu dat $x$ en $y$ niet allebei even kunnen zijn, maar ook niet allebei oneven, dus $x$ en $y$ hebben verschillende pariteit.
 	\end{proof}
-	Omdat we nu weten dat $x$ en $y$ altijd verschillende pariteit hebben als $(x, y, z)$ een primitief Pythagore\"isch drietal is, weten we ook dat $z$ dan altijd oneven is. Namelijk: we kunnen zonder verlies van algemeenheid stellen dat dat $x$, dus ook $x^2$, even is en dat $y$, dus ook $y^2$, oneven is. De som van een oneven en een even getal is een oneven getal, waardoor $z^2$ en $z$ oneven zijn.\\
+	Omdat we nu weten dat $x$ en $y$ altijd verschillende pariteit hebben als $(x, y, z)$ een primitief Pythagore\"isch drietal is, weten we ook dat $z$ dan altijd oneven is. Namelijk: we kunnen zonder verlies van algemeenheid stellen dat $x$, dus ook $x^2$, even is en dat $y$, dus ook $y^2$, oneven is. De som van een oneven en een even getal is een oneven getal, waardoor $z^2$ en $z$ oneven zijn.\\
 	
-	We weten nu genoeg over (primitieve) Pythagrore\"ische drietallen. We zullen nu uitleggen wat congruete getallen zijn. Er bestaan meerdere definities. Wij zullen hieronder twee definities behandelen: een meetkundige en een algebra\"ische definitie. Daarna zullen we laten zien dat deze twee definties equivalent zijn aan elkaar. \\
+	We weten nu genoeg over (primitieve) Pythagrore\"ische drietallen. We zullen nu uitleggen wat congruete getallen zijn. Er bestaan meerdere definities. Wij zullen hieronder twee definities behandelen: een meetkundige en een algebra\"ische definitie. Daarna zullen we laten zien dat deze twee definities equivalent zijn aan elkaar. \\
 	
 	Als eerste kijken we naar de meetkundige definitie uit \cite{Oort}[p.3].	
 	\begin{definition}\label{def:meetkunde}
@@ -173,7 +169,7 @@
 	De meetkundige en algbra\"ische definitie zijn in feite equivalent. Dit zullen we bewijzen met behulp van de volgende propositie:
 	
 	\begin{proposition}
-		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta^2$, $\delta^2 +n$ en $\delta^2 -n$ de kwadraten zijn van een rationaal getal. De correspondentie is:
+		\cite{Koblitz}[p.4, vertaald] Laat $n$ een vast kwadraatvrij positief getal zijn. Laat $x,y,z,\delta \in\QQ_{>0}$ met $x<y<z$. Er is een \'e\'en op \'e\'en relatie tussen rechthoekige driehoeken met zijden $x$ en $y$, schuine zijde $z$ en oppervlakte $n$, en getallen $\delta$ waarvoor geldt dat $\delta^2$, $\delta^2 +n$ en $\delta^2 -n$ de kwadraten zijn van een rationaal getal. De correspondentie is:
 		\begin{align}
 			\label{prop:corr1} x,y,z &\rightarrow \delta = \frac{z}{2} \\
 			\label{prop:corr2} \delta &\rightarrow x=\sqrt{\delta^2+n} - \sqrt{\delta^2-n},\quad y = \sqrt{\delta^2+n}+\sqrt{\delta^2-n},\quad z = 2\delta.
@@ -181,9 +177,9 @@
 		In het bijzonder, $n$ is een congruent getal dan en slechts dan als er een $\delta$ bestaat z\'o dat $\delta^2$, $\delta^2+n$ en $\delta^2-n$ kwadraten van rationale getallen zijn.
 	\end{proposition}
 	\begin{proof}
-		We bewijzen eerst dat correspondentie \ref{prop:corr1} geldt. We nemen een drietal $(x, y, z)$ die voldoet aan $x^2 + y^2 = z^2$ en $\frac{1}{2}xy=n$. Als we vier keer de tweede vergelijking van de eerste afhalen of erbij optellen, houden we het volgende over: $x^2 \pm 2xy + y^2 = z^2 \pm 4n$, wat gelijk is aan $(x \pm y)^2 = z^2 \pm 4n$. Door nu beide kanten door 4 te delen, zien we dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ kwadraten zijn van $\frac{x \pm y}{2}$. \\
+		We bewijzen eerst dat correspondentie \eqref{prop:corr1} geldt. We nemen een drietal $(x, y, z)$ die voldoet aan $x^2 + y^2 = z^2$ en $\frac{1}{2}xy=n$. Als we vier keer de tweede vergelijking van de eerste afhalen of erbij optellen, houden we het volgende over: $x^2 \pm 2xy + y^2 = z^2 \pm 4n$, wat gelijk is aan $(x \pm y)^2 = z^2 \pm 4n$. Door nu beide kanten door 4 te delen, zien we dat $\delta = (\frac{z}{2})^2$ de eigenschap heeft dat $\delta \pm n$ kwadraten zijn van $\frac{x \pm y}{2}$. \\
 		 
-		We laten nu zien dat ook correspondentie \ref{prop:corr2} geldt. We nemen een $\delta\in\QQ$ waarvoor geldt dat $\delta^2$, $\delta^2+n$ en $\delta^2-n$ kwadraten zijn van rationale getallen. Daardoor geldt ook dat $x, y, z \in\QQ$. We zien dat
+		We laten nu zien dat ook correspondentie \eqref{prop:corr2} geldt. We nemen een $\delta\in\QQ_{>0}$ waarvoor geldt dat $\delta^2$, $\delta^2+n$ en $\delta^2-n$ kwadraten zijn van rationale getallen. Daardoor geldt ook dat $x, y, z \in\QQ_{>0}$. We zien dat
 		\begin{align*}
 			xy &= \left( \sqrt{\delta^2+n} - \sqrt{\delta^2-n} \right) \left( \sqrt{\delta^2+n} + \sqrt{\delta^2-n} \right) \\
 			&= \delta^2+n - \left( \delta^2-n \right) \\
@@ -195,16 +191,17 @@
 			 &= 4 \delta^2 \\
 			 &= z^2.
 		 \end{align*}
-		 We weten nu dus dat correspondentie \ref{prop:corr1} en \ref{prop:corr2} gelden. Het enige wat we nu nog moeten laten zien, is dat twee verschillende Pythagore\"ische drietallen $(x,y,z)$ nooit dezelfde $\delta$ op kunnen leveren. {\color{red}Dit kunnen we doen door te laten zien dat twee Pythagore\"ische drietallen nooit dezelfde $\delta = \frac{z}{2}$ op kunnen leveren.}
+		 We weten nu dus dat correspondentie \eqref{prop:corr1} en \eqref{prop:corr2} gelden. Het is duidelijk dat verschillende $\delta$'s verschillende Pythagore\"ische drietallen opleveren (de $z$ is verschillend). Het enige wat we nu nog moeten laten zien, is dat twee verschillende Pythagore\"ische drietallen $(x,y,z)$ nooit dezelfde $\delta$ op kunnen leveren. \\
 		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
+		 Stel dat $(x,y,z)$ en $(x',y',z')$ met $x < y < z$ en $x' < y' < z'$ beiden $\delta$ opleveren en $n = \frac{1}{2}xy = \frac{1}{2}x'y'$. Dan moet gelden dat $\frac{z}{2} = \delta = \frac{z'}{2}$ dus $z = z'$, oftewel $x^2 + y^2 = x'^2 + y'^2$. Door aan beide kanten $2xy$, respectievelijk $2x'y'$, op te tellen krijgen we $x^2 + 2xy + y^2 = x'^2 + 2x'y' + y'^2$. Hieruit volgt dat 
+		 \begin{equation}
+		 (x + y)^2 = (x' + y')^2.\label{eq:kwadraten}
+		 \end{equation}
+		 Omdat $x,y,x',y'>0$ weten we dat $x + y, x' + y'> 0$. Nu volgt uit \eqref{eq:kwadraten} dat $x + y = x' + y'$. We kunnen ook aan beiden kanten van de vergelijking $x^2 + y^2 = x'^2 + y'^2$, de termen $2xy$, respectievelijk $2x'y'$, er van aftrekken. Nu krijgen we $x^2 - 2xy + y^2 = x'^2 - 2x'y' + y'^2$, oftewel
+		 \begin{equation}
+		 (x - y)^2 = (x' - y')^2.\label{eq:kwadraten2}
+		 \end{equation}
+		 Omdat $y - x, y' - x' > 0$, volgt uit \eqref{eq:kwadraten2} dat $y - x = y' - x'$. Er geldt dat $2y = y + x + y - x = y' + x' + y' - x' = 2y'$ dus $y = y'$. Uit $x + y = x' + y'$ volgt nu ook $x = x'$. We concluderen dat twee verschillende Pythagore\"ische drietallen nooit dezelfde $\delta$ opleveren.
 	\end{proof}
 	Dus de definities \ref{def:meetkunde} en \ref{def:algebra} corresponderen \'e\'en op \'e\'en met elkaar. Voor het gemak zullen we vanaf nu definitie \ref{def:meetkunde} hanteren. \\
 	
@@ -248,7 +245,7 @@
 		\draw (X1) -- (X2) -- (X3);
 		\end{tikzpicture}
 	\end{figure*}\\
-	De onderstaande driehoek correspondeert met het congruente getal $n=157$: \cite{Koblitz}[p.5]
+	\newpage De onderstaande driehoek correspondeert met het congruente getal $n=157$: \cite{Koblitz}[p.5]
 	\begin{figure*}[h!]
 		\centering
 		\begin{tikzpicture}[xscale=4, yscale=2]
