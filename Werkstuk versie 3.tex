@@ -73,7 +73,7 @@
 	\section{Inleiding}
 	We hebben onderzoek gedaan naar congruente getallen om onze kennis te verbreden. Het is een onderwerp uit de getaltheorie. In dit werkstuk zullen we vertellen wat we hebben gevonden.
 	
-	In hoofdstuk \ref{sec:def} zullen we eerst Pythagore\"ische drietallen behandelen. Deze zullen we nodig hebben bij een definitie van congruente getallen. Naast deze definitie zullen we nog een definitie geven. Daarna tonen we aan dat deze definities equivalent zijn. In hoofdstuk \ref{sec:vb}, zullen we een aantal voorbeelden geven van congruente getallen met hun corresponderende driehoek. Daarna, in hoofdstuk \ref{sec:suus}, zal het gaan over het vinden van congruente getallen. Er zijn heel veel congruente getallen, maar hoe vinden we ze allemaal? We zullen daarna, in hoofdstuk \ref{sec:lotte}, nog wat uitleggen over presentaties van congruente getallen en wat dit inhoud. We zullen dit werkstuk afsluiten met een bewijs waarom $n=1$ geen congruent getal is. Als afsluiting zullen we een samenvatting geven van alles wat we hebben behandeld.
+	In hoofdstuk \ref{sec:def} zullen we eerst Pythagore\"ische drietallen behandelen. Deze zullen we nodig hebben bij een definitie van congruente getallen. Naast deze definitie zullen we nog een definitie geven. Daarna tonen we aan dat deze definities equivalent zijn. In hoofdstuk \ref{sec:vb}, zullen we een aantal voorbeelden geven van congruente getallen met hun corresponderende driehoek. Daarna, in hoofdstuk \ref{sec:suus}, zal het gaan over het vinden van congruente getallen. Er zijn heel veel congruente getallen, maar hoe vinden we ze allemaal? We zullen daarna, in hoofdstuk \ref{sec:lotte}, nog wat uitleggen over presentaties van congruente getallen en wat dit inhoud. We geven in hoofdstuk \ref{sec:n=1} een bewijs waarom $n=1$ geen congruent getal is. Als afsluiting zullen we een samenvatting geven van alles wat we hebben behandeld.
 	
 	
 	\section{Pythagore\"ische drietallen en congruente getallen}\label{sec:def}
@@ -83,7 +83,8 @@
 	\begin{equation}\label{fermat}
 	x^n + y^n = z^n \quad \text{met} \quad n \in \NN.
 	\end{equation}
-	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor vergelijking (\ref{fermat}). Dat wil zeggen, voor alle $(x,y,z) \in \ZZ^3$ met $x^n + y^n = z^n$, waar $n \geq 3$ en $x, y, z \geq 0$, geldt $xyz = 0$. Wij zijn echter vooral ge\"interesseerd in het geval waarvoor geldt dat $n=2$. Bovendien zoeken we naar niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$ met $x,y,z \in\QQ_{>0}$. Deze oplossingen noteren we als $(x,y,z)$ en ze heten Pythagore\"ische drietallen. De vergelijking van de stelling van Pythagoras lijkt sterk op vergelijking (\ref{fermat}). Het vermoeden is echter bekend geworden voor $n \geq 3$, omdat dat erg moeilijk te bewijzen is. \\
+	Fermat vermoedde dat voor $n \geq 3$ er alleen triviale oplossingen bestaan voor vergelijking (\ref{fermat}). Dat wil zeggen, voor alle $(x,y,z) \in \ZZ^3$ met $x^n + y^n = z^n$, waar $n \geq 3$ en $x, y, z \geq 0$, geldt $xyz = 0$. Wij zijn echter vooral ge\"interesseerd in het geval waarvoor geldt dat $n=2$. Bovendien zoeken we naar niet triviale oplossingen van de vergelijking $x^2 + y^2 = z^2$ met $x,y,z \in\QQ_{>0}$. Deze oplossingen noteren we als $(x,y,z)$ en ze heten Pythagore\"ische drietallen. De vergelijking van de stelling van Pythagoras lijkt sterk op vergelijking (\ref{fermat}). Het vermoeden is echter bekend geworden voor het geval $n \geq 3$, omdat dat erg moeilijk te bewijzen is.
+	
 	De niet-triviale oplossingen $(x,y,z)$ van $x^2 + y^2 = z^2$, vormen een rechthoekige driehoek waarbij $z$ de schuine zijde is. Een simpel voorbeeld van een Pythagore\"isch drietal is $(3,4,5)$, want $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. \\
 	
 	Naast de gewone drietallen, bestaan er ook primitieve \mbox{Pythagore\"ische} drietallen. Dit zijn Pythagore\"ische drietallen $(x,y,z)\in\NN^3_{>0}$ waarvoor geldt dat de grootste gemeenschappelijke deler van $x$ en $y$ gelijk is aan 1. We noteren dit als $\ggd(x,y) = 1$. Nu kunnen we het volgende bewijzen:
@@ -152,7 +153,7 @@
 	We zien dat hier een congruent getal $n$ wordt gegeven als de oppervlakte van een rechthoekige driehoek waarvan (de lengte van) de zijden in $\QQ_{>0}$ zitten. We kunnen conguente getallen ook bekijken met een algebra\"{i}sche benadering. De volgende definitie komt van \cite{Oort}[p.3].
 	
 	\begin{definition}\label{def:algebra}
-		Een positief geheel getal $n$ heet een congruent getal als er een $\delta\in\QQ$ bestaat zodanig dat
+		Een positief geheel getal $n$ heet een congruent getal als er een $\delta \in \QQ_{>0}$ bestaat zodanig dat
 		\begin{equation*}
 			\delta^2 - n,\quad \delta^2,\quad \delta^2 + n
 		\end{equation*}
@@ -281,8 +282,8 @@
 		(B) -- node[auto,swap]{$x$} (O);
 		\draw (M) node[auto]{$r$};
 		
-		\coordinate (S) at (1.8, 0.7);
-		\draw (S) node[auto]{$x,y,z\in\QQ$};
+		\coordinate (S) at (1.9, 0.7);
+		\draw (S) node[auto]{$x,y,z\in\QQ_{>0}$};
 		\coordinate (N) at (1.9, 0.1);
 		\draw (N) node[auto]{$\frac{1}{2}xy=r\in\NN$};
 		\coordinate (X1) at (0,0.1);
@@ -306,8 +307,8 @@
 		(B) -- node[auto,swap]{$sx$} (O);
 		\draw (M) node[auto]{$s^2r$};
 		
-		\coordinate (S) at (1.9, 0.7);
-		\draw (S) node[auto]{$sx,sy,sz\in\QQ$};
+		\coordinate (S) at (2.0, 0.7);
+		\draw (S) node[auto]{$sx,sy,sz\in\QQ_{>0}$};
 		\coordinate (N) at (2.6, 0.1);
 		\draw (N) node[auto]{$\frac{1}{2} sx \cdot sy = s^2 \cdot \frac{1}{2}xy = s^2r \in\NN$};
 		\coordinate (X1) at (0,0.1);
@@ -423,7 +424,7 @@
 	Dezelfde stappen kunnen we uitvoeren voor andere kwadraatvrije congruente getallen. De andere presentatie van $n=210$, zijnde $(35,12,37)$, blijkt $((6,1),1,210)$ te zijn en geeft $((1369,840),79994,210)$ als nieuwe presentatie. De eerder gegeven presentatie van $n=6$, zijnde $(3,4,5)$, geeft dan de presentatie $((2,1),1,6)$, waaruit de nieuwe presentatie $((25,24),70,6)$ volgt.
 	
 	
-	\section{Het bewijs van $n=1$}
+	\section{Het bewijs van $n=1$}\label{sec:n=1}
 	We zullen nu bewijzen dat $n=1$ geen congruent getal is. Daarvoor bekijken we eerst een aantal benodigde stellingen en opmerkingen. Ook hebben we het begrip ``relatief priem" nodig. Twee getallen zijn relatief priem als ze geen factoren gemeen hebben, oftewel hun grootste gemene deler is 1.
 		
 	\begin{theorem}\label{1:hulp2}
@@ -488,6 +489,17 @@
 	
 	
 	\section{Samenvatting}
+	We hebben het gehad over congruente getallen. We zijn begonnen met uitleggen wat Pythagore\"ische drietallen zijn, dus drietallen $(x,y,z)\in \QQ_{>0}^3$ waarvan $x$, $y$ en $z$ de zijden zijn van een rechthoekige driehoek. We keken naar primitieve Pythagore\"ische drietallen, dus drietallen waarvoor geldt dat $\ggd(x,y)=1$. We hebben vervolgens bewezen dat als $\ggd(x,y)=1$ dan $\ggd(x,z)=1$, en dat $x$ en $y$ niet dezelfde pariteit hebben.
+	
+	Dit werd gevolgd door twee definities voor congruente getallen. Als eerste de meetkundige, waarbij we gebruik maakten van een rechthoekige driehoek met zijden $x, y, z \in \QQ$. Hiervoor geldt dat $x^2+y^2=z^2$ en $n=\frac{1}{2}xy$. Als $n$ dan een geheel getal is, heet $n$ congruent. De tweede, algebra\"ische, definitie voor een congruent getal is: een positief geheel getal $n$, waarvoor een rationaal getal $\delta$ bestaat zo dat $\delta^2-n$, $\delta^2$ en $\delta^2+n$ kwadraten zijn van rationale getallen. Later hebben we bewezen dat beide definities equivalent zijn.
+	
+	Na dit hoofdstuk hebben we in hoofdstuk \ref{sec:vb} concrete voorbeelden gezien van congruente getallen. In de vorm van een reeks congruente getallen, en rechthoekige driehoeken met bijbehorende pythagore\"ische drietallen. \\
+	
+	In hoofdstuk \ref{sec:suus} hebben we ons gebogen over de vraag of er een handige manier is om naar congruente getallen te zoeken. We kwamen erachter dat ieder congruent getal te herleiden is naar een kwadraatvrij congruent getal, en dat het effici\"enter is om alleen daar naar op zoek te gaan. Met de stelling van Tunnell en het vermoeden van Birch en Swinnerton-Dyer kunnen we bewijzen dat bepaalde getallen niet congruent zijn, en het zeer aannemelijk maken dat andere getallen dat wel zijn.\\
+	
+	Hierna hebben we gekeken naar het begrip presentatie: dat wat bewijst dat een getal congruent is. We hebben twee varianten bekeken. De eerste variant was het Pythagore\"ische drietal behorende bij het congruente getal, dus $(x,y,z)$. De tweede variant was een variatie op de eerste, namelijk $((k,l),D,n)$. We hebben bewezen dat een congruent getal oneindig veel unieke presentaties heeft. Later hebben we laten zien hoe het proces om nieuwe presentaties te vinden, concreet in zijn werk gaat met het getal 210.\\
+	
+	We hebben onze bevindingen afgesloten met een bewijs dat $n=1$ geen congruent getal is.
 	
 	
 	\bibliographystyle{plain}
